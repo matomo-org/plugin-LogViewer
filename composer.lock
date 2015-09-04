@@ -1,0 +1,57 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "a89f9c87b5a75e993ab59eddb9106ef5",
+    "packages": [
+        {
+            "name": "potsky/pimp-my-log",
+            "version": "1.7.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/potsky/PimpMyLog.git",
+                "reference": "22f448c9aaf8115663536aaef410b5eb9152d950"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/potsky/PimpMyLog/zipball/22f448c9aaf8115663536aaef410b5eb9152d950",
+                "reference": "22f448c9aaf8115663536aaef410b5eb9152d950",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "project",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Potsky",
+                    "email": "potsky@me.com",
+                    "homepage": "http://www.potsky.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Cassio Santos",
+                    "homepage": "http://www.cassiosantos.com",
+                    "role": "Translator (pt_BR)"
+                }
+            ],
+            "description": "Log viewer for your web server",
+            "homepage": "http://pimpmylog.com",
+            "time": "2015-05-27 07:09:41"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

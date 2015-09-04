@@ -1,0 +1,19 @@
+{
+  "name": "LogViewer",
+  "version": "0.1.0",
+  "description": "View Piwik Logs",
+  "theme": false,
+  "keywords": ["log",  "viewer", "diagnostic"],
+  "license":  "GPL v3+",
+  "homepage":  "http://piwik.org",
+  "require": {
+    "piwik": ">=2.15.0-b3"
+  },
+  "authors": [
+    {
+      "name":  "Piwik",
+      "email":  "hello@piwik.org",
+      "homepage":  "http://piwik.org"
+    }
+  ]
+}

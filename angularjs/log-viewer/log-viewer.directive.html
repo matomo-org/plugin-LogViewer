@@ -1,0 +1,46 @@
+<div class="logViewer">
+    <h2>Log Viewer</h2>
+
+    <p>
+        <select ng-model="logViewer.selectedLogWriter">
+            <option value="{{ logWriter }}" ng-repeat="logWriter in logViewer.logWriters">
+                {{ logWriter }}
+            </option>
+        </select>
+        <input type="search" ng-model="logViewer.query" placeholder="{{ 'LogViewer_SearchPattern'|translate }}"
+               piwik-onenter="logViewer.update()">
+        <input type="button" ng-click="logViewer.update()"  class="btn" value="{{ 'General_Search'|translate }}" >
+        <br />
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="severity">{{ 'LogViewer_Severity'|translate }}</th>
+                <th class="tag">{{ 'LogViewer_Tag'|translate }}</th>
+                <th class="date">{{ 'General_Date'|translate }}</th>
+                <th class="message">{{ 'LogViewer_Message'|translate }}</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="log in logViewer.logs">
+                <td class="severity">{{ log.severity }}</td>
+                <td class="tag">{{ log.tag }}</td>
+                <td class="date">{{ log.datetime }}</td>
+                <td class="message">{{ log.message }}</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="paging">
+                    <span id="prev" class="previous" ng-hide="logViewer.page < 1" ng-click="logViewer.previousPage()">
+                        <a class="btn btn-link btn-lg" href="#"><span>&#171; {{ 'General_Previous'|translate }}</span></a>
+                    </span>
+
+                    <span id="next" class="next pointer" ng-hide="(logViewer.logs|length) < 1" ng-click="logViewer.nextPage()">
+                        <a class="btn btn-link btn-lg" href="#"><span>{{ 'General_Next'|translate }} &#187;</span></a>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,41 @@
+.logViewer {
+  table {
+    min-width: 800px;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  .severity,
+  .date {
+    white-space: nowrap
+  }
+
+  .tag,
+  .message {
+    word-break: break-all;
+  }
+
+  .tag {
+    min-width: 100px;
+    max-width: 150px;
+  }
+
+  td {
+    padding-right: 20px;
+  }
+
+  .paging {
+    padding: 5px;
+    font-size: 10px;
+    text-align: center;
+
+    .previous {
+      padding-right: 20px;
+    }
+    .next {
+      padding-left: 20px;
+    }
+  }
+}

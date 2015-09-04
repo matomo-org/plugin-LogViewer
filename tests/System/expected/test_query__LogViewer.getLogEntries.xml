@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<result>
+	<row>
+		<severity>WARNING</severity>
+		<tag>Dashboard</tag>
+		<datetime>2015-05-19 04:45:40</datetime>
+		<requestId>2c4ce</requestId>
+		<message>/home/vagrant/www/piwik/core/Plugin/Widget.php(51): Recoverable Error - Argument 1 passed to Piwik\Plugin\Widget::configureWidgetsList() must be an instance of Piwik\Widget\WidgetsList, instance of Piwik\WidgetsList given, called in /home/vagrant/www/piwik/core/WidgetsList.php on line 122 and defined - Piwik 2.13.1</message>
+	</row>
+	<row>
+		<severity>WARNING</severity>
+		<tag>Dashboard</tag>
+		<datetime>2015-05-19 04:45:42</datetime>
+		<requestId>2c4ce</requestId>
+		<message>/home/vagrant/www/piwik/core/Plugin/Widget.php(51): Recoverable Error - Argument 1 passed to Piwik\Plugin\Widget::configureWidgetsList() must be an instance of Piwik\Widget\WidgetsList, instance of Piwik\WidgetsList given, called in /home/vagrant/www/piwik/core/WidgetsList.php on line 122 and defined - Piwik 2.13.1</message>
+	</row>
+	<row>
+		<severity>WARNING</severity>
+		<tag>Dashboard</tag>
+		<datetime>2015-05-20 04:45:47</datetime>
+		<requestId>2c4ce</requestId>
+		<message>/home/vagrant/www/piwik/core/Plugin/Widget.php(51): Recoverable Error - Argument 1 passed to Piwik\Plugin\Widget::configureWidgetsList() must be an instance of Piwik\Widget\WidgetsList, instance of Piwik\WidgetsList given, called in /home/vagrant/www/piwik/core/WidgetsList.php on line 122 and defined - Piwik 2.13.1</message>
+	</row>
+	<row>
+		<severity>WARNING</severity>
+		<tag>Dashboard</tag>
+		<datetime>2015-05-20 04:45:47</datetime>
+		<requestId>2c4ce</requestId>
+		<message>/home/vagrant/www/piwik/core/Plugin/Widget.php(51): Recoverable - Argument 1 passed to Piwik\Plugin\Widget::configureWidgetsList() must be an instance of Piwik\Widget\WidgetsList, instance of Piwik\WidgetsList given, called in /home/vagrant/www/piwik/core/WidgetsList.php on line 122 and defined - Piwik 2.13.1</message>
+	</row>
+	<row>
+		<severity>WARNING</severity>
+		<tag>CoreUpdater</tag>
+		<datetime>2015-07-03 00:20:12</datetime>
+		<requestId>af14a</requestId>
+		<message>/home/vagrant/www/piwik/core/Updates/3.0.0-b1.php(32): Strict Notice - Non-static method Piwik\Updates\Updates_3_0_0_b1::getDashboardMigrationSqls() should not be called statically - Piwik 3.0.0-b1</message>
+	</row>
+</result>

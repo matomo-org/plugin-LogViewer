@@ -1,0 +1,10 @@
+{
+  "LogViewer": {
+    "LogViewer": "Log Viewer",
+    "Severity": "Severity",
+    "SearchPattern": "Search pattern",
+    "Tag": "Tag",
+    "RequestId": "Request ID",
+    "Message": "message"
+  }
+}
