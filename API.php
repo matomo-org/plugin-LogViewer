@@ -24,6 +24,20 @@ use Piwik\Plugins\LogViewer\Log\Query;
  */
 class API extends \Piwik\Plugin\API
 {
+    /**
+     * Get log entries.
+     *
+     * Latest log entries are returned first.
+     *
+     * @param string $query  A search query. If given, the search is performed case insensitive and query is interpreted
+     *                       as a regular expression. Characters like `[` might need to be escaped as `\[`.
+     * @param string|false $source The log reader to use. Either 'file' or 'database'.
+     *                            By default we try to detect the best reader automatically.
+     * @param int $page           The page that should be returned.
+     * @param int $limitPerPage   Defines how many log entries should be returned per page.
+     * @return array
+     * @throws \Exception Eg if the source cannot be chosen automatically.
+     */
     public function getLogEntries($query = '', $source = false, $page = 0, $limitPerPage = 10)
     {
         Piwik::checkUserHasSuperUserAccess();
@@ -44,6 +58,11 @@ class API extends \Piwik\Plugin\API
         return $return;
     }
 
+    /**
+     * Returns a list of all available log readers.
+     *
+     * @return string[]
+     */
     public function getAvailableLogReaders()
     {
         Piwik::checkUserHasSuperUserAccess();
@@ -52,6 +71,12 @@ class API extends \Piwik\Plugin\API
         return $logReaderFactory->getAvailableLogReaders();
     }
 
+
+    /**
+     * Returns a list of all configured log readers that are supported (available).
+     *
+     * @return string[]
+     */
     public function getConfiguredLogReaders()
     {
         Piwik::checkUserHasSuperUserAccess();
