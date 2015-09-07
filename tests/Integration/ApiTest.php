@@ -38,7 +38,7 @@ class ApiTest extends IntegrationTestCase
     public function test_getConfiguredLogReader()
     {
         $this->setLogWriters(array('file', 'screen'));
-        $this->assertSame(array('file'), $this->api->getConfiguredLogReader());
+        $this->assertSame(array('file'), $this->api->getConfiguredLogReaders());
     }
 
     /**
@@ -48,7 +48,22 @@ class ApiTest extends IntegrationTestCase
     public function test_getConfiguredLogReader_shouldThrowExceptionIfNotEnoughPermission()
     {
         FakeAccess::clearAccess(false);
-        $this->api->getConfiguredLogReader();
+        $this->api->getConfiguredLogReaders();
+    }
+
+    public function test_getAvailableLogReaders()
+    {
+        $this->assertSame(array('file', 'database'), $this->api->getAvailableLogReaders());
+    }
+
+    /**
+     * @expectedException \Exception
+     * @expectedExceptionMessage checkUserHasSuperUserAccess Fake exception
+     */
+    public function test_getAvailableLogReaders_shouldThrowExceptionIfNotEnoughPermission()
+    {
+        FakeAccess::clearAccess(false);
+        $this->api->getAvailableLogReaders();
     }
 
     /**
