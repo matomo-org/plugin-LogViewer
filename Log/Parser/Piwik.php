@@ -20,7 +20,7 @@ class Piwik implements Parser
         $datetime = '';
         $requestId = '';
 
-        // no file specified in log line
+        // a typical log line looks like: $severity $tag[$datetime] [$requestId] $message
         if (preg_match('/^(.*?) (.+?)\[(.*?)\] \[(.*?)\] (.+)$/', $line->content, $matches)) {
             $severity  = $matches[1];
             $tag       = $matches[2];

@@ -2,45 +2,52 @@
 <result>
 	<row>
 		<severity>WARNING</severity>
-		<tag>Dashboard</tag>
-		<datetime>2015-05-19 04:45:40</datetime>
-		<requestId>2c4ce</requestId>
-		<message>/home/vagrant/www/piwik/core/Plugin/Widget.php(51): Recoverable Error - Argument 1 passed to Piwik\Plugin\Widget::configureWidgetsList() must be an instance of Piwik\Widget\WidgetsList, instance of Piwik\WidgetsList given, called in /home/vagrant/www/piwik/core/WidgetsList.php on line 122 and defined - Piwik 2.13.1</message>
+		<tag>CoreHome</tag>
+		<datetime>2015-07-03 06:22:38</datetime>
+		<requestId>082d8</requestId>
+		<message>/home/vagrant/www/piwik/plugins/CoreHome/Columns/UserId.php(69): Warning - Invalid argument supplied for foreach() - Piwik 3.0.0-b1</message>
 	</row>
 	<row>
 		<severity>WARNING</severity>
-		<tag>Live</tag>
-		<datetime>2015-05-19 04:45:41</datetime>
-		<requestId>2c4ce</requestId>
-		<message>/home/vagrant/www/piwik/plugins/Live/Widgets/GetVisitorProfilePopup.php(34): Recoverable Error - Argument 1 passed to Piwik\Plugins\Live\Widgets\GetVisitorProfilePopup::configureWidgetsList() must be an instance of Piwik\Widget\WidgetsList, instance of Piwik\WidgetsList given, called in /home/vagrant/www/piwik/core/WidgetsList.php on line 122 and defined - Piwik 2.13.1</message>
+		<tag>CoreUpdater</tag>
+		<datetime>2015-07-03 00:20:14</datetime>
+		<requestId>af14a</requestId>
+		<message>/home/vagrant/www/piwik/core/Updates/3.0.0-b1.php(182): Notice - Undefined index: idGoal - Piwik 3.0.0-b1</message>
 	</row>
 	<row>
 		<severity>WARNING</severity>
-		<tag>Dashboard</tag>
-		<datetime>2015-05-19 04:45:42</datetime>
-		<requestId>2c4ce</requestId>
-		<message>/home/vagrant/www/piwik/core/Plugin/Widget.php(51): Recoverable Error - Argument 1 passed to Piwik\Plugin\Widget::configureWidgetsList() must be an instance of Piwik\Widget\WidgetsList, instance of Piwik\WidgetsList given, called in /home/vagrant/www/piwik/core/WidgetsList.php on line 122 and defined - Piwik 2.13.1</message>
+		<tag>CoreUpdater</tag>
+		<datetime>2015-07-03 00:20:12</datetime>
+		<requestId>af14a</requestId>
+		<message>/home/vagrant/www/piwik/core/Updates/3.0.0-b1.php(32): Strict Notice - Non-static method Piwik\Updates\Updates_3_0_0_b1::getDashboardMigrationSqls() should not be called statically - Piwik 3.0.0-b1</message>
+	</row>
+	<row>
+		<severity>WARNING</severity>
+		<tag>CoreUpdater</tag>
+		<datetime>2015-07-03 00:20:10</datetime>
+		<requestId>af14a</requestId>
+		<message>/home/vagrant/www/piwik/core/Updates/3.0.0-b1.php(182): Notice - Undefined index: idGoal - Piwik 3.0.0-b1</message>
 	</row>
 	<row>
 		<severity>DEBUG</severity>
-		<tag>Piwik\Common</tag>
-		<datetime>2015-05-19 08:21:01</datetime>
-		<requestId>7c7d2</requestId>
-		<message>'idsite' =&gt; '1',</message>
+		<tag>UserCountry</tag>
+		<datetime>2015-07-03 00:20:09</datetime>
+		<requestId>d795c</requestId>
+		<message>'country_code' =&gt; 'us',</message>
 	</row>
 	<row>
 		<severity>WARNING</severity>
-		<tag>Dashboard</tag>
-		<datetime>2015-05-20 04:45:47</datetime>
-		<requestId>2c4ce</requestId>
-		<message>/home/vagrant/www/piwik/core/Plugin/Widget.php(51): Recoverable Error - Argument 1 passed to Piwik\Plugin\Widget::configureWidgetsList() must be an instance of Piwik\Widget\WidgetsList, instance of Piwik\WidgetsList given, called in /home/vagrant/www/piwik/core/WidgetsList.php on line 122 and defined - Piwik 2.13.1</message>
+		<tag>CoreUpdater</tag>
+		<datetime>2015-07-03 00:20:08</datetime>
+		<requestId>af14a</requestId>
+		<message>/home/vagrant/www/piwik/core/Updates/3.0.0-b1.php(182): Notice - Undefined index: idGoal - Piwik 3.0.0-b1</message>
 	</row>
 	<row>
 		<severity>WARNING</severity>
-		<tag>Dashboard</tag>
-		<datetime>2015-05-20 04:45:47</datetime>
-		<requestId>2c4ce</requestId>
-		<message>/home/vagrant/www/piwik/core/Plugin/Widget.php(51): Recoverable - Argument 1 passed to Piwik\Plugin\Widget::configureWidgetsList() must be an instance of Piwik\Widget\WidgetsList, instance of Piwik\WidgetsList given, called in /home/vagrant/www/piwik/core/WidgetsList.php on line 122 and defined - Piwik 2.13.1</message>
+		<tag>CoreUpdater</tag>
+		<datetime>2015-07-03 00:20:07</datetime>
+		<requestId>af14a</requestId>
+		<message>/home/vagrant/www/piwik/core/Updates/3.0.0-b1.php(182): Notice - Undefined index: idGoal - Piwik 3.0.0-b1</message>
 	</row>
 	<row>
 		<severity>DEBUG</severity>
@@ -51,23 +58,16 @@
 	</row>
 	<row>
 		<severity>WARNING</severity>
-		<tag>CoreUpdater</tag>
-		<datetime>2015-07-03 00:20:07</datetime>
-		<requestId>af14a</requestId>
-		<message>/home/vagrant/www/piwik/core/Updates/3.0.0-b1.php(182): Notice - Undefined index: idGoal - Piwik 3.0.0-b1</message>
+		<tag>Dashboard</tag>
+		<datetime>2015-05-20 04:45:47</datetime>
+		<requestId>2c4ce</requestId>
+		<message>/home/vagrant/www/piwik/core/Plugin/Widget.php(51): Recoverable - Argument 1 passed to Piwik\Plugin\Widget::configureWidgetsList() must be an instance of Piwik\Widget\WidgetsList, instance of Piwik\WidgetsList given, called in /home/vagrant/www/piwik/core/WidgetsList.php on line 122 and defined - Piwik 2.13.1</message>
 	</row>
 	<row>
 		<severity>WARNING</severity>
-		<tag>CoreUpdater</tag>
-		<datetime>2015-07-03 00:20:08</datetime>
-		<requestId>af14a</requestId>
-		<message>/home/vagrant/www/piwik/core/Updates/3.0.0-b1.php(182): Notice - Undefined index: idGoal - Piwik 3.0.0-b1</message>
-	</row>
-	<row>
-		<severity>DEBUG</severity>
-		<tag>UserCountry</tag>
-		<datetime>2015-07-03 00:20:09</datetime>
-		<requestId>d795c</requestId>
-		<message>'country_code' =&gt; 'us',</message>
+		<tag>Dashboard</tag>
+		<datetime>2015-05-20 04:45:47</datetime>
+		<requestId>2c4ce</requestId>
+		<message>/home/vagrant/www/piwik/core/Plugin/Widget.php(51): Recoverable Error - Argument 1 passed to Piwik\Plugin\Widget::configureWidgetsList() must be an instance of Piwik\Widget\WidgetsList, instance of Piwik\WidgetsList given, called in /home/vagrant/www/piwik/core/WidgetsList.php on line 122 and defined - Piwik 2.13.1</message>
 	</row>
 </result>

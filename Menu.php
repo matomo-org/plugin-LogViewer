@@ -21,7 +21,7 @@ class Menu extends \Piwik\Plugin\Menu
     public function configureAdminMenu(MenuAdmin $menu)
     {
         if (Piwik::hasUserSuperUserAccess()) {
-            $menu->addDiagnosticItem('LogViewer_LogViewer', $this->urlForDefaultAction(), $orderId = 30);
+            $menu->addDiagnosticItem('LogViewer_LogViewer', $this->urlForDefaultAction(array('limit' => 100)), $orderId = 30);
         }
     }
 }

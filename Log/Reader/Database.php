@@ -25,6 +25,11 @@ class Database implements Reader
         $this->table = Common::prefixTable('logger_message');
     }
 
+    /**
+     * Reads latest log lines first.
+     *
+     * @return Line|void  Returns null once no more log lines available
+     */
     public function nextLine()
     {
         if (empty($this->lines)) {

@@ -38,7 +38,12 @@ class LogReaderFactory
         }
     }
 
-    public function getConfiguredLogReader()
+    public function getAvailableLogReaders()
+    {
+        return $this->supportedLogReader;
+    }
+
+    public function getConfiguredLogReaders()
     {
         $logWriters = Config::getInstance()->log['log_writers'];
         if (!is_array($logWriters)) {
@@ -57,7 +62,7 @@ class LogReaderFactory
 
     private function tryToDetectBestLogReader()
     {
-        $logWriters = $this->getConfiguredLogReader();
+        $logWriters = $this->getConfiguredLogReaders();
 
         if (count($logWriters) === 1) {
             return array_shift($logWriters);

@@ -47,6 +47,7 @@ class QueryTest extends \PHPUnit_Framework_TestCase
             array($expectedMatch = true, $query = '^test$', $line = 'test'),
             array($expectedMatch = false, $query = '^tes$', $line = 'test'),
             array($expectedMatch = true, $query = 'te/s', $line = 'te/st'), // should escape slash
+            array($expectedMatch = true, $query = "te's", $line = "te'st"),
         );
     }
 

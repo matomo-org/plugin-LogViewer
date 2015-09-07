@@ -29,6 +29,7 @@ class LogViewer extends \Piwik\Plugin
 
     public function getJsFiles(&$jsFiles)
     {
+        $jsFiles[] = "plugins/LogViewer/libs/phpjs/preg_quote.js";
         $jsFiles[] = "plugins/LogViewer/angularjs/log-viewer/log-viewer.controller.js";
         $jsFiles[] = "plugins/LogViewer/angularjs/log-viewer/log-viewer.directive.js";
     }
@@ -36,15 +37,23 @@ class LogViewer extends \Piwik\Plugin
     public function getClientSideTranslationKeys(&$translationKeys)
     {
         $translationKeys[] = 'General_Search';
+        $translationKeys[] = 'LogViewer_LogViewer';
         $translationKeys[] = 'LogViewer_SearchPattern';
         $translationKeys[] = 'LogViewer_LogViewer';
         $translationKeys[] = 'General_Plugin';
         $translationKeys[] = 'General_Date';
         $translationKeys[] = 'LogViewer_RequestId';
         $translationKeys[] = 'LogViewer_Severity';
+        $translationKeys[] = 'LogViewer_AnySeverity';
         $translationKeys[] = 'LogViewer_Tag';
         $translationKeys[] = 'LogViewer_Message';
         $translationKeys[] = 'General_Previous';
         $translationKeys[] = 'General_Next';
+        $translationKeys[] = 'General_SearchNoResults';
+        $translationKeys[] = 'General_ClickToSearch';
+        $translationKeys[] = 'LogViewer_UseRegExp';
+        $translationKeys[] = 'LogViewer_SearchHelp';
+        $translationKeys[] = 'LogViewer_NoSupportedLogWriterConfiguredTitle';
+        $translationKeys[] = 'LogViewer_NoSupportedLogWriterConfiguredMessage';
     }
 }

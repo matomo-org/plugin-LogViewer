@@ -8,7 +8,6 @@
 
 namespace Piwik\Plugins\LogViewer\tests\System;
 
-use Piwik\Plugins\LogViewer\tests\Fixtures\SimpleFixtureTrackFewVisits;
 use Piwik\Tests\Framework\TestCase\SystemTestCase;
 
 /**
@@ -18,11 +17,6 @@ use Piwik\Tests\Framework\TestCase\SystemTestCase;
  */
 class ApiTest extends SystemTestCase
 {
-    /**
-     * @var SimpleFixtureTrackFewVisits
-     */
-    public static $fixture = null; // initialized below class definition
-
     /**
      * @dataProvider getApiForTesting
      */
@@ -66,5 +60,3 @@ class ApiTest extends SystemTestCase
     }
 
 }
-
-ApiTest::$fixture = new SimpleFixtureTrackFewVisits();

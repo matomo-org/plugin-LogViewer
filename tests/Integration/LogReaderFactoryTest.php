@@ -35,31 +35,37 @@ class LogReaderFactoryTest extends IntegrationTestCase
         $this->factory = new LogReaderFactory();
     }
 
+    public function test_getAvailableLogReaders()
+    {
+        $this->setLogWriters(array());
+        $this->assertSame(array('file', 'database'), $this->factory->getAvailableLogReaders());
+    }
+
     public function test_getConfiguredLogReader_NoLogWriterConfigured()
     {
         $this->setLogWriters(array());
-        $this->assertSame(array(), $this->factory->getConfiguredLogReader());
+        $this->assertSame(array(), $this->factory->getConfiguredLogReaders());
     }
 
     public function test_getConfiguredLogReader_shouldNotRemoveAny_IfAllAreValid()
     {
         $this->setLogWriters(array('file', 'database'));
-        $this->assertSame(array('file', 'database'), $this->factory->getConfiguredLogReader());
+        $this->assertSame(array('file', 'database'), $this->factory->getConfiguredLogReaders());
 
         $this->setLogWriters(array('file'));
-        $this->assertSame(array('file'), $this->factory->getConfiguredLogReader());
+        $this->assertSame(array('file'), $this->factory->getConfiguredLogReaders());
     }
 
     public function test_getConfiguredLogReader_shouldIgnoreScreenAsItIsNotSupportedReader()
     {
         $this->setLogWriters(array('screen', 'file', 'database'));
-        $this->assertSame(array('file', 'database'), $this->factory->getConfiguredLogReader());
+        $this->assertSame(array('file', 'database'), $this->factory->getConfiguredLogReaders());
     }
 
     public function test_getConfiguredLogReader_WrongLogWriterFormat()
     {
         $this->setLogWriters('test');
-        $this->assertSame(array(), $this->factory->getConfiguredLogReader());
+        $this->assertSame(array(), $this->factory->getConfiguredLogReaders());
     }
 
     public function test_make_shouldMakeRequested_LogReader()

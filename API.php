@@ -44,12 +44,20 @@ class API extends \Piwik\Plugin\API
         return $return;
     }
 
-    public function getConfiguredLogReader()
+    public function getAvailableLogReaders()
     {
         Piwik::checkUserHasSuperUserAccess();
 
         $logReaderFactory = new LogReaderFactory();
-        return $logReaderFactory->getConfiguredLogReader();
+        return $logReaderFactory->getAvailableLogReaders();
+    }
+
+    public function getConfiguredLogReaders()
+    {
+        Piwik::checkUserHasSuperUserAccess();
+
+        $logReaderFactory = new LogReaderFactory();
+        return $logReaderFactory->getConfiguredLogReaders();
     }
 
 }

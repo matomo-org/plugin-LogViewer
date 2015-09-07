@@ -12,8 +12,6 @@ use Piwik\Config;
 
 /**
  * @group LogViewer
- * @group ApiTest
- * @group Api
  * @group Plugins
  */
 class IntegrationTestCase extends \Piwik\Tests\Framework\TestCase\IntegrationTestCase

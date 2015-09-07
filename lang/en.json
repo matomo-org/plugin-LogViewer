@@ -2,9 +2,14 @@
   "LogViewer": {
     "LogViewer": "Log Viewer",
     "Severity": "Severity",
+    "AnySeverity": "Any Severity",
     "SearchPattern": "Search pattern",
+    "SearchHelp": "Search is case insensitive. If regular expressions are enabled, characters like '[' might be needed to be escaped (eg '\\[').",
     "Tag": "Tag",
-    "RequestId": "Request ID",
-    "Message": "message"
+    "RequestId": "Request Id",
+    "Message": "Message",
+    "NoSupportedLogWriterConfiguredTitle": "No supported log writer configured",
+    "NoSupportedLogWriterConfiguredMessage": "If one was configured in the past, you can still view old logs but new ones won't be shown. Read more about %show to configure a supported log writer%s. Supported are: %s",
+    "UseRegExp": "Use regular expressions"
   }
 }

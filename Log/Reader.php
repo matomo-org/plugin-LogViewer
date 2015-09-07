@@ -11,6 +11,10 @@ namespace Piwik\Plugins\LogViewer\Log;
 interface Reader
 {
     /**
+     * Returns a log line.
+     *
+     * Latest log messages should be returned first.
+     *
      * @return Line|null Returns next log line or null if end of log
      */
     public function nextLine();

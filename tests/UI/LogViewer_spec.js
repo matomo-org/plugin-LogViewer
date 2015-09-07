@@ -12,20 +12,92 @@ describe("LogViewer", function () {
 
     var generalParams = 'idSite=1&period=day&date=2010-01-03';
 
-    before(function () {
+    function searchForText(page, textToAppendToSearchField)
+    {
+        page.sendKeys(".logViewer .search", textToAppendToSearchField);
+        page.click('.logViewer .searchIcon');
+        page.wait(100);
+    }
+
+    function loadLogViewerPage(page)
+    {
+        page.load("?" + generalParams + "&module=LogViewer&action=index");
+    }
+
+    function overrideTestEnvironment(logWriters)
+    {
         testEnvironment.pluginsToLoad = ['LogViewer'];
-        testEnvironment.configOverride = {log_writers: ['file']};
+        testEnvironment.configOverride = {
+            log: {
+                'log_writers': logWriters
+            }
+        };
         testEnvironment.save();
+    }
+
+    beforeEach(function () {
+        overrideTestEnvironment(['file']);
     });
 
     it('should show a simple log page', function (done) {
         expect.screenshot('logview_inital').to.be.captureSelector('#content', function (page) {
-            page.load("?" + generalParams + "&module=LogViewer&action=index");
+            loadLogViewerPage(page);
         }, done);
     });
 
     it('should be visible in the menu', function (done) {
         expect.screenshot('link_in_menu').to.be.captureSelector('li:contains(Diagnostic)', function (page) {
+        }, done);
+    });
+
+    it('should be able to search', function (done) {
+        expect.screenshot('search').to.be.captureSelector('#content', function (page) {
+            searchForText(page, 'Widget');
+        }, done);
+    });
+
+    it('should show a message if there are no results', function (done) {
+        expect.screenshot('no_results').to.be.captureSelector('#content', function (page) {
+            searchForText(page, 'rwererer');
+        }, done);
+    });
+
+    it('should automatically preselect configured log writer', function (done) {
+        expect.screenshot('preselected_logwriter').to.be.captureSelector('#content', function (page) {
+            overrideTestEnvironment(['database']);
+            loadLogViewerPage(page);
+        }, done);
+    });
+
+    it('should show a message if there are no results', function (done) {
+        expect.screenshot('info_no_supported_writer').to.be.captureSelector('#content', function (page) {
+            overrideTestEnvironment(['']);
+            loadLogViewerPage(page);
+        }, done);
+    });
+
+    it('should filter for severity when clicking on one', function (done) {
+        expect.screenshot('filter_severity').to.be.captureSelector('#content', function (page) {
+            loadLogViewerPage(page);
+            page.click('tr:nth-child(2) td.severity');
+        }, done);
+    });
+
+    it('should filter for date when clicking on one', function (done) {
+        expect.screenshot('filter_date').to.be.captureSelector('#content', function (page) {
+            page.click('tr:nth-child(2) td.date');
+        }, done);
+    });
+
+    it('should filter for requestId when clicking on one', function (done) {
+        expect.screenshot('filter_requestId').to.be.captureSelector('#content', function (page) {
+            page.click('tr:nth-child(2) td.requestId');
+        }, done);
+    });
+
+    it('should filter for tag when clicking on one', function (done) {
+        expect.screenshot('filter_tag').to.be.captureSelector('#content', function (page) {
+            page.click('tr:nth-child(2) td.tag');
         }, done);
     });
 });

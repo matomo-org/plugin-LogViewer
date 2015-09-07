@@ -51,8 +51,8 @@ class FileTest extends IntegrationTestCase
 
     public function test_nextLine_tryToReadFirstLines()
     {
-        $this->assertSame('WARNING Dashboard[2015-05-19 04:45:40] [2c4ce] /home/vagrant/www/piwik/core/Plugin/Widget.php(51): Recoverable Error - Argument 1 passed to Piwik\Plugin\Widget::configureWidgetsList() must be an instance of Piwik\Widget\WidgetsList, instance of Piwik\WidgetsList given, called in /home/vagrant/www/piwik/core/WidgetsList.php on line 122 and defined - Piwik 2.13.1 - Please report this message in the Piwik forums: http://forum.piwik.org (please do a search first as it might have been reported already)', $this->file->nextLine()->content);
-        $this->assertSame('WARNING Live[2015-05-19 04:45:41] [2c4ce] /home/vagrant/www/piwik/plugins/Live/Widgets/GetVisitorProfilePopup.php(34): Recoverable Error - Argument 1 passed to Piwik\Plugins\Live\Widgets\GetVisitorProfilePopup::configureWidgetsList() must be an instance of Piwik\Widget\WidgetsList, instance of Piwik\WidgetsList given, called in /home/vagrant/www/piwik/core/WidgetsList.php on line 122 and defined - Piwik 2.13.1 - Please report this message in the Piwik forums: http://forum.piwik.org (please do a search first as it might have been reported already)', $this->file->nextLine()->content);
+        $this->assertSame('WARNING CoreHome[2015-07-03 06:22:38] [082d8] /home/vagrant/www/piwik/plugins/CoreHome/Columns/UserId.php(69): Warning - Invalid argument supplied for foreach() - Piwik 3.0.0-b1 - Please report this message in the Piwik forums: http://forum.piwik.org (please do a search first as it might have been reported already)', $this->file->nextLine()->content);
+        $this->assertSame('WARNING CoreUpdater[2015-07-03 00:20:14] [af14a] /home/vagrant/www/piwik/core/Updates/3.0.0-b1.php(182): Notice - Undefined index: idGoal - Piwik 3.0.0-b1 - Please report this message in the Piwik forums: http://forum.piwik.org (please do a search first as it might have been reported already)', $this->file->nextLine()->content);
     }
 
     public function test_nextLine_shouldReturnNullOnceEndOfFileReached()

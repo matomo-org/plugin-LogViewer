@@ -8,6 +8,7 @@
 
 namespace Piwik\Plugins\LogViewer;
 
+use Piwik\Common;
 use Piwik\Piwik;
 
 /**
@@ -22,9 +23,11 @@ class Controller extends \Piwik\Plugin\ControllerAdmin
     {
         Piwik::checkUserHasSuperUserAccess();
 
+        $limit = Common::getRequestVar('limit', 100, 'int');
+
         // Render the Twig template templates/index.twig and assign the view variable answerToLife to the view.
         return $this->renderTemplate('index', array(
-            'limit' => 50
+            'limit' => $limit
         ));
     }
 }
