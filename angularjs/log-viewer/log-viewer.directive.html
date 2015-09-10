@@ -40,11 +40,11 @@
         </thead>
 
         <tbody>
-            <tr ng-repeat="log in logViewer.logs">
-                <td class="severity" ng-click="logViewer.searchSeverity(log.severity)">{{ log.severity }}</td>
-                <td class="tag" ng-click="logViewer.searchText(log.tag)">{{ log.tag }}</td>
-                <td class="date" ng-click="logViewer.searchDate(log.datetime)">{{ log.datetime }}</td>
-                <td class="requestId" ng-click="logViewer.searchRequestId(log.requestId)">{{ log.requestId }}</td>
+            <tr ng-repeat="log in logViewer.logs" ng-if="log.message">
+                <td class="severity" ng-class="{selectable: log.severity}" ng-click="logViewer.searchSeverity(log.severity)">{{ log.severity || '-' }}</td>
+                <td class="tag" ng-class="{selectable: log.tag}" ng-click="logViewer.searchText(log.tag)">{{ log.tag || '-' }}</td>
+                <td class="date" ng-class="{selectable: log.datetime}" ng-click="logViewer.searchDate(log.datetime)">{{ log.datetime || '-' }}</td>
+                <td class="requestId" ng-class="{selectable: log.requestId}" ng-click="logViewer.searchRequestId(log.requestId)">{{ log.requestId || '-' }}</td>
                 <td class="message">{{ log.message }}</td>
             </tr>
             <tr ng-if="!logViewer.isLoading && ((logViewer.logs|length) == 0)">

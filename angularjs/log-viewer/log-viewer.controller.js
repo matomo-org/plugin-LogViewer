@@ -93,11 +93,17 @@
         };
 
         this.searchSeverity = function (severity) {
+            if (!severity) {
+                return;
+            }
             this.selectedSeverity = ('' + severity).toUpperCase();
             this.update();
         };
 
         this.searchDate = function (datetime) {
+            if (!datetime) {
+                return;
+            }
             this.selectedSeverity = '';
             this.query = '\\[' + datetime.substr(0, 10) + '.{9}\\]';
             this.useRegExp = true;
@@ -105,10 +111,16 @@
         };
 
         this.searchRequestId = function (requestId) {
+            if (!requestId) {
+                return;
+            }
             this.searchText('[' + requestId + ']');
         };
 
         this.searchText = function (text) {
+            if (!text) {
+                return;
+            }
             this.selectedSeverity = '';
             this.query = text;
             if (this.useRegExp) {
