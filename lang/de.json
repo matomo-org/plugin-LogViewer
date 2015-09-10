@@ -1,0 +1,7 @@
+{
+    "LogViewer": {
+        "LogViewer": "Log-Anzeige",
+        "SearchPattern": "Suchmuster",
+        "UseRegExp": "Verwende reguläre Ausdrücke"
+    }
+}

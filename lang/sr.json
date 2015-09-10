@@ -1,0 +1,15 @@
+{
+    "LogViewer": {
+        "LogViewer": "Prikaz zapisa",
+        "Severity": "Severity",
+        "AnySeverity": "Any Severity",
+        "SearchPattern": "Izraz za pretragu",
+        "SearchHelp": "Pretraga razlikuje velika i mala slova. Ukoliko su uključeni regularni izrazi, znake poput '[' bi trebalo pisati '\\[' (escape).",
+        "Tag": "Oznaka",
+        "RequestId": "Identifikator zahteva",
+        "Message": "Poruka",
+        "NoSupportedLogWriterConfiguredTitle": "Program za pravljenje zapisa nije podešen",
+        "NoSupportedLogWriterConfiguredMessage": "If one was configured in the past, you can still view old logs but new ones won't be shown. Read more about %show to configure a supported log writer%s. Supported are: %s",
+        "UseRegExp": "Koristi regularne izraze"
+    }
+}

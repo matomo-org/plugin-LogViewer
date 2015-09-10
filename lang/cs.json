@@ -1,0 +1,15 @@
+{
+    "LogViewer": {
+        "LogViewer": "Prohlížeč záznamu",
+        "Severity": "Závažnost",
+        "AnySeverity": "Jakákoliv závažnost",
+        "SearchPattern": "Vzor pro vyhledávání",
+        "SearchHelp": "Vyhledávání nerozlišuje velikost písmen. Pokud jsou povoleny regulární výrazy, znaky jako '[' možná bude nutné escapovat (t. j. '\\[').",
+        "Tag": "Značka",
+        "RequestId": "ID požadavku",
+        "Message": "Zpráva",
+        "NoSupportedLogWriterConfiguredTitle": "Není nakonfigurován žádný podporovaný zapisovač záznamu",
+        "NoSupportedLogWriterConfiguredMessage": "Pokud byl nějaký nakonfigurován v minulosti, budete moct prohlížet staré záznamy, ale nové nebudou zobrazeny. Zjistěte víc o tom, jak %snakonfigurovat podporovaný zapisovač záznamů%s. Podporované jsou %s",
+        "UseRegExp": "Použít regulární výrazy"
+    }
+}

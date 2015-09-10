@@ -1,0 +1,15 @@
+{
+    "LogViewer": {
+        "LogViewer": "Log Viewer",
+        "Severity": "Precisione",
+        "AnySeverity": "Qualunque precisione",
+        "SearchPattern": "Modello di ricerca",
+        "SearchHelp": "La ricerca tiene conto delle maiuscole. Se sono abilitate le espressioni regolari, i caratteri come '[' potrebbero aver bisogno di essere saltati (es. '\\[').",
+        "Tag": "Tag",
+        "RequestId": "ID richiesta",
+        "Message": "Messaggio",
+        "NoSupportedLogWriterConfiguredTitle": "Non è configurato alcun log writer supportato",
+        "NoSupportedLogWriterConfiguredMessage": "Se ne è stato configurato uno in passato, puoi ancora vedere i vecchi log ma i nuovi non verranno mostrati. Leggi di più su %scome configurare un log writer supportato%s. Quelli supportati sono: %s",
+        "UseRegExp": "Usa espressioni regolari"
+    }
+}
