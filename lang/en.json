@@ -10,6 +10,9 @@
     "Message": "Message",
     "NoSupportedLogWriterConfiguredTitle": "No supported log writer configured",
     "NoSupportedLogWriterConfiguredMessage": "If one was configured in the past, you can still view old logs but new ones won't be shown. Read more about %show to configure a supported log writer%s. Supported are: %s",
-    "UseRegExp": "Use regular expressions"
+    "UseRegExp": "Use regular expressions",
+    "ClickToSearchForThis": "Click to search for this term",
+    "CurrentLogConfigIs": "Logging is configured as follows: %s, click to read more about configuring logging.",
+    "ExportThisSearch": "Export this search as %s containing the latest %s entries. The download may take a few minutes..."
   }
 }

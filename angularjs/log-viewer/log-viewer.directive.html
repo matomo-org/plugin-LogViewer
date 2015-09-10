@@ -25,6 +25,15 @@
         <input type="checkbox"
                class="useRegExp"
                ng-model="logViewer.useRegExp"> {{ 'LogViewer_UseRegExp'|translate }}
+
+        <span ng-click="logViewer.update()" class="icon-reload"></span>
+        <a title="{{ 'LogViewer_ExportThisSearch'|translate:'TSV':5000 }}"
+           class="icon-export"
+           ng-href="?module=API&method=LogViewer.getLogEntries&query={{ logViewer.buildQuery() }}&format=TSV&token_auth={{ logViewer.tokenAuth }}&page=0&limitPerPage=5000"></a>
+        <a title="{{ 'LogViewer_CurrentLogConfigIs'|translate:(logViewer.logConfig|json) }}"
+              class="icon-info"
+              target="_blank"
+              href="?module=Proxy&action=redirect&url=https://piwik.org/faq/troubleshooting/faq_115/"></a>
         <br />
     </p>
 
@@ -41,10 +50,22 @@
 
         <tbody>
             <tr ng-repeat="log in logViewer.logs" ng-if="log.message">
-                <td class="severity" ng-class="{selectable: log.severity}" ng-click="logViewer.searchSeverity(log.severity)">{{ log.severity || '-' }}</td>
-                <td class="tag" ng-class="{selectable: log.tag}" ng-click="logViewer.searchText(log.tag)">{{ log.tag || '-' }}</td>
-                <td class="date" ng-class="{selectable: log.datetime}" ng-click="logViewer.searchDate(log.datetime)">{{ log.datetime || '-' }}</td>
-                <td class="requestId" ng-class="{selectable: log.requestId}" ng-click="logViewer.searchRequestId(log.requestId)">{{ log.requestId || '-' }}</td>
+                <td class="severity"
+                    title="{{ log.severity ? ('LogViewer_ClickToSearchForThis'|translate) : '' }}"
+                    ng-class="{selectable: log.severity}"
+                    ng-click="logViewer.searchSeverity(log.severity)">{{ log.severity || '-' }}</td>
+                <td class="tag"
+                    title="{{ log.tag ? ('LogViewer_ClickToSearchForThis'|translate) : '' }}"
+                    ng-class="{selectable: log.tag}"
+                    ng-click="logViewer.searchText(log.tag)">{{ log.tag || '-' }}</td>
+                <td class="date"
+                    title="{{ log.datetime ? ('LogViewer_ClickToSearchForThis'|translate) : '' }}"
+                    ng-class="{selectable: log.datetime}"
+                    ng-click="logViewer.searchDate(log.datetime)">{{ log.datetime || '-' }}</td>
+                <td class="requestId"
+                    title="{{ log.requestId ? ('LogViewer_ClickToSearchForThis'|translate) : '' }}"
+                    ng-class="{selectable: log.requestId}"
+                    ng-click="logViewer.searchRequestId(log.requestId)">{{ log.requestId || '-' }}</td>
                 <td class="message">{{ log.message }}</td>
             </tr>
             <tr ng-if="!logViewer.isLoading && ((logViewer.logs|length) == 0)">

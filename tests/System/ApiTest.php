@@ -28,7 +28,7 @@ class ApiTest extends SystemTestCase
     public function getApiForTesting()
     {
         $apiToTest   = array();
-        $apiToTest[] = array(array('LogViewer'),
+        $apiToTest[] = array(array('LogViewer.getLogEntries', 'LogViewer.getAvailableLogReaders', 'LogViewer.getConfiguredLogReaders'),
             array(
                 'testSuffix' => '',
             )

@@ -79,25 +79,25 @@ describe("LogViewer", function () {
     it('should filter for severity when clicking on one', function (done) {
         expect.screenshot('filter_severity').to.be.captureSelector('#content', function (page) {
             loadLogViewerPage(page);
-            page.click('tr:nth-child(2) td.severity');
+            page.click('tr:nth-child(1) td.severity');
         }, done);
     });
 
     it('should filter for date when clicking on one', function (done) {
         expect.screenshot('filter_date').to.be.captureSelector('#content', function (page) {
-            page.click('tr:nth-child(2) td.date');
+            page.click('tr:nth-child(1) td.date');
         }, done);
     });
 
     it('should filter for requestId when clicking on one', function (done) {
         expect.screenshot('filter_requestId').to.be.captureSelector('#content', function (page) {
-            page.click('tr:nth-child(2) td.requestId');
+            page.click('tr:nth-child(1) td.requestId');
         }, done);
     });
 
     it('should filter for tag when clicking on one', function (done) {
         expect.screenshot('filter_tag').to.be.captureSelector('#content', function (page) {
-            page.click('tr:nth-child(2) td.tag');
+            page.click('tr:nth-child(1) td.tag');
         }, done);
     });
 });

@@ -71,7 +71,6 @@ class API extends \Piwik\Plugin\API
         return $logReaderFactory->getAvailableLogReaders();
     }
 
-
     /**
      * Returns a list of all configured log readers that are supported (available).
      *
@@ -83,6 +82,18 @@ class API extends \Piwik\Plugin\API
 
         $logReaderFactory = new LogReaderFactory();
         return $logReaderFactory->getConfiguredLogReaders();
+    }
+
+    /**
+     * Returns a list of all configured log readers that are supported (available).
+     *
+     * @return string[]
+     */
+    public function getLogConfig()
+    {
+        Piwik::checkUserHasSuperUserAccess();
+
+        return Config::getInstance()->log;
     }
 
 }

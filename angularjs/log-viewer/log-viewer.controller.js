@@ -7,9 +7,9 @@
 (function () {
     angular.module('piwikApp').controller('LogViewerController', LogViewerController);
 
-    LogViewerController.$inject = ['$scope', 'piwikApi'];
+    LogViewerController.$inject = ['$scope', 'piwikApi', 'piwik'];
 
-    function LogViewerController($scope, piwikApi) {
+    function LogViewerController($scope, piwikApi, piwik) {
         var self = this;
 
         this.page = 0;
@@ -20,6 +20,7 @@
         this.useRegExp = false;
         this.severities = ['DEBUG', 'INFO', 'NOTICE', 'WARNING', 'ERROR', 'CRITICAL', 'ALERT', 'EMERGENCY'];
         this.selectedSeverity = '';
+        this.tokenAuth = piwik.token_auth;
 
         var fetchLogEntriesPromise;
 
@@ -58,8 +59,13 @@
             }
         });
 
-        this.update = function () {
-            this.isLoading = true;
+        piwikApi.fetch({
+            method: 'LogViewer.getLogConfig'
+        }).then(function (config) {
+            self.logConfig = config;
+        })
+
+        this.buildQuery = function (){
 
             var query = this.query;
             if (!this.useRegExp) {
@@ -69,6 +75,14 @@
             if (this.selectedSeverity) {
                 query = '^' + this.selectedSeverity + '(.*)' + query;
             }
+
+            return query;
+        }
+
+        this.update = function () {
+            this.isLoading = true;
+
+            var query = this.buildQuery();
 
             if (fetchLogEntriesPromise) {
                 fetchLogEntriesPromise.abort();

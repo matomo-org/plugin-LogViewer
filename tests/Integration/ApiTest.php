@@ -76,6 +76,24 @@ class ApiTest extends IntegrationTestCase
         $this->api->getLogEntries();
     }
 
+    /**
+     * @expectedException \Exception
+     * @expectedExceptionMessage checkUserHasSuperUserAccess Fake exception
+     */
+    public function test_getLogConfig_shouldThrowExceptionIfNotEnoughPermission()
+    {
+        FakeAccess::clearAccess(false);
+        $this->api->getLogConfig();
+    }
+
+    public function test_getLogConfig_shouldReturnLogConfig()
+    {
+        $config = $this->api->getLogConfig();
+
+        $this->assertNotEmpty($config['log_level']);
+        $this->assertInternalType('array', $config['log_writers']);
+    }
+
     public function test_getLogEntries_nothingSpecified_shouldReturnAllLogs_AndFindSourceAutomatically()
     {
         $this->setLogWriters(array('file'));
