@@ -59,4 +59,11 @@ class ApiTest extends SystemTestCase
         return dirname(__FILE__);
     }
 
+    public static function provideContainerConfigBeforeClass()
+    {
+        return array(
+            'log.file.filename' => PIWIK_INCLUDE_PATH . '/plugins/LogViewer/tests/resources/piwik.log'
+        );
+    }
+
 }

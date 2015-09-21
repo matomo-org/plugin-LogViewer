@@ -21,7 +21,7 @@ describe("LogViewer", function () {
 
     function loadLogViewerPage(page)
     {
-        page.load("?" + generalParams + "&module=LogViewer&action=index");
+        page.load("?" + generalParams + "&module=LogViewer&action=index&uitest=1");
     }
 
     function overrideTestEnvironment(logWriters)
