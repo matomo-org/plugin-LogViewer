@@ -26,7 +26,7 @@
                class="useRegExp"
                ng-model="logViewer.useRegExp"> {{ 'LogViewer_UseRegExp'|translate }}
 
-        <span ng-click="logViewer.update()" class="icon-reload"></span>
+        <a ng-click="logViewer.update()" class="icon-reload"></a>
         <a title="{{ 'LogViewer_ExportThisSearch'|translate:'TSV':5000 }}"
            class="icon-export"
            ng-href="?module=API&method=LogViewer.getLogEntries&query={{ logViewer.buildQuery() }}&format=TSV&token_auth={{ logViewer.tokenAuth }}&page=0&limitPerPage=5000"></a>
