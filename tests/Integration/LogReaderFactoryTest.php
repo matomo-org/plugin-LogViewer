@@ -117,5 +117,11 @@ class LogReaderFactoryTest extends IntegrationTestCase
         $this->factory->make(false);
     }
 
+    public function provideContainerConfig()
+    {
+        return array(
+            'log.file.filename' => PIWIK_INCLUDE_PATH . '/plugins/LogViewer/tests/resources/piwik.log'
+        );
+    }
 
 }
