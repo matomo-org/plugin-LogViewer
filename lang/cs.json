@@ -10,6 +10,9 @@
         "Message": "Zpráva",
         "NoSupportedLogWriterConfiguredTitle": "Není nakonfigurován žádný podporovaný zapisovač záznamu",
         "NoSupportedLogWriterConfiguredMessage": "Pokud byl nějaký nakonfigurován v minulosti, budete moct prohlížet staré záznamy, ale nové nebudou zobrazeny. Zjistěte víc o tom, jak %snakonfigurovat podporovaný zapisovač záznamů%s. Podporované jsou %s",
-        "UseRegExp": "Použít regulární výrazy"
+        "UseRegExp": "Použít regulární výrazy",
+        "ClickToSearchForThis": "Klikněte zde pro vyhledání tohoto termínu",
+        "CurrentLogConfigIs": "Logování je nastaveno jako %s, zde klikněte pro více informací o konfiguraci logování.",
+        "ExportThisSearch": "Exportovat toto vyhledávání jako %s obsahující posledních %s záznamů. Stažení může pár minut trvat..."
     }
 }

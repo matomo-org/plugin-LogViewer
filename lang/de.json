@@ -1,7 +1,16 @@
 {
     "LogViewer": {
         "LogViewer": "Log-Anzeige",
+        "Severity": "Schwere",
+        "AnySeverity": "Jeder Schweregrad",
         "SearchPattern": "Suchmuster",
-        "UseRegExp": "Verwende reguläre Ausdrücke"
+        "SearchHelp": "Suche berücksichtigt keine Groß- und Kleinschreibung. Falls reguläre Ausdrücke verwendet werden, kann es notwendig werden dass Zeichen wie '[' maskiert werden müssen (d.h. '\\[')",
+        "Tag": "Tag",
+        "RequestId": "Anfrage Id",
+        "Message": "Meldung",
+        "NoSupportedLogWriterConfiguredTitle": "Kein unterstützter log Schreiber konfiguriert.",
+        "UseRegExp": "Verwende reguläre Ausdrücke",
+        "ClickToSearchForThis": "Klicken um nach diesem Begriff zu suchen",
+        "ExportThisSearch": "Exportiere diese Suche als %s. Dies beinhaltet die letzten %s Einträge. Der Download kann einige Minuten in Anspruch nehmen..."
     }
 }

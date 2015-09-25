@@ -1,0 +1,14 @@
+{
+    "LogViewer": {
+        "LogViewer": "Visor do rexistro",
+        "Severity": "Gravidade",
+        "AnySeverity": "Calquera gravidade",
+        "SearchPattern": "Buscar patrón",
+        "SearchHelp": "A busca non distingue entre maiúsculas e minúsculas. Se se activan as expresións regulares pode que haxa que escapar algúns caracteres, como «[» (p.ex. «\\[»).",
+        "Tag": "Etiqueta",
+        "RequestId": "Solicitar identificador",
+        "Message": "Mensaxe",
+        "UseRegExp": "Usar expresións regulares",
+        "ClickToSearchForThis": "Prema para buscar este termo"
+    }
+}

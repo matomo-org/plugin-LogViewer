@@ -1,0 +1,18 @@
+{
+    "LogViewer": {
+        "LogViewer": "Log Viewer",
+        "Severity": "Zwaarte",
+        "AnySeverity": "Elke zwaarte",
+        "SearchPattern": "Zoek patroon",
+        "SearchHelp": "Zoeken is hoofdlettergevoelig. Als reguliere expressies zijn ingeschakeld, is het mogelijk dat karakters als '[' moeten worden ge-escaped (bijv. '\\[').",
+        "Tag": "Tag",
+        "RequestId": "Aanvraag Id",
+        "Message": "Bericht",
+        "NoSupportedLogWriterConfiguredTitle": "Geen ondersteunde log schrijver geconfigureerd",
+        "NoSupportedLogWriterConfiguredMessage": "Indien er eerder één was geconfigureerd, dan kun je nog steeds de oude logs bekijken maar nieuwe logs zullen niet worden weergegeven. Lees meer over %s hoe een ondersteunde log schrijvers te configureren.%s Ondersteunde formaten zijn: %s",
+        "UseRegExp": "Gebruik reguliere expressies",
+        "ClickToSearchForThis": "Klik om deze term op te zoeken",
+        "CurrentLogConfigIs": "Logging is als volgt geconfigureerd: %s. Klik om meer te lezen over het configureren van logging.",
+        "ExportThisSearch": "Exporteer deze zoekopdracht als %s met de laatste %s regels. De download kan enkele minuten duren."
+    }
+}

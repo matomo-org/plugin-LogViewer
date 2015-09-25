@@ -1,0 +1,17 @@
+{
+    "LogViewer": {
+        "LogViewer": "Visualizador de Log",
+        "Severity": "Gravidade",
+        "AnySeverity": "Qualquer Gravidade",
+        "SearchPattern": "Buscar padrão",
+        "SearchHelp": "A pesquisa não diferencia maiúsculas de minúsculas. Se expressões regulares estão habilitadas, caracteres como, e.g., '[' podem ser necessários para serem escapados (eg '\\[').",
+        "Tag": "Tag",
+        "RequestId": "Solicitar Id",
+        "Message": "Mensagem",
+        "NoSupportedLogWriterConfiguredTitle": "Nenhum escritor de log suportado configurado",
+        "NoSupportedLogWriterConfiguredMessage": "Se algum foi configurado antes, você ainda pode ver os logs antigos, mas os novos não serão exibidos. Leia mais sobre %scomo configurar um gravador%s de log suportado. Os suportados são: %s",
+        "UseRegExp": "Utilizar expressões regulares",
+        "ClickToSearchForThis": "Clique para buscar por esta palavra",
+        "CurrentLogConfigIs": "O registo é configurado da seguinte forma: %s, clique para ler mais sobre configuração de registro."
+    }
+}
