@@ -100,7 +100,7 @@
             }).then(function (logs) {
                 self.isLoading = false;
                 self.logs = logs;
-            }).catch(function (error) {
+            })['catch'](function (error) {
                 self.isLoading = false;
                 createNotification().show(error, {context: 'error'});
             });
