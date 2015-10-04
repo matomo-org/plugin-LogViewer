@@ -29,7 +29,8 @@ describe("LogViewer", function () {
         testEnvironment.pluginsToLoad = ['LogViewer'];
         testEnvironment.configOverride = {
             log: {
-                'log_writers': logWriters
+                'log_writers': logWriters,
+                'logger_file_path': PIWIK_INCLUDE_PATH + '/plugins/LogViewer/tests/resources/piwik.log'
             }
         };
         testEnvironment.save();
@@ -39,7 +40,7 @@ describe("LogViewer", function () {
         overrideTestEnvironment(['file']);
     });
 
-    it('should show a simple log page', function (done) {
+    it.only('should show a simple log page', function (done) {
         expect.screenshot('logview_inital').to.be.captureSelector('#content', function (page) {
             loadLogViewerPage(page);
         }, done);
