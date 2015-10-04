@@ -40,7 +40,7 @@ describe("LogViewer", function () {
         overrideTestEnvironment(['file']);
     });
 
-    it.only('should show a simple log page', function (done) {
+    it('should show a simple log page', function (done) {
         expect.screenshot('logview_inital').to.be.captureSelector('#content', function (page) {
             loadLogViewerPage(page);
         }, done);
