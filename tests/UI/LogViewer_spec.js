@@ -29,7 +29,8 @@ describe("LogViewer", function () {
         testEnvironment.pluginsToLoad = ['LogViewer'];
         testEnvironment.configOverride = {
             log: {
-                'log_writers': logWriters
+                'log_writers': logWriters,
+                'logger_file_path': PIWIK_INCLUDE_PATH + '/plugins/LogViewer/tests/resources/piwik.log'
             }
         };
         testEnvironment.save();
