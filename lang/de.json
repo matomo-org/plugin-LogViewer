@@ -9,8 +9,10 @@
         "RequestId": "Anfrage Id",
         "Message": "Meldung",
         "NoSupportedLogWriterConfiguredTitle": "Kein unterstützter log Schreiber konfiguriert.",
+        "NoSupportedLogWriterConfiguredMessage": "Bei alten Konfigurationen kann man die alten Logs noch anschauen, aber neue werden nicht angezeigt. Lesen Sie mehr über die %sKonfiguration eines unterstützten Log Schreibers%s. Unterstützt werden: %s",
         "UseRegExp": "Verwende reguläre Ausdrücke",
         "ClickToSearchForThis": "Klicken um nach diesem Begriff zu suchen",
+        "CurrentLogConfigIs": "Logging ist wie folgt konfiguriert: %s, anklicken um mehr übers Konfigurieren des Loggings zu lesen.",
         "ExportThisSearch": "Exportiere diese Suche als %s. Dies beinhaltet die letzten %s Einträge. Der Download kann einige Minuten in Anspruch nehmen..."
     }
 }

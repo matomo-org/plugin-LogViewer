@@ -12,6 +12,7 @@
         "NoSupportedLogWriterConfiguredMessage": "Se algum foi configurado antes, você ainda pode ver os logs antigos, mas os novos não serão exibidos. Leia mais sobre %scomo configurar um gravador%s de log suportado. Os suportados são: %s",
         "UseRegExp": "Utilizar expressões regulares",
         "ClickToSearchForThis": "Clique para buscar por esta palavra",
-        "CurrentLogConfigIs": "O registo é configurado da seguinte forma: %s, clique para ler mais sobre configuração de registro."
+        "CurrentLogConfigIs": "O registo é configurado da seguinte forma: %s, clique para ler mais sobre configuração de registro.",
+        "ExportThisSearch": "Exporte essa pesquisa como %s contendo as entradas %s mais recentes. O download pode demorar alguns minutos..."
     }
 }

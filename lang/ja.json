@@ -1,0 +1,11 @@
+{
+    "LogViewer": {
+        "LogViewer": "ログビューアー",
+        "SearchPattern": "検索パターン",
+        "Tag": "タグ",
+        "RequestId": "リクエスト ID",
+        "Message": "メッセージ",
+        "UseRegExp": "正規表現を使用",
+        "ClickToSearchForThis": "クリックしてこの用語を検索"
+    }
+}
