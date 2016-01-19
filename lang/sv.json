@@ -4,6 +4,7 @@
         "Severity": "Stränghet",
         "AnySeverity": "Lägg till stränghet",
         "SearchPattern": "Sökmönster",
-        "Tag": "Tagg"
+        "Tag": "Tagg",
+        "Message": "Meddelande"
     }
 }

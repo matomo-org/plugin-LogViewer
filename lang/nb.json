@@ -1,5 +1,7 @@
 {
     "LogViewer": {
-        "Message": "Melding"
+        "Tag": "Tagg",
+        "Message": "Melding",
+        "NoSupportedLogWriterConfiguredMessage": "Hvis en var konfigurert før, kan du fortsatt vise gamle logger, men nye vil ikke vises. Les mer om %shvordan konfigurere en støttet loggskriver%s. Følgende er støttede: %s"
     }
 }
