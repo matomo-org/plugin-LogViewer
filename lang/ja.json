@@ -9,10 +9,10 @@
         "RequestId": "リクエスト ID",
         "Message": "メッセージ",
         "NoSupportedLogWriterConfiguredTitle": "設定されたログライターがサポートされていません",
-        "NoSupportedLogWriterConfiguredMessage": "過去に設定されている場合、古いログを表示できますが、新しいものは表示されません。%s サポートされているログ ライター を設定する方法 %s について続きを読む。サポートされています: %s",
+        "NoSupportedLogWriterConfiguredMessage": "過去に設定されている場合、古いログを表示できますが、新しいものは表示されません。%1$s サポートされているログ ライター を設定する方法 %2$s について続きを読む。サポートされています: %3$s",
         "UseRegExp": "正規表現を使用",
         "ClickToSearchForThis": "クリックしてこの用語を検索",
         "CurrentLogConfigIs": "ログ記録は次のように設定されています: %s、クリックしてログ記録の設定方法の続きを読む。",
-        "ExportThisSearch": "エントリの %s 最新のものを含む %s ものとしてこの検索をエクスポートします。ダウンロードは数分かかることがあります。"
+        "ExportThisSearch": "エントリの %1$s 最新のものを含む %2$s ものとしてこの検索をエクスポートします。ダウンロードは数分かかることがあります。"
     }
 }

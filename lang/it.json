@@ -9,10 +9,10 @@
         "RequestId": "ID richiesta",
         "Message": "Messaggio",
         "NoSupportedLogWriterConfiguredTitle": "Non è configurato alcun log writer supportato",
-        "NoSupportedLogWriterConfiguredMessage": "Se ne è stato configurato uno in passato, puoi ancora vedere i vecchi log ma i nuovi non verranno mostrati. Leggi di più su %scome configurare un log writer supportato%s. Quelli supportati sono: %s",
+        "NoSupportedLogWriterConfiguredMessage": "Se ne è stato configurato uno in passato, puoi ancora vedere i vecchi log ma i nuovi non verranno mostrati. Leggi di più su %1$scome configurare un log writer supportato%2$s. Quelli supportati sono: %3$s",
         "UseRegExp": "Usa espressioni regolari",
         "ClickToSearchForThis": "Clicca per ricercare questo termine",
         "CurrentLogConfigIs": "La registrazione è configurata come segue: %s, clicca per saperne di più sulla configurazione delle registrazioni.",
-        "ExportThisSearch": "Esporta questa ricerca come %s che contiene le ultime %s voci. Il download può richiedere qualche minuto."
+        "ExportThisSearch": "Esporta questa ricerca come %1$s che contiene le ultime %2$s voci. Il download può richiedere qualche minuto."
     }
 }

@@ -9,6 +9,6 @@
         "RequestId": "Solicitud Id",
         "Message": "Mensaje",
         "NoSupportedLogWriterConfiguredTitle": "No existe un registrador apoyado configurado",
-        "NoSupportedLogWriterConfiguredMessage": "Si uno fue configurado en el pasado, puede aun ver los antiguos registros pero los nuevos no los verá. Lea más acerca de %scomo configurar un registrador de sucesos soportado%s. Estos son: %s"
+        "NoSupportedLogWriterConfiguredMessage": "Si uno fue configurado en el pasado, puede aun ver los antiguos registros pero los nuevos no los verá. Lea más acerca de %1$scomo configurar un registrador de sucesos soportado%2$s. Estos son: %3$s"
     }
 }

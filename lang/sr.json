@@ -9,7 +9,6 @@
         "RequestId": "Identifikator zahteva",
         "Message": "Poruka",
         "NoSupportedLogWriterConfiguredTitle": "Program za pravljenje zapisa nije podešen",
-        "NoSupportedLogWriterConfiguredMessage": "If one was configured in the past, you can still view old logs but new ones won't be shown. Read more about %show to configure a supported log writer%s. Supported are: %s",
         "UseRegExp": "Koristi regularne izraze"
     }
 }

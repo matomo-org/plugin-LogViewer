@@ -9,10 +9,10 @@
         "RequestId": "Aanvraag Id",
         "Message": "Bericht",
         "NoSupportedLogWriterConfiguredTitle": "Geen ondersteunde log schrijver geconfigureerd",
-        "NoSupportedLogWriterConfiguredMessage": "Indien er eerder één was geconfigureerd, dan kun je nog steeds de oude logs bekijken maar nieuwe logs zullen niet worden weergegeven. Lees meer over %s hoe een ondersteunde log schrijvers te configureren.%s Ondersteunde formaten zijn: %s",
+        "NoSupportedLogWriterConfiguredMessage": "Indien er eerder één was geconfigureerd, dan kun je nog steeds de oude logs bekijken maar nieuwe logs zullen niet worden weergegeven. Lees meer over %1$s hoe een ondersteunde log schrijvers te configureren.%2$s Ondersteunde formaten zijn: %3$s",
         "UseRegExp": "Gebruik reguliere expressies",
         "ClickToSearchForThis": "Klik om deze term op te zoeken",
         "CurrentLogConfigIs": "Logging is als volgt geconfigureerd: %s. Klik om meer te lezen over het configureren van logging.",
-        "ExportThisSearch": "Exporteer deze zoekopdracht als %s met de laatste %s regels. De download kan enkele minuten duren."
+        "ExportThisSearch": "Exporteer deze zoekopdracht als %1$s met de laatste %2$s regels. De download kan enkele minuten duren."
     }
 }
