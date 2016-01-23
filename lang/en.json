@@ -1,18 +1,18 @@
 {
-  "LogViewer": {
-    "LogViewer": "Log Viewer",
-    "Severity": "Severity",
-    "AnySeverity": "Any Severity",
-    "SearchPattern": "Search pattern",
-    "SearchHelp": "Search is case insensitive. If regular expressions are enabled, characters like '[' might be needed to be escaped (eg '\\[').",
-    "Tag": "Tag",
-    "RequestId": "Request Id",
-    "Message": "Message",
-    "NoSupportedLogWriterConfiguredTitle": "No supported log writer configured",
-    "NoSupportedLogWriterConfiguredMessage": "If one was configured in the past, you can still view old logs but new ones won't be shown. Read more about %show to configure a supported log writer%s. Supported are: %s",
-    "UseRegExp": "Use regular expressions",
-    "ClickToSearchForThis": "Click to search for this term",
-    "CurrentLogConfigIs": "Logging is configured as follows: %s, click to read more about configuring logging.",
-    "ExportThisSearch": "Export this search as %s containing the latest %s entries. The download may take a few minutes..."
-  }
+    "LogViewer": {
+        "LogViewer": "Log Viewer",
+        "Severity": "Severity",
+        "AnySeverity": "Any Severity",
+        "SearchPattern": "Search pattern",
+        "SearchHelp": "Search is case insensitive. If regular expressions are enabled, characters like '[' might be needed to be escaped (eg '\\[').",
+        "Tag": "Tag",
+        "RequestId": "Request Id",
+        "Message": "Message",
+        "NoSupportedLogWriterConfiguredTitle": "No supported log writer configured",
+        "NoSupportedLogWriterConfiguredMessage": "If one was configured in the past, you can still view old logs but new ones won't be shown. Read more about %1$show to configure a supported log writer%2$s. Supported are: %3$s",
+        "UseRegExp": "Use regular expressions",
+        "ClickToSearchForThis": "Click to search for this term",
+        "CurrentLogConfigIs": "Logging is configured as follows: %s, click to read more about configuring logging.",
+        "ExportThisSearch": "Export this search as %1$s containing the latest %2$s entries. The download may take a few minutes..."
+    }
 }
