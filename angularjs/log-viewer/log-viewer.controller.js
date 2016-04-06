@@ -60,7 +60,8 @@
         });
 
         piwikApi.fetch({
-            method: 'LogViewer.getLogConfig'
+            method: 'LogViewer.getLogConfig',
+            filter_limit: '-1'
         }).then(function (config) {
             self.logConfig = config;
         })
