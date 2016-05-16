@@ -1,94 +1,95 @@
 <div class="logViewer">
-    <h2>{{ 'LogViewer_LogViewer'|translate }}</h2>
+    <div piwik-content-block content-title="{{ 'LogViewer_LogViewer'|translate }}">
 
-    <p>
-        <select ng-model="logViewer.selectedLogWriter" ng-change="logViewer.update()">
-            <option value="{{ logWriter }}" ng-repeat="logWriter in logViewer.logWriters">
-                {{ logWriter }}
-            </option>
-        </select>
-        <select ng-model="logViewer.selectedSeverity" ng-change="logViewer.update()">
-            <option value="">{{ 'LogViewer_AnySeverity'|translate|lowercase }}</option>
-            <option value="{{ severity }}" ng-repeat="severity in logViewer.severities">
-                {{ severity|lowercase }}
-            </option>
-        </select>
-        <input type="text"
-               class="search"
-               title="{{ 'LogViewer_SearchHelp'|translate }}"
-               ng-model="logViewer.query"
-               placeholder="{{ 'LogViewer_SearchPattern'|translate }}"
-               piwik-onenter="logViewer.update()">
-        <img ng-click="logViewer.update()" title="{{ 'General_ClickToSearch'|translate }}"
-             class="searchIcon" src="plugins/Morpheus/images/search_ico.png"/>
+        <p>
+            <select ng-model="logViewer.selectedLogWriter" ng-change="logViewer.update()">
+                <option value="{{ logWriter }}" ng-repeat="logWriter in logViewer.logWriters">
+                    {{ logWriter }}
+                </option>
+            </select>
+            <select ng-model="logViewer.selectedSeverity" ng-change="logViewer.update()">
+                <option value="">{{ 'LogViewer_AnySeverity'|translate|lowercase }}</option>
+                <option value="{{ severity }}" ng-repeat="severity in logViewer.severities">
+                    {{ severity|lowercase }}
+                </option>
+            </select>
+            <input type="text"
+                   class="search"
+                   title="{{ 'LogViewer_SearchHelp'|translate }}"
+                   ng-model="logViewer.query"
+                   placeholder="{{ 'LogViewer_SearchPattern'|translate }}"
+                   piwik-onenter="logViewer.update()">
+            <img ng-click="logViewer.update()" title="{{ 'General_ClickToSearch'|translate }}"
+                 class="searchIcon" src="plugins/Morpheus/images/search_ico.png"/>
 
-        <input type="checkbox"
-               class="useRegExp"
-               ng-model="logViewer.useRegExp"> {{ 'LogViewer_UseRegExp'|translate }}
+            <input type="checkbox"
+                   class="useRegExp"
+                   ng-model="logViewer.useRegExp"> {{ 'LogViewer_UseRegExp'|translate }}
 
-        <a ng-click="logViewer.update()" class="icon-reload"></a>
-        <a title="{{ 'LogViewer_ExportThisSearch'|translate:'TSV':5000 }}"
-           class="icon-export"
-           ng-href="?module=API&method=LogViewer.getLogEntries&query={{ logViewer.buildQuery() }}&format=TSV&token_auth={{ logViewer.tokenAuth }}&page=0&limitPerPage=5000"></a>
-        <a title="{{ 'LogViewer_CurrentLogConfigIs'|translate:(logViewer.logConfig|json) }}"
-              class="icon-info"
-              target="_blank"
-              href="?module=Proxy&action=redirect&url=https://piwik.org/faq/troubleshooting/faq_115/"></a>
-        <br />
-    </p>
+            <a ng-click="logViewer.update()" class="icon-reload"></a>
+            <a title="{{ 'LogViewer_ExportThisSearch'|translate:'TSV':5000 }}"
+               class="icon-export"
+               ng-href="?module=API&method=LogViewer.getLogEntries&query={{ logViewer.buildQuery() }}&format=TSV&token_auth={{ logViewer.tokenAuth }}&page=0&limitPerPage=5000"></a>
+            <a title="{{ 'LogViewer_CurrentLogConfigIs'|translate:(logViewer.logConfig|json) }}"
+                  class="icon-info"
+                  target="_blank"
+                  href="?module=Proxy&action=redirect&url=https://piwik.org/faq/troubleshooting/faq_115/"></a>
+            <br />
+        </p>
 
-    <table>
-        <thead>
-            <tr>
-                <th class="severity">{{ 'LogViewer_Severity'|translate }}</th>
-                <th class="tag">{{ 'LogViewer_Tag'|translate }}</th>
-                <th class="date">{{ 'General_Date'|translate }}</th>
-                <th class="date">{{ 'LogViewer_RequestId'|translate }}</th>
-                <th class="message">{{ 'LogViewer_Message'|translate }}</th>
-            </tr>
-        </thead>
+        <table piwik-content-table>
+            <thead>
+                <tr>
+                    <th class="severity">{{ 'LogViewer_Severity'|translate }}</th>
+                    <th class="tag">{{ 'LogViewer_Tag'|translate }}</th>
+                    <th class="date">{{ 'General_Date'|translate }}</th>
+                    <th class="date">{{ 'LogViewer_RequestId'|translate }}</th>
+                    <th class="message">{{ 'LogViewer_Message'|translate }}</th>
+                </tr>
+            </thead>
 
-        <tbody>
-            <tr ng-repeat="log in logViewer.logs" ng-if="log.message">
-                <td class="severity"
-                    title="{{ log.severity ? ('LogViewer_ClickToSearchForThis'|translate) : '' }}"
-                    ng-class="{selectable: log.severity}"
-                    ng-click="logViewer.searchSeverity(log.severity)">{{ log.severity || '-' }}</td>
-                <td class="tag"
-                    title="{{ log.tag ? ('LogViewer_ClickToSearchForThis'|translate) : '' }}"
-                    ng-class="{selectable: log.tag}"
-                    ng-click="logViewer.searchText(log.tag)">{{ log.tag || '-' }}</td>
-                <td class="date"
-                    title="{{ log.datetime ? ('LogViewer_ClickToSearchForThis'|translate) : '' }}"
-                    ng-class="{selectable: log.datetime}"
-                    ng-click="logViewer.searchDate(log.datetime)">{{ log.datetime || '-' }}</td>
-                <td class="requestId"
-                    title="{{ log.requestId ? ('LogViewer_ClickToSearchForThis'|translate) : '' }}"
-                    ng-class="{selectable: log.requestId}"
-                    ng-click="logViewer.searchRequestId(log.requestId)">{{ log.requestId || '-' }}</td>
-                <td class="message">{{ log.message }}</td>
-            </tr>
-            <tr ng-if="!logViewer.isLoading && ((logViewer.logs|length) == 0)">
-                <td colspan="4">
-                    {{ 'General_SearchNoResults'|translate }}
-                </td>
-            </tr>
-            <tr ng-if="logViewer.isLoading">
-                <td colspan="4">
-                    <span class="loadingPiwik"><img src="plugins/Morpheus/images/loading-blue.gif"/>{{ 'General_Loading'|translate }}</span>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="4" class="paging">
-                    <span id="prev" class="previous" ng-hide="logViewer.page < 1" ng-click="logViewer.previousPage()">
-                        <a class="btn btn-link btn-large" href="#"><span>&#171; {{ 'General_Previous'|translate }}</span></a>
-                    </span>
+            <tbody>
+                <tr ng-repeat="log in logViewer.logs" ng-if="log.message">
+                    <td class="severity"
+                        title="{{ log.severity ? ('LogViewer_ClickToSearchForThis'|translate) : '' }}"
+                        ng-class="{selectable: log.severity}"
+                        ng-click="logViewer.searchSeverity(log.severity)">{{ log.severity || '-' }}</td>
+                    <td class="tag"
+                        title="{{ log.tag ? ('LogViewer_ClickToSearchForThis'|translate) : '' }}"
+                        ng-class="{selectable: log.tag}"
+                        ng-click="logViewer.searchText(log.tag)">{{ log.tag || '-' }}</td>
+                    <td class="date"
+                        title="{{ log.datetime ? ('LogViewer_ClickToSearchForThis'|translate) : '' }}"
+                        ng-class="{selectable: log.datetime}"
+                        ng-click="logViewer.searchDate(log.datetime)">{{ log.datetime || '-' }}</td>
+                    <td class="requestId"
+                        title="{{ log.requestId ? ('LogViewer_ClickToSearchForThis'|translate) : '' }}"
+                        ng-class="{selectable: log.requestId}"
+                        ng-click="logViewer.searchRequestId(log.requestId)">{{ log.requestId || '-' }}</td>
+                    <td class="message">{{ log.message }}</td>
+                </tr>
+                <tr ng-if="!logViewer.isLoading && ((logViewer.logs|length) == 0)">
+                    <td colspan="5">
+                        {{ 'General_SearchNoResults'|translate }}
+                    </td>
+                </tr>
+                <tr ng-if="logViewer.isLoading">
+                    <td colspan="5">
+                        <span class="loadingPiwik"><img src="plugins/Morpheus/images/loading-blue.gif"/>{{ 'General_Loading'|translate }}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="paging">
+                        <span id="prev" class="previous" ng-hide="logViewer.page < 1" ng-click="logViewer.previousPage()">
+                            <a class="btn" href="javascript:;"><span>&#171; {{ 'General_Previous'|translate }}</span></a>
+                        </span>
 
-                    <span id="next" class="next pointer" ng-hide="(logViewer.logs|length) < 1" ng-click="logViewer.nextPage()">
-                        <a class="btn btn-link btn-large" href="#"><span>{{ 'General_Next'|translate }} &#187;</span></a>
-                    </span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                        <span id="next" class="next pointer" ng-hide="(logViewer.logs|length) < 1" ng-click="logViewer.nextPage()">
+                            <a class="btn" href="javascript:;"><span>{{ 'General_Next'|translate }} &#187;</span></a>
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
