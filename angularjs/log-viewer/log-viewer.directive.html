@@ -19,8 +19,8 @@
                    ng-model="logViewer.query"
                    placeholder="{{ 'LogViewer_SearchPattern'|translate }}"
                    piwik-onenter="logViewer.update()">
-            <img ng-click="logViewer.update()" title="{{ 'General_ClickToSearch'|translate }}"
-                 class="searchIcon" src="plugins/Morpheus/images/search_ico.png"/>
+            <span ng-click="logViewer.update()" title="{{ 'General_ClickToSearch'|translate }}"
+                 class="icon-search searchIcon"></span>
 
             <input type="checkbox"
                    class="useRegExp"
