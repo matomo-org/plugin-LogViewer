@@ -1,41 +1,46 @@
 <div class="logViewer">
     <div piwik-content-block content-title="{{ 'LogViewer_LogViewer'|translate }}">
 
-        <p>
-            <select ng-model="logViewer.selectedLogWriter" ng-change="logViewer.update()">
-                <option value="{{ logWriter }}" ng-repeat="logWriter in logViewer.logWriters">
-                    {{ logWriter }}
-                </option>
-            </select>
-            <select ng-model="logViewer.selectedSeverity" ng-change="logViewer.update()">
-                <option value="">{{ 'LogViewer_AnySeverity'|translate|lowercase }}</option>
-                <option value="{{ severity }}" ng-repeat="severity in logViewer.severities">
-                    {{ severity|lowercase }}
-                </option>
-            </select>
-            <input type="text"
-                   class="search"
-                   title="{{ 'LogViewer_SearchHelp'|translate }}"
-                   ng-model="logViewer.query"
-                   placeholder="{{ 'LogViewer_SearchPattern'|translate }}"
-                   piwik-onenter="logViewer.update()">
-            <span ng-click="logViewer.update()" title="{{ 'General_ClickToSearch'|translate }}"
-                 class="icon-search searchIcon"></span>
+        <div class="row">
+            <div piwik-field uicontrol="select" name="logWriter"
+                 ng-model="logViewer.selectedLogWriter"
+                 ng-change="logViewer.update()"
+                 full-width="true"
+                 class="logWriters col s4 m3 l2"
+                 options="logViewer.logWriters">
+            </div>
 
-            <input type="checkbox"
-                   class="useRegExp"
-                   ng-model="logViewer.useRegExp"> {{ 'LogViewer_UseRegExp'|translate }}
+            <div piwik-field uicontrol="select" name="selectedSeverity"
+                 full-width="true"
+                 class="severities col s4 m3 l2"
+                 ng-model="logViewer.selectedSeverity"
+                 ng-change="logViewer.update()"
+                 options="logViewer.severities">
+            </div>
+            <div class="col s12 m12 l8">
+                <input type="text"
+                       class="search"
+                       title="{{ 'LogViewer_SearchHelp'|translate }}"
+                       ng-model="logViewer.query"
+                       placeholder="{{ 'LogViewer_SearchPattern'|translate }}"
+                       piwik-onenter="logViewer.update()">
+                <span ng-click="logViewer.update()" title="{{ 'General_ClickToSearch'|translate }}"
+                     class="icon-search searchIcon"></span>
 
-            <a ng-click="logViewer.update()" class="icon-reload"></a>
-            <a title="{{ 'LogViewer_ExportThisSearch'|translate:'TSV':5000 }}"
-               class="icon-export"
-               ng-href="?module=API&method=LogViewer.getLogEntries&query={{ logViewer.buildQuery() }}&format=TSV&token_auth={{ logViewer.tokenAuth }}&page=0&limitPerPage=5000"></a>
-            <a title="{{ 'LogViewer_CurrentLogConfigIs'|translate:(logViewer.logConfig|json) }}"
-                  class="icon-info"
-                  target="_blank"
-                  href="?module=Proxy&action=redirect&url=https://piwik.org/faq/troubleshooting/faq_115/"></a>
-            <br />
-        </p>
+                <input type="checkbox"
+                       class="useRegExp"
+                       ng-model="logViewer.useRegExp"> {{ 'LogViewer_UseRegExp'|translate }}
+
+                <a ng-click="logViewer.update()" class="icon-reload"></a>
+                <a title="{{ 'LogViewer_ExportThisSearch'|translate:'TSV':5000 }}"
+                   class="icon-export"
+                   ng-href="?module=API&method=LogViewer.getLogEntries&query={{ logViewer.buildQuery() }}&format=TSV&token_auth={{ logViewer.tokenAuth }}&page=0&limitPerPage=5000"></a>
+                <a title="{{ 'LogViewer_CurrentLogConfigIs'|translate:(logViewer.logConfig|json) }}"
+                      class="icon-info"
+                      target="_blank"
+                      href="?module=Proxy&action=redirect&url=https://piwik.org/faq/troubleshooting/faq_115/"></a>
+                <br />
+        </div>
 
         <table piwik-content-table>
             <thead>

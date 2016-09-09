@@ -7,10 +7,12 @@
 (function () {
     angular.module('piwikApp').controller('LogViewerController', LogViewerController);
 
-    LogViewerController.$inject = ['$scope', 'piwikApi', 'piwik'];
+    LogViewerController.$inject = ['$scope', 'piwikApi', 'piwik', '$filter'];
 
-    function LogViewerController($scope, piwikApi, piwik) {
+    function LogViewerController($scope, piwikApi, piwik, $filter) {
         var self = this;
+
+        var translate = $filter('translate');
 
         this.page = 0;
         this.query = '';
@@ -18,7 +20,18 @@
         this.logWriters = [];
         this.selectedLogWriter = '';
         this.useRegExp = false;
-        this.severities = ['DEBUG', 'INFO', 'NOTICE', 'WARNING', 'ERROR', 'CRITICAL', 'ALERT', 'EMERGENCY'];
+        this.severities = [
+            {key: '', value: translate('LogViewer_AnySeverity')},
+            {key: 'DEBUG', value: 'DEBUG'},
+            {key: 'INFO', value: 'INFO'},
+            {key: 'NOTICE', value: 'NOTICE'},
+            {key: 'WARNING', value: 'WARNING'},
+            {key: 'ERROR', value: 'ERROR'},
+            {key: 'CRITICAL', value: 'CRITICAL'},
+            {key: 'ALERT', value: 'ALERT'},
+            {key: 'EMERGENCY', value: 'EMERGENCY'}
+        ]
+
         this.selectedSeverity = '';
         this.tokenAuth = piwik.token_auth;
 
@@ -33,7 +46,11 @@
             method: 'LogViewer.getAvailableLogReaders'
         }).then(function (logWriters) {
             if (angular.isArray(logWriters)) {
-                self.logWriters = logWriters;
+                var options = [];
+                angular.forEach(logWriters, function (logWriter) {
+                    options.push({key: logWriter, value: logWriter});
+                });
+                self.logWriters = options;
             }
         }).then(function () {
             return piwikApi.fetch({
