@@ -3,6 +3,25 @@
     min-width: 800px;
   }
 
+  .logWriters {
+    padding-left: 0;
+    .input-field {
+      padding-left: 0;
+    }
+  }
+
+  .severities, .logWriters {
+    width: 150px;
+    display: inline-block;
+    .row {
+      margin-top: 0;
+      margin-bottom: 0;
+      .input-field {
+        margin-top: 0;
+      }
+    }
+  }
+
   th {
     text-align: left;
   }
@@ -22,7 +41,7 @@
   .icon-export,
   .icon-info,
   .icon-reload {
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     margin-left: 10px;
     vertical-align: sub;
@@ -60,11 +79,13 @@
   .searchIcon {
     margin-left: -30px;
     cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
   }
 
   .paging {
     padding: 5px;
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
 
     .previous {

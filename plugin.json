@@ -1,13 +1,18 @@
 {
   "name": "LogViewer",
-  "version": "0.2.0",
+  "version": "3.0.0",
   "description": "View log messages logged by Piwik",
   "theme": false,
   "keywords": ["log",  "viewer", "diagnostic", "debug", "debugging"],
   "license":  "GPL v3+",
   "homepage":  "http://piwik.org",
   "require": {
-    "piwik": ">=2.15.0-rc4,<3.0.0-b1"
+    "piwik": ">=3.0.0-dev,<4.0.0-dev"
+  },
+  "support": {
+    "issues": "https://github.com/piwik/plugin-LogViewer/issues",
+    "forum": "https://forum.piwik.org",
+    "source": "https://github.com/piwik/plugin-LogViewer"
   },
   "authors": [
     {
