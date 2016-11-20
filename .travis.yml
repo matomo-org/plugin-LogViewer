@@ -27,11 +27,12 @@ env:
   global:
     - PLUGIN_NAME=LogViewer
     - PIWIK_ROOT_DIR=$TRAVIS_BUILD_DIR/piwik
-    # this variable controls the version of Piwik your tests will run against. increment it when
-    # making your plugin compatible with the new version of Piwik.
-    - PIWIK_TEST_TARGET=2.15.0-rc4
-    - secure: "fGB6R2y5YWwa4N4tEzG7/auRqZd7YnxJ/yHYU0RBZNuvPUFCI0kWsJBXfBw6OH6KEdFb/t6jWAjIkHRJIaHZXWPenWFNM/7VPmtqJOWjzKX9jIa/gCIvEHUxoUqu30UVciN2kIE72IEYH80kH8QDZ00xiGjxA/W/RfLVKRmZ9T0+EnyS+3dYSWOFF3PqRfsE9E7OSgtCDX7msXH8eSr0Ted/L19YYxXdcLGkDWE9iwm8E3TjEXYC887KYHT8RLNtCcZYgxUd7o8BkJZinQBTozjbwSenHDJzKDFOF3yDEEnzfe+AP+pOjGDDAgrXXfZxC1G49Z2afwV5p4xtFENGm97lGvRmcftwADW1Fmnz4lYhnpTJI6UFjZUi2tKLM/GRAz/rokLm/2tGUWTRaXTi33mCEPW5yCvBEFBIPZbgWEXArsihuSfOyUYT8MJ3u+8I8WqpW/vEUr3MkTJGpnNSzXXX+Ff8MSOloG3uRQTYwfd72SsJIyqYICQoUxi/h4o+Q1Flsve96mQASlAIlBliEZwI12MXfNrdGO+lfaRzaz3y0b8knIAEOdOc6gkLgPL9I/QXwJVka5MxftIK/vwK5HRHlfzZR1ssubW9MzJ21E/sTuvJ81K8SXF5IyaNz14/NFhy5NYWQFC9Af+B92zlZgovTHW3J+t4WVIHHPJDzrc="
-    - secure: "ZcR57MklgkQqE8Kv+pI674jrNLHX0KEa4ZL5DcQkNpTbo/bPIM/agxZEmMoL5ACDJOUJr8WgPfEJwqjHDrHPgdHPIBtfXQEvszRlGz5v14PKKLGc5MQlsqlDQ+oMjMUq39XZtEBlFbcqs8cSp7j/efHEIjD0iYAnKBesbQwvBEtEvsR4fTGBDYPz3mKOtYcwW3gxSQt65qSiM9mZZg9saLA8wAcTGXyHvULy3pBWigTjNdEpt1EHM9JmJKb662nFM3+DGEqQ+Tgolu4OID79rScsUPbMOoEcwk/VLjJ2nGs6vDVJmOrLxGrAv96gONDkSKn6PSQU+XiDrZOxMocKBNUj2PvqfuHTO6DV88R6mGbiSieyDSBjlrVqsK2xNgRIZvBptIovfNFzdHIhpyKTx6DybrGEPUSSzCCKNdVr9ve2RpKYx5VMksGSfLIc0ryGQOdVsVYGloGn/eFTXFyGguWErmkcHzERgqzTZdq4gYWUpR7yWFx0Jruk1X73mx/o04M70Iyak3M3ogpqnNoiDQikOI7tN4ux7VpTrtCGirRadmXgejVD3zB6G3QAyzPz1ouOBi1M8rAaHzxckEZ/GajxcOqS2ZC5Cpn0A/pOEqJPSjliL0f3qm++MmV6ErQGvAlb77lYoOKkfqeMLStuNbwMaIDngjuKJ93gutSpb7s="
+    # this variable controls the version of Piwik your tests will run against.
+    # by default it will run against the maximum support version read from plugin.json
+    # (PIWIK_TEST_TARGET=maximum_supported_piwik).
+    # You can also specify a specific Piwik version
+    # (PIWIK_TEST_TARGET=2.16.0-b1).
+    - PIWIK_TEST_TARGET=maximum_supported_piwik
   matrix:
     - TEST_SUITE=PluginTests MYSQL_ADAPTER=PDO_MYSQL TEST_AGAINST_PIWIK_BRANCH=$PIWIK_TEST_TARGET
     - TEST_SUITE=PluginTests MYSQL_ADAPTER=PDO_MYSQL TEST_AGAINST_CORE=minimum_required_piwik
@@ -40,10 +41,10 @@ env:
 matrix:
   exclude:
     # execute latest stable tests only w/ PHP 5.5
-    - php: 5.3.3
+    - php: 5.3
       env: TEST_SUITE=PluginTests MYSQL_ADAPTER=PDO_MYSQL TEST_AGAINST_CORE=minimum_required_piwik
     # execute UI tests only w/ PHP 5.6
-    - php: 5.3.3
+    - php: 5.3
       env: TEST_SUITE=UITests MYSQL_ADAPTER=PDO_MYSQL TEST_AGAINST_PIWIK_BRANCH=$PIWIK_TEST_TARGET
 
 sudo: required
@@ -70,7 +71,7 @@ install:
   - '[ -d ./tests/travis/.git ] || sh -c "rm -rf ./tests/travis && git clone https://github.com/piwik/travis-scripts.git ./tests/travis"'
   - cd ./tests/travis ; git checkout master ; cd ../..
 
-  - export GENERATE_TRAVIS_YML_COMMAND="php ./tests/travis/generator/main.php generate:travis-yml --plugin=\"LogViewer\" --verbose"
+  - export GENERATE_TRAVIS_YML_COMMAND="php ./tests/travis/generator/main.php generate:travis-yml --plugin=\"LogViewer\" --php-versions=\"5.6,5.3\" --verbose"
   - '[[ "$TRAVIS_JOB_NUMBER" != *.1 || "$TRAVIS_PULL_REQUEST" != "false" ]] || ./tests/travis/autoupdate_travis_yml.sh'
 
   - ./tests/travis/checkout_test_against_branch.sh
@@ -134,6 +135,7 @@ before_script:
 
   - ./tests/travis/prepare.sh
   - ./tests/travis/setup_webserver.sh
+  - if [[ "$TRAVIS_PHP_VERSION" != 5.3* ]]; then ./tests/travis/install_phantomjs.sh; export PATH=$PWD/travis_phantomjs/phantomjs-2.1.1-linux-x86_64/bin:$PATH; fi
 
   - cd tests/PHPUnit
 
