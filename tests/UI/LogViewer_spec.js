@@ -71,7 +71,7 @@ describe("LogViewer", function () {
     });
 
     it('should show a message if there are no results', function (done) {
-        expect.screenshot('info_no_supported_writer').to.be.captureSelector('#content', function (page) {
+        expect.screenshot('info_no_supported_writer').to.be.captureSelector('#notificationContainer .notification-info, #content', function (page) {
             overrideTestEnvironment(['']);
             loadLogViewerPage(page);
         }, done);
