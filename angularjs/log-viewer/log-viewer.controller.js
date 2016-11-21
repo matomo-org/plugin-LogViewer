@@ -65,7 +65,7 @@
                 createNotification().show(message, {title: title, context: 'info', noclear: true});
 
                 if (self.logWriters && self.logWriters[0]) {
-                    self.selectedLogWriter = self.logWriters[0];
+                    self.selectedLogWriter = self.logWriters[0].value;
                 }
             }
 
@@ -114,7 +114,7 @@
                 query: query,
                 limitPerPage: $scope.limit,
                 source: self.selectedLogWriter,
-                page: self.page,
+                page: self.page
             }).then(function (logs) {
                 self.isLoading = false;
                 self.logs = logs;
