@@ -61,7 +61,7 @@
                 self.selectedLogWriter = logWriters[0];
             } else {
                 var title = _pk_translate('LogViewer_NoSupportedLogWriterConfiguredTitle');
-                var message = _pk_translate('LogViewer_NoSupportedLogWriterConfiguredMessage', ['<a href="https://piwik.org/faq/troubleshooting/faq_115/">', '</a>', self.logWriters.join(', '), ]);
+                var message = _pk_translate('LogViewer_NoSupportedLogWriterConfiguredMessage', ['<a href="https://piwik.org/faq/troubleshooting/faq_115/">', '</a>', self.logWriters.map(function(item){ return item.value;}).join(', '), ]);
                 createNotification().show(message, {title: title, context: 'info', noclear: true});
 
                 if (self.logWriters && self.logWriters[0]) {
