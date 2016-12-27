@@ -1,0 +1,12 @@
+{
+    "LogViewer": {
+        "LogViewer": "Logien katselu",
+        "Severity": "Vakavuus",
+        "AnySeverity": "Kaikki vakavuudet",
+        "SearchPattern": "Haku",
+        "Tag": "Tagi",
+        "RequestId": "Kyselyn ID",
+        "Message": "Viesti",
+        "ClickToSearchForThis": "Klikkaa hakeaksesi tällä hakusanalla"
+    }
+}

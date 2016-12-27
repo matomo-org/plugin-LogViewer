@@ -1,0 +1,13 @@
+{
+    "LogViewer": {
+        "LogViewer": "Программа просмотра журнала",
+        "Severity": "Строгость",
+        "AnySeverity": "Любая строгость",
+        "SearchPattern": "Шаблон поиска",
+        "Tag": "Тег",
+        "RequestId": "Id запроса",
+        "Message": "Сообщение",
+        "UseRegExp": "Используйте регулярное выражение",
+        "ClickToSearchForThis": "Нажмите для поиска по этому термину"
+    }
+}

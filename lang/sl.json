@@ -1,0 +1,17 @@
+{
+    "LogViewer": {
+        "LogViewer": "Pregledovalnik dnevniških datotek",
+        "Severity": "Pomembnost",
+        "AnySeverity": "Vse pomembnosti",
+        "SearchPattern": "Iskalni vzorec",
+        "SearchHelp": "Iskanje ne razlikuje velikih\/malih črk. Če so vključeni regularni izrazi, je možno, da bodo znaki kot '[' potrebovali escape sekvenco (npr. '\\[').",
+        "Tag": "Oznaka",
+        "RequestId": "Id zahtevka",
+        "Message": "Sporočilo",
+        "NoSupportedLogWriterConfiguredTitle": "Ni nastavljena porpora za zapisovanje dnevnika",
+        "UseRegExp": "Uporabi regularne izraze",
+        "ClickToSearchForThis": "Klikni za iskanje po tem terminu",
+        "CurrentLogConfigIs": "Nastavitve za dnevniške datoteke so nastavljene tako: %s, klikni, da prepereš več o konfiguriranju nastavitev dnevniških datotek.",
+        "ExportThisSearch": "Izvozi to iskanje kot %1$s vsebuje zadnjih %2$s vnosov. Prenos lahko traja nekaj minut..."
+    }
+}

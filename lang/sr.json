@@ -9,6 +9,10 @@
         "RequestId": "Identifikator zahteva",
         "Message": "Poruka",
         "NoSupportedLogWriterConfiguredTitle": "Program za pravljenje zapisa nije podešen",
-        "UseRegExp": "Koristi regularne izraze"
+        "NoSupportedLogWriterConfiguredMessage": "Ukoliko imate ranija podešavanja, još uvek možete videti stare zapise ali se zato novi neće videti. Pročitajte više o ovome na %1$sKako podesiti podržane programe za zapise%2$s. Podržani su: %3$s",
+        "UseRegExp": "Koristi regularne izraze",
+        "ClickToSearchForThis": "Kliknite kako biste pretražili ovaj termin",
+        "CurrentLogConfigIs": "Zapisi su podešeni na sledeći način: %s, kliknite kako biste saznali više kako da podesite zapise.",
+        "ExportThisSearch": "Sačuvajte ovu pretragu kao %1$s koja sadrži barem %2$s zapisa. Preuzimanje može potrajati nekoliko minuta..."
     }
 }

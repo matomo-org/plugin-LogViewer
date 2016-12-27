@@ -1,0 +1,18 @@
+{
+    "LogViewer": {
+        "LogViewer": "Parës Regjistri",
+        "Severity": "Rëndësi",
+        "AnySeverity": "Çfarëdo Rëndësie",
+        "SearchPattern": "Mostër kërkimi",
+        "SearchHelp": "Kërkimi nuk bën dallim mes shkronjash të vogla apo të mëdha. Nëse janë të aktivizuara shprehjet e rregullta, mund të jetë e nevojshme që shenja të tilla si '[' të paraprihen nga pjerrake (p.sh. '\\[').",
+        "Tag": "Etiketë",
+        "RequestId": "ID Kërkese",
+        "Message": "Mesazh",
+        "NoSupportedLogWriterConfiguredTitle": "S’ka të formësuar ndonjë shkrues regjistri që mbulohet",
+        "NoSupportedLogWriterConfiguredMessage": "Nëse ka patur një të tillë të formësuar dikur, mundeni ende të shihni regjistra të vjetër, por të rinjtë nuk do të shfaqen. Lexoni më tepër se %1$ssi të formësohet një shkrues regjistrat që mbulohet nga ne%2$s. Të mbuluar nga ne janë: %3$s",
+        "UseRegExp": "Përdor shprehje të rregullta",
+        "ClickToSearchForThis": "Klikoni që të kërkohet për këtë term",
+        "CurrentLogConfigIs": "Regjistrimi është formësuar si vijon: %s, klikoni që të lexoni më tepër rreth formësimit të regjistrimit.",
+        "ExportThisSearch": "Eksportoje këtë kërkim si %1$s që përmban zërat më të rinj %2$s. Shkarkimi mund të dojë disa minuta…"
+    }
+}

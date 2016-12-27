@@ -9,6 +9,10 @@
         "RequestId": "Solicitud Id",
         "Message": "Mensaje",
         "NoSupportedLogWriterConfiguredTitle": "No existe un registrador apoyado configurado",
-        "NoSupportedLogWriterConfiguredMessage": "Si uno fue configurado en el pasado, puede aun ver los antiguos registros pero los nuevos no los verá. Lea más acerca de %1$scomo configurar un registrador de sucesos soportado%2$s. Estos son: %3$s"
+        "NoSupportedLogWriterConfiguredMessage": "Si uno fue configurado en el pasado, puede aun ver los antiguos registros pero los nuevos no los verá. Lea más acerca de %1$scomo configurar un registrador de sucesos soportado%2$s. Estos son: %3$s",
+        "UseRegExp": "Use expresiones regulares",
+        "ClickToSearchForThis": "Click para buscar por el término",
+        "CurrentLogConfigIs": "Inicio de sesión está configurado del siguiente modo: %s, haga clic para saber más acerca de configurar el inicio de sesión.",
+        "ExportThisSearch": "Exporte esta búsqueda como %1$s conteniendo las últimas %2$s entradas. La descarga puede tomar unos minutos..."
     }
 }
