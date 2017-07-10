@@ -1,6 +1,6 @@
 {
   "name": "LogViewer",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "View log messages logged by Piwik",
   "theme": false,
   "keywords": ["log",  "viewer", "diagnostic", "debug", "debugging"],
