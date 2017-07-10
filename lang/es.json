@@ -1,18 +1,18 @@
 {
     "LogViewer": {
-        "LogViewer": "Visualizador de registro",
+        "LogViewer": "Visualizador del histórico de registros",
         "Severity": "Severidad",
         "AnySeverity": "Cualquier severidad",
-        "SearchPattern": "Buscar patrón",
-        "SearchHelp": "Buscar entre mayúsculas y minúsculas. Si se ha habilitado las expresiones regulares, los caracteres tales como '[' pueden ser necesarios para ser evitados (ej. '\\[').",
+        "SearchPattern": "Patrón de búsqueda",
+        "SearchHelp": "Buscar no diferencia entre mayúsculas y minúsculas. Si se han habilitado las expresiones regulares, puede que se necesite codificar caracteres como '[' (ej. '\\[').",
         "Tag": "Etiqueta",
-        "RequestId": "Solicitud Id",
+        "RequestId": "Id de solicitud",
         "Message": "Mensaje",
-        "NoSupportedLogWriterConfiguredTitle": "No existe un registrador apoyado configurado",
-        "NoSupportedLogWriterConfiguredMessage": "Si uno fue configurado en el pasado, puede aun ver los antiguos registros pero los nuevos no los verá. Lea más acerca de %1$scomo configurar un registrador de sucesos soportado%2$s. Estos son: %3$s",
+        "NoSupportedLogWriterConfiguredTitle": "No se ha configurado un \"log writer\" de los que están soportados.",
+        "NoSupportedLogWriterConfiguredMessage": "Si se configuró uno en el pasado, todavía puedes ver los registros antiguos pero los nuevos no los verás. Lee más acerca de %1$scómo configurar un \"log writer\" de los soportados%2$s. Estos son: %3$s",
         "UseRegExp": "Use expresiones regulares",
         "ClickToSearchForThis": "Click para buscar por el término",
-        "CurrentLogConfigIs": "Inicio de sesión está configurado del siguiente modo: %s, haga clic para saber más acerca de configurar el inicio de sesión.",
+        "CurrentLogConfigIs": "El registro de sucesos está configurado del siguiente modo: %s, haga clic para saber más acerca de configurar el registro de sucesos.",
         "ExportThisSearch": "Exporte esta búsqueda como %1$s conteniendo las últimas %2$s entradas. La descarga puede tomar unos minutos..."
     }
 }

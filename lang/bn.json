@@ -1,0 +1,14 @@
+{
+    "LogViewer": {
+        "LogViewer": "লগ ভিউয়ার",
+        "Severity": "প্রবলতা",
+        "AnySeverity": "যেকোন প্রবলতা",
+        "SearchPattern": "প্যাটার্ন অনুসন্ধান",
+        "Tag": "ট্যাগ",
+        "RequestId": "অাইডির জন্য অনুরোধ",
+        "Message": "ম্যাসেজ",
+        "NoSupportedLogWriterConfiguredTitle": "কোন সমর্থিত লগ ভিউয়ার কনফিগার করা নেই।",
+        "UseRegExp": "রেগুলার এক্সপ্রেশন ব্যবহার করুন",
+        "ClickToSearchForThis": "অাইটেম অনুসন্ধানের জন্য ক্লিক করুন"
+    }
+}
