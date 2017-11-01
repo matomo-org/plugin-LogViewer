@@ -3,7 +3,7 @@
         "LogViewer": "Log Viewer",
         "Severity": "Zwaarte",
         "AnySeverity": "Elke zwaarte",
-        "SearchPattern": "Zoek patroon",
+        "SearchPattern": "Zoekpatroon",
         "SearchHelp": "Zoeken is hoofdlettergevoelig. Als reguliere expressies zijn ingeschakeld, is het mogelijk dat karakters als '[' moeten worden ge-escaped (bijv. '\\[').",
         "Tag": "Tag",
         "RequestId": "Aanvraag Id",
@@ -11,7 +11,7 @@
         "NoSupportedLogWriterConfiguredTitle": "Geen ondersteunde log schrijver geconfigureerd",
         "NoSupportedLogWriterConfiguredMessage": "Indien er eerder één was geconfigureerd, dan kun je nog steeds de oude logs bekijken maar nieuwe logs zullen niet worden weergegeven. Lees meer over %1$s hoe een ondersteunde log schrijvers te configureren.%2$s Ondersteunde formaten zijn: %3$s",
         "UseRegExp": "Gebruik reguliere expressies",
-        "ClickToSearchForThis": "Klik om deze term op te zoeken",
+        "ClickToSearchForThis": "Klik om naar deze term te zoeken",
         "CurrentLogConfigIs": "Logging is als volgt geconfigureerd: %s. Klik om meer te lezen over het configureren van logging.",
         "ExportThisSearch": "Exporteer deze zoekopdracht als %1$s met de laatste %2$s regels. De download kan enkele minuten duren."
     }

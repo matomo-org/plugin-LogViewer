@@ -4,7 +4,7 @@
         "Severity": "Schwere",
         "AnySeverity": "Jeder Schweregrad",
         "SearchPattern": "Suchmuster",
-        "SearchHelp": "Suche berücksichtigt keine Groß- und Kleinschreibung. Falls reguläre Ausdrücke verwendet werden, kann es notwendig werden dass Zeichen wie '[' maskiert werden müssen (d.h. '\\[')",
+        "SearchHelp": "Suche berücksichtigt keine Groß- und Kleinschreibung. Falls reguläre Ausdrücke verwendet werden, kann es notwendig werden, dass Zeichen wie '[' maskiert werden müssen (d.h. '\\[')",
         "Tag": "Tag",
         "RequestId": "Anfrage Id",
         "Message": "Meldung",

@@ -1,0 +1,18 @@
+{
+    "LogViewer": {
+        "LogViewer": "Przeglądarka logów",
+        "Severity": "Poziom",
+        "AnySeverity": "Dowolny poziom",
+        "SearchPattern": "Wzorzec wyszukiwania",
+        "SearchHelp": "Wyszukiwanie niewrażliwe na wielkość liter. Włączenie wyrażeń regularnych może spowodować, że znaki t.j. '[' trzeba będzie zapisać ze znakiem ucieczki (np. '\\[').",
+        "Tag": "Tag",
+        "RequestId": "Id żądania",
+        "Message": "Wiadomość",
+        "NoSupportedLogWriterConfiguredTitle": "Nie skonfigurowano wspieranego logera",
+        "NoSupportedLogWriterConfiguredMessage": "Jeśli poprzednio loger był skonfigurowany, nadal możesz przeglądać stare logi, a nowe nie będą wyświetlane. Przeczytaj więcej o %1$skonfiguracji wspieranego logera%2$s. Wspierane są: %3$s",
+        "UseRegExp": "Użyj wyrażenia regularnego",
+        "ClickToSearchForThis": "Kliknij, aby wyszukać tą frazę",
+        "CurrentLogConfigIs": "Logowanie zostało następująco skonfigurowane: %s, kliknij aby dowiedzieć się więcej o konfiguracji logowania.",
+        "ExportThisSearch": "Eksportuj to wyszukiwanie jako %1$s zawierające najnowsze %2$s wpisy. Pobieranie może zająć parę minut..."
+    }
+}

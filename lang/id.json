@@ -1,0 +1,8 @@
+{
+    "LogViewer": {
+        "SearchPattern": "Pola pencarian",
+        "Tag": "Tag",
+        "RequestId": "Id Permintaan",
+        "Message": "Pesan"
+    }
+}
