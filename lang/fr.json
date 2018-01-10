@@ -9,7 +9,7 @@
         "RequestId": "Id de requête",
         "Message": "Message",
         "NoSupportedLogWriterConfiguredTitle": "Aucun module supporté d'écriture de log n'est configuré",
-        "NoSupportedLogWriterConfiguredMessage": "S'il y en avait déjà un de configuré par le passé, vous pouvez toujours visualiser les anciens logs mais les nouveaux ne seront pas affichés. Apprenez-en plus sur %1$scomment configurer un module de logs supporté%2$s. Les modules supportés sont: %3$s",
+        "NoSupportedLogWriterConfiguredMessage": "S'il y en avait déjà un de configuré par le passé, vous pouvez toujours visualiser les anciens logs mais les nouveaux ne seront pas affichés. En savoir plus sur %1$scomment configurer un module de logs supporté%2$s. Les modules supportés sont: %3$s",
         "UseRegExp": "Utiliser les expressions régulières",
         "ClickToSearchForThis": "Cliquez pour rechercher ce terme",
         "CurrentLogConfigIs": "La journalisation est configurée ainsi : %s, cliquer pour en savoir plus sur la configuration de la journalisation.",

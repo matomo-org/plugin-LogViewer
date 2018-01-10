@@ -4,6 +4,7 @@
         "Severity": "Vakavuus",
         "AnySeverity": "Kaikki vakavuudet",
         "SearchPattern": "Haku",
+        "SearchHelp": "Haku ei välitä kirjainkoosta. Jos \"regular expressions\"-toiminto on käytössä, osa merkeistä - esimerkiksi '[' - pitää aloittaa kenoviivalla (esim. '\\[').",
         "Tag": "Tagi",
         "RequestId": "Kyselyn ID",
         "Message": "Viesti",
