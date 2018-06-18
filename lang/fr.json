@@ -5,7 +5,7 @@
         "AnySeverity": "N'importe quelle gravité",
         "SearchPattern": "Requête de recherche",
         "SearchHelp": "La recherche est sensible à la casse. Si les expressions régulières sont activées, les caractères tels que '[' pourraient avoir besoin d'être échappés (ex '\\[').",
-        "Tag": "Étiquette",
+        "Tag": "Balise",
         "RequestId": "Id de requête",
         "Message": "Message",
         "NoSupportedLogWriterConfiguredTitle": "Aucun module supporté d'écriture de log n'est configuré",
