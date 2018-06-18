@@ -1,7 +1,7 @@
-# Piwik LogViewer Plugin
+# Matomo LogViewer Plugin
 
-[![Build Status](https://travis-ci.org/piwik/plugin-LogViewer.svg)](https://travis-ci.org/piwik/plugin-LogViewer)
+[![Build Status](https://travis-ci.org/matomo-org/plugin-LogViewer.svg)](https://travis-ci.org/matomo-org/plugin-LogViewer)
 
 ## Description
 
-View log messages that were logged by Piwik via the Piwik UI or HTTP Reporting API.
+View log messages that were logged by Matomo via the Matomo UI or HTTP Reporting API.
