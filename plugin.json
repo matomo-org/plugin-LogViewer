@@ -1,24 +1,24 @@
 {
   "name": "LogViewer",
-  "version": "3.0.2",
-  "description": "View log messages logged by Piwik",
+  "version": "3.0.3",
+  "description": "View log messages logged by Matomo",
   "theme": false,
   "keywords": ["log",  "viewer", "diagnostic", "debug", "debugging"],
   "license":  "GPL v3+",
-  "homepage":  "http://piwik.org",
+  "homepage":  "https://matomo.org",
   "require": {
     "piwik": ">=3.0.0-dev,<4.0.0-dev"
   },
   "support": {
-    "issues": "https://github.com/piwik/plugin-LogViewer/issues",
-    "forum": "https://forum.piwik.org",
-    "source": "https://github.com/piwik/plugin-LogViewer"
+    "issues": "https://github.com/matomo-org/plugin-LogViewer/issues",
+    "forum": "https://forum.matomo.org",
+    "source": "https://github.com/matomo-org/plugin-LogViewer"
   },
   "authors": [
     {
-      "name":  "Piwik",
-      "email":  "hello@piwik.org",
-      "homepage":  "http://piwik.org"
+      "name":  "Matomo",
+      "email":  "hello@matomo.org",
+      "homepage":  "https://matomo.org"
     }
   ]
 }
