@@ -12,16 +12,17 @@ describe("LogViewer", function () {
 
     var generalParams = 'idSite=1&period=day&date=2010-01-03';
 
-    function searchForText(page, textToAppendToSearchField)
+    async function searchForText(textToAppendToSearchField)
     {
-        page.sendKeys(".logViewer .search", textToAppendToSearchField);
-        page.click('.logViewer .searchIcon');
-        page.wait(100);
+        await page.type(".logViewer .search", textToAppendToSearchField);
+        await page.click('.logViewer .searchIcon');
+        await page.mouse.move(-10, -10);
+        await page.waitForNetworkIdle();
     }
 
-    function loadLogViewerPage(page)
+    async function loadLogViewerPage()
     {
-        page.load("?" + generalParams + "&module=LogViewer&action=index&uitest=1");
+        await page.goto("?" + generalParams + "&module=LogViewer&action=index&uitest=1");
     }
 
     function overrideTestEnvironment(logWriters)
@@ -40,65 +41,72 @@ describe("LogViewer", function () {
         overrideTestEnvironment(['file']);
     });
 
-    it('should show a simple log page', function (done) {
-        expect.screenshot('logview_inital').to.be.captureSelector('#content', function (page) {
-            loadLogViewerPage(page);
-        }, done);
+    it('should show a simple log page', async function () {
+        await loadLogViewerPage();
+        var elem = await page.jQuery('#content');
+        expect(await elem.screenshot()).to.matchImage('logview_inital');
     });
 
-    it('should be visible in the menu', function (done) {
-        expect.screenshot('link_in_menu').to.be.captureSelector('li:contains(Diagnostic)', function (page) {
-        }, done);
+    it('should be visible in the menu', async function () {
+        var elem = await page.jQuery('li:contains(Diagnostic)');
+        expect(await elem.screenshot()).to.matchImage('link_in_menu');
     });
 
-    it('should be able to search', function (done) {
-        expect.screenshot('search').to.be.captureSelector('#content', function (page) {
-            searchForText(page, 'Widget');
-        }, done);
+    it('should be able to search', async function () {
+        await searchForText('Widget');
+        var elem = await page.jQuery('#content');
+        expect(await elem.screenshot()).to.matchImage('search');
     });
 
-    it('should show a message if there are no results', function (done) {
-        expect.screenshot('no_results').to.be.captureSelector('#content', function (page) {
-            searchForText(page, 'rwererer');
-        }, done);
+    it('should show a message if there are no results', async function () {
+        await searchForText('rwererer');
+        var elem = await page.jQuery('#content');
+        expect(await elem.screenshot()).to.matchImage('no_results');
     });
 
-    it('should automatically preselect configured log writer', function (done) {
-        expect.screenshot('preselected_logwriter').to.be.captureSelector('#content', function (page) {
-            overrideTestEnvironment(['database']);
-            loadLogViewerPage(page);
-        }, done);
+    it('should automatically preselect configured log writer', async function () {
+        await overrideTestEnvironment(['database']);
+        await loadLogViewerPage();
+        var elem = await page.jQuery('#content');
+        expect(await elem.screenshot()).to.matchImage('preselected_logwriter');
     });
 
-    it('should show a message if there are no results', function (done) {
-        expect.screenshot('info_no_supported_writer').to.be.captureSelector('#notificationContainer .notification-info, #content', function (page) {
-            overrideTestEnvironment(['']);
-            loadLogViewerPage(page);
-        }, done);
+    it('should show a message if there are no results', async function () {
+        await overrideTestEnvironment(['']);
+        await loadLogViewerPage();
+        expect(await page.screenshotSelector('#notificationContainer .notification-info, #content')).to.matchImage('info_no_supported_writer');
     });
 
-    it('should filter for severity when clicking on one', function (done) {
-        expect.screenshot('filter_severity').to.be.captureSelector('#content', function (page) {
-            loadLogViewerPage(page);
-            page.click('tr:nth-child(1) td.severity');
-        }, done);
+    it('should filter for severity when clicking on one', async function () {
+        await loadLogViewerPage();
+        await page.click('tr:nth-child(1) td.severity');
+        await page.mouse.move(-10, -10);
+        await page.waitForNetworkIdle();
+        var elem = await page.jQuery('#content');
+        expect(await elem.screenshot()).to.matchImage('filter_severity');
     });
 
-    it('should filter for date when clicking on one', function (done) {
-        expect.screenshot('filter_date').to.be.captureSelector('#content', function (page) {
-            page.click('tr:nth-child(1) td.date');
-        }, done);
+    it('should filter for date when clicking on one', async function () {
+        await page.click('tr:nth-child(1) td.date');
+        await page.mouse.move(-10, -10);
+        await page.waitForNetworkIdle();
+        var elem = await page.jQuery('#content');
+        expect(await elem.screenshot()).to.matchImage('filter_date');
     });
 
-    it('should filter for requestId when clicking on one', function (done) {
-        expect.screenshot('filter_requestId').to.be.captureSelector('#content', function (page) {
-            page.click('tr:nth-child(1) td.requestId');
-        }, done);
+    it('should filter for requestId when clicking on one', async function () {
+        await page.click('tr:nth-child(1) td.requestId');
+        await page.mouse.move(-10, -10);
+        await page.waitForNetworkIdle();
+        var elem = await page.jQuery('#content');
+        expect(await elem.screenshot()).to.matchImage('filter_requestId');
     });
 
-    it('should filter for tag when clicking on one', function (done) {
-        expect.screenshot('filter_tag').to.be.captureSelector('#content', function (page) {
-            page.click('tr:nth-child(1) td.tag');
-        }, done);
+    it('should filter for tag when clicking on one', async function () {
+        await page.click('tr:nth-child(1) td.tag');
+        await page.mouse.move(-10, -10);
+        await page.waitForNetworkIdle();
+        var elem = await page.jQuery('#content');
+        expect(await elem.screenshot()).to.matchImage('filter_tag');
     });
 });
