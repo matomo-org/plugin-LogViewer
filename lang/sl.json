@@ -9,6 +9,7 @@
         "RequestId": "Id zahtevka",
         "Message": "Sporočilo",
         "NoSupportedLogWriterConfiguredTitle": "Ni nastavljena porpora za zapisovanje dnevnika",
+        "NoSupportedLogWriterConfiguredMessage": "Če je bil v preteklosti že konfiguriran, lahko še vedno pregledate stare dnevnike, vendar novejši dnevniki ne bodo prikazani. Prebri več o tem %1$s rikazi kako nastaviti podprte dnevniške zapisovalce%2$s. Podprti so: %3$s",
         "UseRegExp": "Uporabi regularne izraze",
         "ClickToSearchForThis": "Klikni za iskanje po tem terminu",
         "CurrentLogConfigIs": "Nastavitve za dnevniške datoteke so nastavljene tako: %s, klikni, da prepereš več o konfiguriranju nastavitev dnevniških datotek.",
