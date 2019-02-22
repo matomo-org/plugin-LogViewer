@@ -1,0 +1,7 @@
+{
+    "LogViewer": {
+        "Tag": "标签",
+        "Message": "信息",
+        "UseRegExp": "使用正则表达式"
+    }
+}
