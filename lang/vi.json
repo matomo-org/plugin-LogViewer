@@ -1,0 +1,18 @@
+{
+    "LogViewer": {
+        "LogViewer": "Trình xem nhật ký",
+        "Severity": "Mức độ nghiêm trọng",
+        "AnySeverity": "Bất kỳ mức độ nghiêm trọng",
+        "SearchPattern": "Mẫu tìm kiếm",
+        "SearchHelp": "Tìm kiếm là trường hợp không phân biệt hoa thường. Nếu các biểu thức thông thường được bật, các ký tự như '[' có thể cần được thoát (ví dụ: '\\[').",
+        "Tag": "Thẻ",
+        "RequestId": "ID truy vấn",
+        "Message": "Thông điệp",
+        "NoSupportedLogWriterConfiguredTitle": "Không có trình ghi nhật ký nào được cấu hình",
+        "NoSupportedLogWriterConfiguredMessage": "Nếu trước đây đã được định cấu hình, bạn vẫn có thể xem nhật ký cũ nhưng những nhật ký mới sẽ không được hiển thị. Đọc thêm về %1$scách định cấu hình trình ghi nhật ký được hỗ trợ%2$s. Được hỗ trợ là: %3$s",
+        "UseRegExp": "Sử dụng biểu thức chính quy",
+        "ClickToSearchForThis": "Nhấn vào đây để tìm kiếm thuật ngữ này",
+        "CurrentLogConfigIs": "Nhật ký được cấu hình như sau: %s, bấm vào để đọc thêm về cách định cấu hình ghi nhật ký.",
+        "ExportThisSearch": "Xuất tìm kiếm này như chứa các %1$smục mới nhất%2$s. Quá trình tải xuống có thể mất vài phút..."
+    }
+}
