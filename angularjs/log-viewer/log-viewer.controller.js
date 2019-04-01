@@ -72,7 +72,7 @@
             if (self.selectedLogWriter) {
                 self.update();
             } else {
-                this.isLoading = false;
+                self.isLoading = false;
             }
         });
 
