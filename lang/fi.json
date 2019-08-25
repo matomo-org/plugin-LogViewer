@@ -1,6 +1,6 @@
 {
     "LogViewer": {
-        "LogViewer": "Logien katselu",
+        "LogViewer": "Lokien katselu",
         "Severity": "Vakavuus",
         "AnySeverity": "Kaikki vakavuudet",
         "SearchPattern": "Haku",
@@ -8,6 +8,10 @@
         "Tag": "Tagi",
         "RequestId": "Kyselyn ID",
         "Message": "Viesti",
-        "ClickToSearchForThis": "Klikkaa hakeaksesi tällä hakusanalla"
+        "NoSupportedLogWriterConfiguredTitle": "Tuettua lokienkirjoitinta ei ole otettu käyttöön",
+        "UseRegExp": "Käytä säännöllisiä lausekkeita",
+        "ClickToSearchForThis": "Klikkaa hakeaksesi tällä hakuehdolla",
+        "CurrentLogConfigIs": "Lokien kirjoitus on käytössä: %s, klikkaa lisätietoja lokien asetuksista.",
+        "ExportThisSearch": "Vie tämä haku %1$s sisältäen viimeisimmät %2$s tietueet. Lataaminen saattaa kestää hetken..."
     }
 }

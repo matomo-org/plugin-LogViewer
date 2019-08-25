@@ -1,7 +1,10 @@
 {
     "LogViewer": {
+        "LogViewer": "Logi vaataja",
         "Severity": "Tõsidus",
+        "SearchPattern": "Otsingumuster",
         "Tag": "Silt",
+        "RequestId": "Päringu ID",
         "Message": "Sõnum"
     }
 }
