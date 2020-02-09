@@ -28,7 +28,7 @@ class DatabaseTest extends IntegrationTestCase
      */
     private $dbReader;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

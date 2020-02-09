@@ -25,19 +25,18 @@ class FileTest extends IntegrationTestCase
      */
     private $file;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
         $this->file = $this->createFile(PIWIK_INCLUDE_PATH . '/plugins/LogViewer/tests/resources/piwik.log');
     }
 
-    /**
-     * @expectedException \Exception
-     * @expectedExceptionMessage Specified path to log file does not exist: /not/exisTinG/Path.log
-     */
     public function test_construct_shouldThrowException_IfPathDoesNotExist()
     {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('Specified path to log file does not exist: /not/exisTinG/Path.log');
+
         $this->createFile('/not/exisTinG/Path.log');
     }
 

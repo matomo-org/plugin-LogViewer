@@ -18,7 +18,7 @@ class IntegrationTestCase extends \Piwik\Tests\Framework\TestCase\IntegrationTes
 {
     private $backupLogWriter;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -26,7 +26,7 @@ class IntegrationTestCase extends \Piwik\Tests\Framework\TestCase\IntegrationTes
         $this->backupLogWriter = Config::getInstance()->log['log_writers'];
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $this->setLogWriters($this->backupLogWriter);
         parent::tearDown();

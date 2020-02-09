@@ -28,7 +28,7 @@ class LogReaderFactoryTest extends IntegrationTestCase
      */
     private $factory;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -77,12 +77,11 @@ class LogReaderFactoryTest extends IntegrationTestCase
         $this->assertTrue($reader instanceof Database);
     }
 
-    /**
-     * @expectedException \Exception
-     * @expectedExceptionMessage Wrong source specifed. Such log reader does not exist: notSupporTed
-     */
     public function test_make_shouldThrowException_IfNotSupportedReaderRequested()
     {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('Wrong source specifed. Such log reader does not exist: notSupporTed');
+
         $this->factory->make('notSupporTed');
     }
 
@@ -97,22 +96,20 @@ class LogReaderFactoryTest extends IntegrationTestCase
         $this->assertTrue($reader instanceof Database);
     }
 
-    /**
-     * @expectedException \Exception
-     * @expectedExceptionMessage No source specified, please specify one of: file, database
-     */
     public function test_make_shouldThrowException_IfNoSourceSpecified_AndNoWriterConfigured()
     {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('No source specified, please specify one of: file, database');
+
         $this->setLogWriters(array());
         $this->factory->make(false);
     }
 
-    /**
-     * @expectedException \Exception
-     * @expectedExceptionMessage No source specified, please specify one of: file, database
-     */
     public function test_make_shouldThrowException_IfNoSourceSpecified_AndManyWritersConfigured()
     {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('No source specified, please specify one of: file, database');
+
         $this->setLogWriters(array('file', 'database'));
         $this->factory->make(false);
     }

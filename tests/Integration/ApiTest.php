@@ -27,7 +27,7 @@ class ApiTest extends IntegrationTestCase
      */
     private $api;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -41,12 +41,11 @@ class ApiTest extends IntegrationTestCase
         $this->assertSame(array('file'), $this->api->getConfiguredLogReaders());
     }
 
-    /**
-     * @expectedException \Exception
-     * @expectedExceptionMessage checkUserHasSuperUserAccess Fake exception
-     */
     public function test_getConfiguredLogReader_shouldThrowExceptionIfNotEnoughPermission()
     {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('checkUserHasSuperUserAccess Fake exception');
+
         FakeAccess::clearAccess(false);
         $this->api->getConfiguredLogReaders();
     }
@@ -56,32 +55,29 @@ class ApiTest extends IntegrationTestCase
         $this->assertSame(array('file', 'database'), $this->api->getAvailableLogReaders());
     }
 
-    /**
-     * @expectedException \Exception
-     * @expectedExceptionMessage checkUserHasSuperUserAccess Fake exception
-     */
     public function test_getAvailableLogReaders_shouldThrowExceptionIfNotEnoughPermission()
     {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('checkUserHasSuperUserAccess Fake exception');
+
         FakeAccess::clearAccess(false);
         $this->api->getAvailableLogReaders();
     }
 
-    /**
-     * @expectedException \Exception
-     * @expectedExceptionMessage checkUserHasSuperUserAccess Fake exception
-     */
     public function test_getLogEntries_shouldThrowExceptionIfNotEnoughPermission()
     {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('checkUserHasSuperUserAccess Fake exception');
+
         FakeAccess::clearAccess(false);
         $this->api->getLogEntries();
     }
 
-    /**
-     * @expectedException \Exception
-     * @expectedExceptionMessage checkUserHasSuperUserAccess Fake exception
-     */
     public function test_getLogConfig_shouldThrowExceptionIfNotEnoughPermission()
     {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('checkUserHasSuperUserAccess Fake exception');
+
         FakeAccess::clearAccess(false);
         $this->api->getLogConfig();
     }
@@ -91,7 +87,7 @@ class ApiTest extends IntegrationTestCase
         $config = $this->api->getLogConfig();
 
         $this->assertNotEmpty($config['log_level']);
-        $this->assertInternalType('array', $config['log_writers']);
+        self::assertIsArray($config['log_writers']);
     }
 
     public function test_getLogEntries_nothingSpecified_shouldReturnAllLogs_AndFindSourceAutomatically()
