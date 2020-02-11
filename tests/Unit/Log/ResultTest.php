@@ -16,7 +16,7 @@ use Piwik\Plugins\LogViewer\Log\Result;
  * @group ResultTest
  * @group Plugins
  */
-class ResultTest extends \PHPUnit_Framework_TestCase
+class ResultTest extends \PHPUnit\Framework\TestCase
 {
     public function test_addLogLine_shouldNotReturnAnyLogLine_IfNoneRequested()
     {

@@ -16,7 +16,7 @@ use Piwik\Plugins\LogViewer\Log\Parser\Piwik;
  * @group PiwikTest
  * @group Plugins
  */
-class PiwikTest extends \PHPUnit_Framework_TestCase
+class PiwikTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @dataProvider getLogLines
