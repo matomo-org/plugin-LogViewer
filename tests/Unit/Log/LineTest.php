@@ -15,7 +15,7 @@ use Piwik\Plugins\LogViewer\Log\Line;
  * @group LineTest
  * @group Plugins
  */
-class LineTest extends \PHPUnit_Framework_TestCase
+class LineTest extends \PHPUnit\Framework\TestCase
 {
     public function test__construct_shouldSaveContentInProperty()
     {

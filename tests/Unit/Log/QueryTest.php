@@ -17,7 +17,7 @@ use Piwik\Plugins\LogViewer\Log\Result;
  * @group QueryTest
  * @group Plugins
  */
-class QueryTest extends \PHPUnit_Framework_TestCase
+class QueryTest extends \PHPUnit\Framework\TestCase
 {
     public function test_matches_shouldAlwaysMatchIfNoQueryIsGiven()
     {
