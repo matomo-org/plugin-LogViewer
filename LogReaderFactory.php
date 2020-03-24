@@ -34,7 +34,7 @@ class LogReaderFactory
                 return new Database();
 
             default:
-                throw new Exception('Wrong source specifed. Such log reader does not exist: ' . $source);
+                throw new Exception('Wrong source specified. Such log reader does not exist: ' . $source);
         }
     }
 
