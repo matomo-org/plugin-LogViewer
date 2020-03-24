@@ -80,7 +80,7 @@ class LogReaderFactoryTest extends IntegrationTestCase
     public function test_make_shouldThrowException_IfNotSupportedReaderRequested()
     {
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage('Wrong source specifed. Such log reader does not exist: notSupporTed');
+        $this->expectExceptionMessage('Wrong source specified. Such log reader does not exist: notSupporTed');
 
         $this->factory->make('notSupporTed');
     }
