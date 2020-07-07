@@ -1,0 +1,18 @@
+{
+    "LogViewer": {
+        "LogViewer": "Visor de registro",
+        "Severity": "Severidad",
+        "AnySeverity": "Cualquier severidad",
+        "SearchPattern": "Buscar patrón",
+        "SearchHelp": "La búsqueda no distingue mayúsculas de minúsculas. Si se habilitan las expresiones regulares, los caracteres como \"[\" pueden necesitar ser precedidos por una barra invertida (por ejemplo: \"\\[\").",
+        "Tag": "Etiqueta",
+        "RequestId": "Identificador de solicitud",
+        "Message": "Mensaje",
+        "NoSupportedLogWriterConfiguredTitle": "No se configuró un escritor de registro soportado",
+        "NoSupportedLogWriterConfiguredMessage": "Si uno fue configurado en el pasado, todavía podés ver viejos registros pero los nuevos no serán mostrados. Leé más sobre %1$scómo configurar un escritor de registro soportado%2$s. Los soportados son: %3$s",
+        "UseRegExp": "Usar expresiones regulares",
+        "ClickToSearchForThis": "Hacé clic para buscar este término",
+        "CurrentLogConfigIs": "El registro está configurado de esta manera: %s, hacé clic para leer más sobre configuración de registro.",
+        "ExportThisSearch": "Exportá esta búsqueda como %1$s conteniendo las últimas %2$s entradas. La descarga puede tomar algunos minutos…"
+    }
+}
