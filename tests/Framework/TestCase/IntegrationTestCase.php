@@ -2,7 +2,7 @@
 /**
  * Matomo - free/libre analytics platform
  *
- * @link https://matomo.org
+ * @link    https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
@@ -34,8 +34,8 @@ class IntegrationTestCase extends \Piwik\Tests\Framework\TestCase\IntegrationTes
 
     protected function setLogWriters($writer)
     {
-        $log = Config::getInstance()->log;
-        $log['log_writers'] = $writer;
+        $log                       = Config::getInstance()->log;
+        $log['log_writers']        = $writer;
         Config::getInstance()->log = $log;
     }
 

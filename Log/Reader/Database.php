@@ -2,7 +2,7 @@
 /**
  * Matomo - free/libre analytics platform
  *
- * @link https://matomo.org
+ * @link    https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
@@ -21,7 +21,7 @@ class Database implements Reader
 
     public function __construct()
     {
-        $this->db = Db::get();
+        $this->db    = Db::get();
         $this->table = Common::prefixTable('logger_message');
     }
 
@@ -52,7 +52,7 @@ class Database implements Reader
 
         if (isset($this->lowestIdLogMessageFromPreviousRun)) {
             // prevent fetching the same log entries from before
-            $query .= " WHERE `idlogger_message` < ?";
+            $query  .= " WHERE `idlogger_message` < ?";
             $bind[] = $this->lowestIdLogMessageFromPreviousRun;
         }
 

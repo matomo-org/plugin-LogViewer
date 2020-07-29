@@ -2,7 +2,7 @@
 /**
  * Matomo - free/libre analytics platform
  *
- * @link https://matomo.org
+ * @link    https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
@@ -26,10 +26,10 @@ class Result
     public function __construct($logsPerPage, $page)
     {
         $this->logsPerPage = $logsPerPage;
-        $this->page = $page;
+        $this->page        = $page;
 
         $this->limitStart = $logsPerPage * $page;
-        $this->limitEnd = $this->limitStart + $logsPerPage;
+        $this->limitEnd   = $this->limitStart + $logsPerPage;
     }
 
     public function addLogLine(Line $logline)
