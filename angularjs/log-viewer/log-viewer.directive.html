@@ -30,9 +30,11 @@
                 <div piwik-field uicontrol="checkbox" class="useRegExp" ng-model="logViewer.useRegExp" title="{{ 'LogViewer_UseRegExp'|translate }}"></div>
 
                 <a ng-click="logViewer.update()" class="icon-reload"></a>
-                <a title="{{ 'LogViewer_ExportThisSearch'|translate:'TSV':5000 }}"
-                   class="icon-export"
-                   ng-href="?module=API&method=LogViewer.getLogEntries&query={{ logViewer.buildQuery() }}&format=TSV&token_auth={{ logViewer.tokenAuth }}&page=0&limitPerPage=5000"></a>
+                <form action="{{ '?module=API&method=LogViewer.getLogEntries&query='+ logViewer.buildQuery() + '&format=TSV&page=0&limitPerPage=5000' }}" method="POST" id="export" target="_blank">
+                    <input type="hidden" name="token_auth" value="{{ logViewer.tokenAuth }}">
+                    <input type="hidden" name="force_api_session" value="1">
+                    <a title="{{ 'LogViewer_ExportThisSearch'|translate:'TSV':5000 }}" class="icon-export" onclick="$('#export').submit();"></a>
+                </form>
                 <a title="{{ 'LogViewer_CurrentLogConfigIs'|translate:(logViewer.logConfig|json) }}"
                       class="icon-info"
                       target="_blank"
