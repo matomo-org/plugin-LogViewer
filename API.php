@@ -2,20 +2,18 @@
 /**
  * Matomo - free/libre analytics platform
  *
- * @link https://matomo.org
+ * @link    https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
 namespace Piwik\Plugins\LogViewer;
 
 use Piwik\Config;
-use Piwik\DataTable;
-use Piwik\DataTable\Row;
 use Piwik\Piwik;
 use Piwik\Plugins\LogViewer\Log\Log;
 use Piwik\Plugins\LogViewer\Log\Parser\Piwik as PiwikParser;
-use Piwik\Plugins\LogViewer\Log\Result;
 use Piwik\Plugins\LogViewer\Log\Query;
+use Piwik\Plugins\LogViewer\Log\Result;
 
 /**
  * API for plugin LogViewer
@@ -29,12 +27,13 @@ class API extends \Piwik\Plugin\API
      *
      * Latest log entries are returned first.
      *
-     * @param string $query  A search query. If given, the search is performed case insensitive and query is interpreted
-     *                       as a regular expression. Characters like `[` might need to be escaped as `\[`.
-     * @param string|false $source The log reader to use. Either 'file' or 'database'.
-     *                            By default we try to detect the best reader automatically.
-     * @param int $page           The page that should be returned.
-     * @param int $limitPerPage   Defines how many log entries should be returned per page.
+     * @param string       $query        A search query. If given, the search is performed case insensitive and query
+     *                                   is interpreted as a regular expression. Characters like `[` might need to be
+     *                                   escaped as `\[`.
+     * @param string|false $source       The log reader to use. Either 'file' or 'database'.
+     *                                   By default we try to detect the best reader automatically.
+     * @param int          $page         The page that should be returned.
+     * @param int          $limitPerPage Defines how many log entries should be returned per page.
      * @return array
      * @throws \Exception Eg if the source cannot be chosen automatically.
      */
@@ -43,7 +42,7 @@ class API extends \Piwik\Plugin\API
         Piwik::checkUserHasSuperUserAccess();
 
         $logReaderFactory = new LogReaderFactory();
-        $reader = $logReaderFactory->make($source);
+        $reader           = $logReaderFactory->make($source);
 
         $log    = new Log($reader);
         $result = $log->find(new Query($query), new Result($limitPerPage, $page));

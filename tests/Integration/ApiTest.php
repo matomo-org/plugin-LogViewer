@@ -2,14 +2,12 @@
 /**
  * Matomo - free/libre analytics platform
  *
- * @link https://matomo.org
+ * @link    https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
 namespace Piwik\Plugins\LogViewer\tests\Integration;
 
-use Piwik\Config;
-use Piwik\Db;
 use Piwik\Plugins\LogViewer\API;
 use Piwik\Plugins\LogViewer\tests\Framework\TestCase\IntegrationTestCase;
 use Piwik\Tests\Framework\Mock\FakeAccess;
@@ -126,7 +124,7 @@ class ApiTest extends IntegrationTestCase
     {
         return array(
             'log.file.filename' => PIWIK_INCLUDE_PATH . '/plugins/LogViewer/tests/resources/piwik.log',
-            'Piwik\Access' => new FakeAccess()
+            'Piwik\Access'      => new FakeAccess()
         );
     }
 

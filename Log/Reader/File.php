@@ -2,7 +2,7 @@
 /**
  * Matomo - free/libre analytics platform
  *
- * @link https://matomo.org
+ * @link    https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
@@ -10,7 +10,6 @@ namespace Piwik\Plugins\LogViewer\Log\Reader;
 
 use Piwik\Plugins\LogViewer\Log\Line;
 use Piwik\Plugins\LogViewer\Log\Reader;
-use Exception;
 
 class File implements Reader
 {
@@ -58,8 +57,8 @@ class File implements Reader
 
     private function isLastLineToRead()
     {
-        $hasNoMoreLines = !$this->areMultipleLinesInBuffer();
-        $isFileWithoutContent = empty($this->filesize);
+        $hasNoMoreLines         = !$this->areMultipleLinesInBuffer();
+        $isFileWithoutContent   = empty($this->filesize);
         $moreCharReadThanNeeded = $this->pos > $this->filesize;
 
         return $hasNoMoreLines && ($moreCharReadThanNeeded || $isFileWithoutContent);
@@ -94,13 +93,13 @@ class File implements Reader
     private function readManyBytesFromFile()
     {
         $bufferSize = 4096;
-        $this->pos += $bufferSize;
+        $this->pos  += $bufferSize;
 
         if ($this->pos < $this->filesize && ($this->pos + $bufferSize) > $this->filesize) {
             // we have not reached the end of file but will in next run. Read directly till the end
             $missingBytesTillBeginning = $this->filesize - $this->pos;
-            $bufferSize += $missingBytesTillBeginning;
-            $this->pos  += $missingBytesTillBeginning;
+            $bufferSize                += $missingBytesTillBeginning;
+            $this->pos                 += $missingBytesTillBeginning;
         }
 
         fseek($this->handle, $this->pos * -1, SEEK_END);

@@ -2,7 +2,7 @@
 /**
  * Matomo - free/libre analytics platform
  *
- * @link https://matomo.org
+ * @link    https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
@@ -28,20 +28,23 @@ class ApiTest extends SystemTestCase
     public function getApiForTesting()
     {
         $apiToTest   = array();
-        $apiToTest[] = array(array('LogViewer.getLogEntries', 'LogViewer.getAvailableLogReaders', 'LogViewer.getConfiguredLogReaders'),
+        $apiToTest[] = array(
+            array('LogViewer.getLogEntries', 'LogViewer.getAvailableLogReaders', 'LogViewer.getConfiguredLogReaders'),
             array(
                 'testSuffix' => '',
             )
         );
-        $apiToTest[] = array('LogViewer.getLogEntries',
+        $apiToTest[] = array(
+            'LogViewer.getLogEntries',
             array(
-                'testSuffix' => 'next_page',
+                'testSuffix'             => 'next_page',
                 'otherRequestParameters' => array('page' => 1)
             )
         );
-        $apiToTest[] = array('LogViewer.getLogEntries',
+        $apiToTest[] = array(
+            'LogViewer.getLogEntries',
             array(
-                'testSuffix' => 'query',
+                'testSuffix'             => 'query',
                 'otherRequestParameters' => array('query' => 'dashboard')
             )
         );

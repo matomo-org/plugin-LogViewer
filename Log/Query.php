@@ -2,7 +2,7 @@
 /**
  * Matomo - free/libre analytics platform
  *
- * @link https://matomo.org
+ * @link    https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
@@ -17,6 +17,6 @@ class Query
 
     public function matches(Line $line)
     {
-        return empty($this->query) || preg_match('/' . str_replace('/', '\/', $this->query). '/i', $line->content);
+        return empty($this->query) || preg_match('/' . str_replace('/', '\/', $this->query) . '/i', $line->content);
     }
 }

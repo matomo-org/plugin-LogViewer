@@ -2,7 +2,7 @@
 /**
  * Matomo - free/libre analytics platform
  *
- * @link https://matomo.org
+ * @link    https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
@@ -15,9 +15,9 @@ class Piwik implements Parser
 {
     public function parse(Line $line)
     {
-        $severity = '';
-        $tag = '';
-        $datetime = '';
+        $severity  = '';
+        $tag       = '';
+        $datetime  = '';
         $requestId = '';
 
         // a typical log line looks like: $severity $tag[$datetime] [$requestId] $message

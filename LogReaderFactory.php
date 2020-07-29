@@ -2,17 +2,17 @@
 /**
  * Matomo - free/libre analytics platform
  *
- * @link https://matomo.org
+ * @link    https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
 namespace Piwik\Plugins\LogViewer;
 
+use Exception;
+use Piwik\Config;
 use Piwik\Container\StaticContainer;
 use Piwik\Plugins\LogViewer\Log\Reader\Database;
 use Piwik\Plugins\LogViewer\Log\Reader\File;
-use Piwik\Config;
-use Exception;
 
 class LogReaderFactory
 {
@@ -68,6 +68,6 @@ class LogReaderFactory
             return array_shift($logWriters);
         }
 
-        throw new Exception('No source specified, please specify one of: ' . implode(', ' , $this->supportedLogReader));
+        throw new Exception('No source specified, please specify one of: ' . implode(', ', $this->supportedLogReader));
     }
 }
