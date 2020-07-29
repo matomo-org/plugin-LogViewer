@@ -27,9 +27,7 @@
                 <span ng-click="logViewer.update()" title="{{ 'General_ClickToSearch'|translate }}"
                      class="icon-search searchIcon"></span>
 
-                <input type="checkbox"
-                       class="useRegExp"
-                       ng-model="logViewer.useRegExp"> {{ 'LogViewer_UseRegExp'|translate }}
+                <div piwik-field uicontrol="checkbox" class="useRegExp" ng-model="logViewer.useRegExp" title="{{ 'LogViewer_UseRegExp'|translate }}"></div>
 
                 <a ng-click="logViewer.update()" class="icon-reload"></a>
                 <a title="{{ 'LogViewer_ExportThisSearch'|translate:'TSV':5000 }}"
