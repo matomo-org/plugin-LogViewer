@@ -1,7 +1,18 @@
 {
     "LogViewer": {
+        "LogViewer": "日志查看器",
+        "Severity": "严重程度",
+        "AnySeverity": "任何严重程度",
+        "SearchPattern": "搜索模式",
+        "SearchHelp": "搜索不区分大小写。 如果启用了正则表达式，则可能需要转义'['等字符（例如'\\ ['）。",
         "Tag": "标签",
+        "RequestId": "要求编号",
         "Message": "信息",
-        "UseRegExp": "使用正则表达式"
+        "NoSupportedLogWriterConfiguredTitle": "未配置受支持的日志编写器",
+        "NoSupportedLogWriterConfiguredMessage": "如果以前配置过，您仍然可以查看旧日志，但不会显示新日志。 阅读有关%1$s如何配置受支持的日志编写器的更多信息。%2$s受支持的：%3$s",
+        "UseRegExp": "使用正则表达式",
+        "ClickToSearchForThis": "点击搜索该词",
+        "CurrentLogConfigIs": "日志配置如下：%s，单击以了解有关配置日志的更多信息。",
+        "ExportThisSearch": "将此搜索导出为%1$s，其中包含最新的%2$s个条目。 下载可能需要几分钟..."
     }
 }
