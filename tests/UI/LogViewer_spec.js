@@ -79,6 +79,7 @@ describe("LogViewer", function () {
 
     it('should filter for severity when clicking on one', async function () {
         await loadLogViewerPage();
+        await page.waitFor('tr:nth-child(1) td.severity');
         await page.click('tr:nth-child(1) td.severity');
         await page.mouse.move(-10, -10);
         await page.waitForNetworkIdle();
