@@ -23,7 +23,7 @@ describe("LogViewer", function () {
     async function loadLogViewerPage()
     {
         await page.goto("?" + generalParams + "&module=LogViewer&action=index&uitest=1");
-        await page.waitFor('#content .logViewer', { timeout: 120 });
+        await page.waitFor('#content .logViewer', { timeout: 120000 });
     }
 
     function overrideTestEnvironment(logWriters)
@@ -80,7 +80,7 @@ describe("LogViewer", function () {
 
     it('should filter for severity when clicking on one', async function () {
         await loadLogViewerPage();
-        await page.waitFor('tr:nth-child(1) td.severity', { timeout: 120 });
+        await page.waitFor('tr:nth-child(1) td.severity', { timeout: 120000 });
         await page.click('tr:nth-child(1) td.severity');
         await page.mouse.move(-10, -10);
         await page.waitForNetworkIdle();
