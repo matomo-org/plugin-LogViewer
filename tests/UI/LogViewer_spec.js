@@ -26,7 +26,7 @@ describe("LogViewer", function () {
         try {
             await page.waitFor('#content .logViewer', { timeout: 120000 });
         } catch (e) {
-            const html = await page.evaluate(() => document.getElementById('#content').innerHTML);
+            const html = await page.evaluate(() => document.body.innerHTML);
             console.log('HTML: ' + html);
             throw e;
         }
