@@ -23,7 +23,7 @@ describe("LogViewer", function () {
     async function loadLogViewerPage()
     {
         await page.goto("?" + generalParams + "&module=LogViewer&action=index&uitest=1");
-        await page.waitFor('#content .logViewer', { timeout: 120000 });
+        await page.waitFor('#content', { timeout: 120000 });
     }
 
     function overrideTestEnvironment(logWriters)

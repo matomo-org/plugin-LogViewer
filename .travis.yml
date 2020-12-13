@@ -70,8 +70,8 @@ install:
   - '[ -d ./tests/travis/.git ] || sh -c "rm -rf ./tests/travis && git clone https://github.com/matomo-org/travis-scripts.git ./tests/travis"'
   - cd ./tests/travis ; git checkout master ; cd ../..
 
-  - export GENERATE_TRAVIS_YML_COMMAND="php ./tests/travis/generator/main.php generate:travis-yml --plugin=\"LogViewer\" --php-versions=\"7.2,7.4\" --distribution=\"bionic\" --sudo-false --verbose"
-  - '[[ "$TRAVIS_JOB_NUMBER" != *.1 || "$TRAVIS_PULL_REQUEST" != "false" ]] || ./tests/travis/autoupdate_travis_yml.sh'
+  #- export GENERATE_TRAVIS_YML_COMMAND="php ./tests/travis/generator/main.php generate:travis-yml --plugin=\"LogViewer\" --php-versions=\"7.2,7.4\" --distribution=\"bionic\" --sudo-false --verbose"
+  #- '[[ "$TRAVIS_JOB_NUMBER" != *.1 || "$TRAVIS_PULL_REQUEST" != "false" ]] || ./tests/travis/autoupdate_travis_yml.sh'
 
   - ./tests/travis/checkout_test_against_branch.sh
 
@@ -106,6 +106,7 @@ before_script:
   - ./tests/travis/setup_webserver.sh
   - ./tests/travis/install_phantomjs.sh; export PATH=$PWD/travis_phantomjs/phantomjs-2.1.1-linux-x86_64/bin:$PATH;
 
+  - cp $PIWIK_ROOT_DIR/plugins/LogViewer/page-renderer.js $PIWIK_ROOT_DIR/tests/lib/screenshot-testing/support/page-renderer.js
   - cd tests/PHPUnit
 
 after_script:
