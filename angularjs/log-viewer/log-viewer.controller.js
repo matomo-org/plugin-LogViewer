@@ -11,6 +11,7 @@
 
     function LogViewerController($scope, piwikApi, piwik, $filter) {
         var self = this;
+        console.log('log viewer controller start');
 
         var translate = $filter('translate');
 
