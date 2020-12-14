@@ -24,10 +24,9 @@ describe("LogViewer", function () {
     {
         await page.goto("?" + generalParams + "&module=LogViewer&action=index&uitest=1");
         try {
-            await page.waitFor('#content .logViewer', { timeout: 120000 });
+            await page.waitFor('#content .logViewer', { timeout: 180000 });
         } catch (e) {
-            const html = await page.evaluate(() => document.body.innerHTML);
-            console.log('HTML: ' + html);
+            console.log('HEAD: '+document.head.innerHTML);
             throw e;
         }
     }
@@ -86,7 +85,7 @@ describe("LogViewer", function () {
 
     it('should filter for severity when clicking on one', async function () {
         await loadLogViewerPage();
-        await page.waitFor('tr:nth-child(1) td.severity', { timeout: 120000 });
+        await page.waitFor('tr:nth-child(1) td.severity', { timeout: 180000 });
         await page.click('tr:nth-child(1) td.severity');
         await page.mouse.move(-10, -10);
         await page.waitForNetworkIdle();
