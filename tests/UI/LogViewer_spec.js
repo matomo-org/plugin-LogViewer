@@ -24,11 +24,6 @@ describe("LogViewer", function () {
     {
         await page.goto("?" + generalParams + "&module=LogViewer&action=index&uitest=1");
         await page.waitFor('#content [piwik-log-viewer]', { timeout: 180000 });
-
-        const elementCount = await page.evaluate(() => {
-            return $('#content [piwik-log-viewer]').length;
-        });
-console.log('ELEMENT COUNT: ' + elementCount);
     }
 
     function overrideTestEnvironment(logWriters)
@@ -79,10 +74,12 @@ console.log('ELEMENT COUNT: ' + elementCount);
 
     it('should show a message if there are no results', async function () {
         await overrideTestEnvironment(['']);
-        await loadLogViewerPage();
+        await page.reload();
+        await page.waitFor('#content [piwik-log-viewer]', { timeout: 180000 });
+//        await loadLogViewerPage();
         expect(await page.screenshotSelector('#notificationContainer .notification-info, #content')).to.matchImage('info_no_supported_writer');
     });
-
+return;
     it('should filter for severity when clicking on one', async function () {
         await loadLogViewerPage();
         await page.waitFor('tr:nth-child(1) td.severity', { timeout: 180000 });
