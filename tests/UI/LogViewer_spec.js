@@ -25,9 +25,10 @@ describe("LogViewer", function () {
         await page.goto("?" + generalParams + "&module=LogViewer&action=index&uitest=1");
         await page.waitFor('#content [piwik-log-viewer]', { timeout: 180000 });
 
-        await page.evaluate(() => {
-            console.log($('#content [piwik-log-viewer]').length);
+        const elementCount = await page.evaluate(() => {
+            return $('#content [piwik-log-viewer]').length;
         });
+console.log('ELEMENT COUNT: ' + elementCount);
     }
 
     function overrideTestEnvironment(logWriters)
