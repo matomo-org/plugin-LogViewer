@@ -23,12 +23,11 @@ describe("LogViewer", function () {
     async function loadLogViewerPage()
     {
         await page.goto("?" + generalParams + "&module=LogViewer&action=index&uitest=1");
-        try {
-            await page.waitFor('#content .logViewer', { timeout: 180000 });
-        } catch (e) {
-            console.log('HEAD: '+(await page.evaluate(() => document.head.innerHTML)));
-            throw e;
-        }
+        await page.waitFor('#content [piwik-log-viewer]', { timeout: 180000 });
+
+        await page.evaluate(() => {
+            console.log($('#content [piwik-log-viewer]').length);
+        });
     }
 
     function overrideTestEnvironment(logWriters)
