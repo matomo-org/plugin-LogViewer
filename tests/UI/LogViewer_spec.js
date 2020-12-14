@@ -78,7 +78,7 @@ describe("LogViewer", function () {
         expect(await elem.screenshot()).to.matchImage('preselected_logwriter');
     });
 
-    it('should show a message if there are no results', async function () {
+    it('should show a message if there is not logger', async function () {
         await overrideTestEnvironment(['']);
         await reloadLogViewerPage();
         expect(await page.screenshotSelector('#notificationContainer .notification-info, #content')).to.matchImage('info_no_supported_writer');
