@@ -23,7 +23,7 @@ describe("LogViewer", function () {
     async function loadLogViewerPage()
     {
         await page.goto("?" + generalParams + "&module=LogViewer&action=index&uitest=1");
-        await page.waitFor('#content [piwik-log-viewer]', { timeout: 180000 });
+        await page.waitFor('#content .logViewer', { timeout: 180000 });
     }
 
     // for some reason, loading the same URL again can cause puppeteer to not reload/re-run the javascript, breaking the tests
