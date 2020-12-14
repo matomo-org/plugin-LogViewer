@@ -26,6 +26,12 @@ describe("LogViewer", function () {
         await page.waitFor('#content [piwik-log-viewer]', { timeout: 180000 });
     }
 
+    // for some reason, loading the same URL again can cause puppeteer to not reload/re-run the javascript, breaking the tests
+    async function reloadLogViewerPage() {
+        await page.reload();
+        await page.waitFor('#content [piwik-log-viewer]', { timeout: 180000 });
+    }
+
     function overrideTestEnvironment(logWriters)
     {
         testEnvironment.pluginsToLoad = ['LogViewer'];
@@ -67,21 +73,19 @@ describe("LogViewer", function () {
 
     it('should automatically preselect configured log writer', async function () {
         await overrideTestEnvironment(['database']);
-        await loadLogViewerPage();
+        await reloadLogViewerPage();
         var elem = await page.jQuery('#content');
         expect(await elem.screenshot()).to.matchImage('preselected_logwriter');
     });
 
     it('should show a message if there are no results', async function () {
         await overrideTestEnvironment(['']);
-        await page.reload();
-        await page.waitFor('#content [piwik-log-viewer]', { timeout: 180000 });
-//        await loadLogViewerPage();
+        await reloadLogViewerPage();
         expect(await page.screenshotSelector('#notificationContainer .notification-info, #content')).to.matchImage('info_no_supported_writer');
     });
-return;
+
     it('should filter for severity when clicking on one', async function () {
-        await loadLogViewerPage();
+        await reloadLogViewerPage();
         await page.waitFor('tr:nth-child(1) td.severity', { timeout: 180000 });
         await page.click('tr:nth-child(1) td.severity');
         await page.mouse.move(-10, -10);
