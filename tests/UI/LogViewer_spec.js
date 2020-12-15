@@ -25,7 +25,7 @@ describe("LogViewer", function () {
     {
         ++random;
         await page.newWebPage();
-        await page.goto("?" + generalParams + "&module=LogViewer&action=index&random=" + random);
+        await page.goto("?" + generalParams + "&module=LogViewer&action=index");
         await page.waitFor('#content .logViewer', { timeout: 180000 });
     }
 
