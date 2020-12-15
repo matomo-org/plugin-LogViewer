@@ -20,11 +20,8 @@ describe("LogViewer", function () {
         await page.waitForNetworkIdle();
     }
 
-    let random = 1;
     async function loadLogViewerPage()
     {
-        ++random;
-        await page.newWebPage();
         await page.goto("?" + generalParams + "&module=LogViewer&action=index");
         await page.waitFor('#content .logViewer', { timeout: 180000 });
     }
