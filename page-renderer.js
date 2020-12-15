@@ -275,7 +275,7 @@ PAGE_METHODS_TO_PROXY.forEach(function (methodName) {
     };
 });
 
-PageRenderer.newWebPage = async function () {
+PageRenderer.prototype.newWebPage = async function () {
     await this.webpage.close();
 
     this.webpage = browser.newPage();
