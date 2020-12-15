@@ -275,6 +275,18 @@ PAGE_METHODS_TO_PROXY.forEach(function (methodName) {
     };
 });
 
+PageRenderer.newWebPage = async function () {
+    await this.webpage.close();
+
+    this.webpage = browser.newPage();
+
+    this.webpage.setViewport({
+        width: 1350,
+        height: 768,
+    });
+    this._setupWebpageEvents();
+};
+
 PageRenderer.prototype.waitForNetworkIdle = async function () {
     await new Promise(resolve => setTimeout(resolve, AJAX_IDLE_THRESHOLD));
 
