@@ -90,8 +90,31 @@ var PageRenderer = function (baseUrl, page) {
 
     PAGE_PROPERTIES_TO_PROXY.forEach((propertyName) => {
         Object.defineProperty(this, propertyName, {
-            value: page[propertyName],
+            value: this.webpage[propertyName],
             writable: false,
+            configurable: true,
+        });
+    });
+
+    this.webpage.setViewport({
+        width: 1350,
+        height: 768,
+    });
+    this._setupWebpageEvents();
+};
+
+PageRenderer.prototype.newWebPage = async function () {
+    const browser = this.webpage.browser();
+
+    await this.webpage.close();
+
+    this.webpage = await browser.newPage();
+
+    PAGE_PROPERTIES_TO_PROXY.forEach((propertyName) => {
+        Object.defineProperty(this, propertyName, {
+            value: this.webpage[propertyName],
+            writable: false,
+            configurable: true,
         });
     });
 
@@ -274,20 +297,6 @@ PAGE_METHODS_TO_PROXY.forEach(function (methodName) {
         return result;
     };
 });
-
-PageRenderer.prototype.newWebPage = async function () {
-    const browser = this.webpage.browser();
-
-    await this.webpage.close();
-
-    this.webpage = browser.newPage();
-
-    this.webpage.setViewport({
-        width: 1350,
-        height: 768,
-    });
-    this._setupWebpageEvents();
-};
 
 PageRenderer.prototype.waitForNetworkIdle = async function () {
     await new Promise(resolve => setTimeout(resolve, AJAX_IDLE_THRESHOLD));
