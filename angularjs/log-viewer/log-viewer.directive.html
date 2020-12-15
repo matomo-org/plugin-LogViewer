@@ -1,3 +1,60 @@
 <div class="logViewer">
-    REMOVED
+    <div piwik-content-block content-title="{{ 'LogViewer_LogViewer'|translate }}">
+
+        <div class="row">
+            <div piwik-field uicontrol="select" name="logWriter"
+                 ng-model="logViewer.selectedLogWriter"
+                 ng-change="logViewer.update()"
+                 full-width="true"
+                 class="logWriters col s4 m3 l2"
+                 options="logViewer.logWriters">
+            </div>
+
+            <div piwik-field uicontrol="select" name="selectedSeverity"
+                 full-width="true"
+                 class="severities col s4 m3 l2"
+                 ng-model="logViewer.selectedSeverity"
+                 ng-change="logViewer.update()"
+                 options="logViewer.severities">
+            </div>
+            <div class="col s12 m12 l8">
+                <input type="text"
+                       class="search"
+                       title="{{ 'LogViewer_SearchHelp'|translate }}"
+                       ng-model="logViewer.query"
+                       placeholder="{{ 'LogViewer_SearchPattern'|translate }}"
+                       piwik-onenter="logViewer.update()">
+                <span ng-click="logViewer.update()" title="{{ 'General_ClickToSearch'|translate }}"
+                     class="icon-search searchIcon"></span>
+
+                <div piwik-field uicontrol="checkbox" class="useRegExp" ng-model="logViewer.useRegExp" title="{{ 'LogViewer_UseRegExp'|translate }}"></div>
+
+                <a ng-click="logViewer.update()" class="icon-reload"></a>
+                <form action="{{ '?module=API&method=LogViewer.getLogEntries&query='+ logViewer.buildQuery() + '&format=TSV&page=0&limitPerPage=5000' }}" method="POST" id="export" target="_blank">
+                    <input type="hidden" name="token_auth" value="{{ logViewer.tokenAuth }}">
+                    <input type="hidden" name="force_api_session" value="1">
+                    <a title="{{ 'LogViewer_ExportThisSearch'|translate:'TSV':5000 }}" class="icon-export" onclick="$('#export').submit();"></a>
+                </form>
+                <a title="{{ 'LogViewer_CurrentLogConfigIs'|translate:(logViewer.logConfig|json) }}"
+                      class="icon-info"
+                      target="_blank"
+                      href="https://piwik.org/faq/troubleshooting/faq_115/" rel="noreferrer noopener"></a>
+                <br />
+        </div>
+
+        <table piwik-content-table>
+            <thead>
+                <tr>
+                    <th class="severity">{{ 'LogViewer_Severity'|translate }}</th>
+                    <th class="tag">{{ 'LogViewer_Tag'|translate }}</th>
+                    <th class="date">{{ 'General_Date'|translate }}</th>
+                    <th class="date">{{ 'LogViewer_RequestId'|translate }}</th>
+                    <th class="message">{{ 'LogViewer_Message'|translate }}</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+        </table>
+    </div>
 </div>
