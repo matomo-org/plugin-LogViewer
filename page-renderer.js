@@ -276,6 +276,8 @@ PAGE_METHODS_TO_PROXY.forEach(function (methodName) {
 });
 
 PageRenderer.prototype.newWebPage = async function () {
+    const browser = this.webpage.browser();
+
     await this.webpage.close();
 
     this.webpage = browser.newPage();
