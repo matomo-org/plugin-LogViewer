@@ -30,6 +30,7 @@ describe("LogViewer", function () {
     async function reloadLogViewerPage() {
         await page.reload();
         await page.waitFor('#content [piwik-log-viewer]', { timeout: 180000 });
+        await page.waitFor(() => !! window.jQuery, { timeout: 180000 });
     }
 
     function overrideTestEnvironment(logWriters)
