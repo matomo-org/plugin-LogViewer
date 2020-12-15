@@ -20,16 +20,17 @@ describe("LogViewer", function () {
         await page.waitForNetworkIdle();
     }
 
+    let random = 1;
     async function loadLogViewerPage()
     {
-        await page.goto("?" + generalParams + "&module=LogViewer&action=index&uitest=1");
+        ++random;
+        await page.goto("?" + generalParams + "&module=LogViewer&action=index&uitest=1&random=" + random);
         await page.waitFor('#content .logViewer', { timeout: 180000 });
     }
 
     // for some reason, loading the same URL again can cause puppeteer to not reload/re-run the javascript, breaking the tests
     async function reloadLogViewerPage() {
-        await page.reload();
-        await page.waitFor('#content [piwik-log-viewer]', { timeout: 180000 });
+        await loadLogViewerPage();
         await page.waitFor(() => !! window.jQuery, { timeout: 180000 });
     }
 
