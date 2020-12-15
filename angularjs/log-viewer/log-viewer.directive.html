@@ -40,6 +40,7 @@
                       target="_blank"
                       href="https://piwik.org/faq/troubleshooting/faq_115/" rel="noreferrer noopener"></a>
                 <br />
+            </div>
         </div>
 
         <table piwik-content-table>
@@ -54,6 +55,46 @@
             </thead>
 
             <tbody>
+                <tr ng-repeat="log in logViewer.logs" ng-if="log.message">
+                    <td class="severity"
+                        title="{{ log.severity ? ('LogViewer_ClickToSearchForThis'|translate) : '' }}"
+                        ng-class="{selectable: log.severity}"
+                        ng-click="logViewer.searchSeverity(log.severity)">{{ log.severity || '-' }}</td>
+                    <td class="tag"
+                        title="{{ log.tag ? ('LogViewer_ClickToSearchForThis'|translate) : '' }}"
+                        ng-class="{selectable: log.tag}"
+                        ng-click="logViewer.searchText(log.tag)">{{ log.tag || '-' }}</td>
+                    <td class="date"
+                        title="{{ log.datetime ? ('LogViewer_ClickToSearchForThis'|translate) : '' }}"
+                        ng-class="{selectable: log.datetime}"
+                        ng-click="logViewer.searchDate(log.datetime)">{{ log.datetime || '-' }}</td>
+                    <td class="requestId"
+                        title="{{ log.requestId ? ('LogViewer_ClickToSearchForThis'|translate) : '' }}"
+                        ng-class="{selectable: log.requestId}"
+                        ng-click="logViewer.searchRequestId(log.requestId)">{{ log.requestId || '-' }}</td>
+                    <td class="message">{{ log.message }}</td>
+                </tr>
+                <tr ng-if="!logViewer.isLoading && ((logViewer.logs|length) == 0)">
+                    <td colspan="5">
+                        {{ 'General_SearchNoResults'|translate }}
+                    </td>
+                </tr>
+                <tr ng-if="logViewer.isLoading">
+                    <td colspan="5">
+                        <span class="loadingPiwik"><img src="plugins/Morpheus/images/loading-blue.gif"/>{{ 'General_Loading'|translate }}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="paging">
+                        <span id="prev" class="previous" ng-hide="logViewer.page < 1" ng-click="logViewer.previousPage()">
+                            <a class="btn" href="javascript:;"><span>&#171; {{ 'General_Previous'|translate }}</span></a>
+                        </span>
+
+                        <span id="next" class="next pointer" ng-hide="(logViewer.logs|length) < 1" ng-click="logViewer.nextPage()">
+                            <a class="btn" href="javascript:;"><span>{{ 'General_Next'|translate }} &#187;</span></a>
+                        </span>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
