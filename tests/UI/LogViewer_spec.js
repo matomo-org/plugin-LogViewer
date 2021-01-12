@@ -22,7 +22,7 @@ describe("LogViewer", function () {
 
     async function loadLogViewerPage()
     {
-        await page.goto("?" + generalParams + "&module=LogViewer&action=index&uitest=1");
+        await page.goto("?" + generalParams + "&module=LogViewer&action=&uitest=1");
         await page.waitFor('#content .logViewer', { timeout: 0 });
     }
 
