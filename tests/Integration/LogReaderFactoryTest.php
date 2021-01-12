@@ -79,7 +79,7 @@ class LogReaderFactoryTest extends IntegrationTestCase
 
     /**
      * @expectedException \Exception
-     * @expectedExceptionMessage Wrong source specifed. Such log reader does not exist: notSupporTed
+     * @expectedExceptionMessage Wrong source specified. Such log reader does not exist: notSupporTed
      */
     public function test_make_shouldThrowException_IfNotSupportedReaderRequested()
     {
