@@ -23,7 +23,21 @@ describe("LogViewer", function () {
     async function loadLogViewerPage()
     {
         await page.goto("about:blank");
+        await page.waitFor(100);
         await page.goto("?" + generalParams + "&module=LogViewer&action=&uitest=1");
+
+        for (var i=0; i<5; i++) {
+            try {
+                // page randomly fails to load correctly on travis, so try a reloading it a few times
+                await page.waitFor('#content .logViewer', {timeout: 10000});
+                break;
+            } catch (e) {
+                await page.goto("about:blank");
+                await page.waitFor(100);
+                await page.goto("?" + generalParams + "&module=LogViewer&action=&uitest=1&reload=" + i);
+            }
+        }
+
         await page.waitFor('#content .logViewer');
     }
 
