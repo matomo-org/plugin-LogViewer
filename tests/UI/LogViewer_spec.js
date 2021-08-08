@@ -27,7 +27,7 @@ describe("LogViewer", function () {
         await page.waitFor(100);
         await page.goto("?" + generalParams + "&module=LogViewer&action=&uitest=1");
 
-        for (var i=0; i<5; i++) {
+        for (var i=0; i<7; i++) {
             try {
                 // page randomly fails to load correctly on travis, so try a reloading it a few times
                 await page.waitFor('#content .logViewer', {timeout: 10000});
@@ -38,8 +38,6 @@ describe("LogViewer", function () {
                 await page.goto("?" + generalParams + "&module=LogViewer&action=&uitest=1&reload=" + i);
             }
         }
-
-        await page.waitFor('#content .logViewer');
     }
 
     function overrideTestEnvironment(logWriters)
