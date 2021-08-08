@@ -18,6 +18,7 @@ describe("LogViewer", function () {
         await page.click('.logViewer .searchIcon');
         await page.mouse.move(-10, -10);
         await page.waitForNetworkIdle();
+        await page.waitFor('.logViewer');
     }
 
     async function loadLogViewerPage()
@@ -59,7 +60,7 @@ describe("LogViewer", function () {
 
     it('should show a simple log page', async function () {
         await loadLogViewerPage();
-        var elem = await page.jQuery('#content');
+        var elem = await page.$('#content');
         expect(await elem.screenshot()).to.matchImage('logview_inital');
     });
 
@@ -70,20 +71,20 @@ describe("LogViewer", function () {
 
     it('should be able to search', async function () {
         await searchForText('Widget');
-        var elem = await page.jQuery('#content');
+        var elem = await page.$('#content');
         expect(await elem.screenshot()).to.matchImage('search');
     });
 
     it('should show a message if there are no results', async function () {
         await searchForText('rwererer');
-        var elem = await page.jQuery('#content');
+        var elem = await page.$('#content');
         expect(await elem.screenshot()).to.matchImage('no_results');
     });
 
     it('should automatically preselect configured log writer', async function () {
         await overrideTestEnvironment(['database']);
         await loadLogViewerPage();
-        var elem = await page.jQuery('#content');
+        var elem = await page.$('#content');
         expect(await elem.screenshot()).to.matchImage('preselected_logwriter');
     });
 
@@ -99,7 +100,7 @@ describe("LogViewer", function () {
         await page.click('tr:nth-child(1) td.severity');
         await page.mouse.move(-10, -10);
         await page.waitForNetworkIdle();
-        var elem = await page.jQuery('#content');
+        var elem = await page.$('#content');
         expect(await elem.screenshot()).to.matchImage('filter_severity');
     });
 
@@ -107,7 +108,7 @@ describe("LogViewer", function () {
         await page.click('tr:nth-child(1) td.date');
         await page.mouse.move(-10, -10);
         await page.waitForNetworkIdle();
-        var elem = await page.jQuery('#content');
+        var elem = await page.$('#content');
         expect(await elem.screenshot()).to.matchImage('filter_date');
     });
 
@@ -115,7 +116,7 @@ describe("LogViewer", function () {
         await page.click('tr:nth-child(1) td.requestId');
         await page.mouse.move(-10, -10);
         await page.waitForNetworkIdle();
-        var elem = await page.jQuery('#content');
+        var elem = await page.$('#content');
         expect(await elem.screenshot()).to.matchImage('filter_requestId');
     });
 
@@ -123,7 +124,7 @@ describe("LogViewer", function () {
         await page.click('tr:nth-child(1) td.tag');
         await page.mouse.move(-10, -10);
         await page.waitForNetworkIdle();
-        var elem = await page.jQuery('#content');
+        var elem = await page.$('#content');
         expect(await elem.screenshot()).to.matchImage('filter_tag');
     });
 });
