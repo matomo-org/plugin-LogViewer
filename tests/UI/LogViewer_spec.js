@@ -23,22 +23,22 @@ describe("LogViewer", function () {
     async function loadLogViewerPage()
     {
         await page.goto("about:blank");
-        await page.waitFor(100);
+        await page.waitForTimeout(100);
         await page.goto("?" + generalParams + "&module=LogViewer&action=&uitest=1");
 
         for (var i=0; i<5; i++) {
             try {
                 // page randomly fails to load correctly on travis, so try a reloading it a few times
-                await page.waitFor('#content .logViewer', {timeout: 10000});
+                await page.waitForSelector('#content .logViewer', {timeout: 10000});
                 break;
             } catch (e) {
                 await page.goto("about:blank");
-                await page.waitFor(100);
+                await page.waitForTimeout(100);
                 await page.goto("?" + generalParams + "&module=LogViewer&action=&uitest=1&reload=" + i);
             }
         }
 
-        await page.waitFor('#content .logViewer');
+        await page.waitForSelector('#content .logViewer');
     }
 
     function overrideTestEnvironment(logWriters)
@@ -95,7 +95,7 @@ describe("LogViewer", function () {
 
     it('should filter for severity when clicking on one', async function () {
         await loadLogViewerPage();
-        await page.waitFor('tr:nth-child(1) td.severity', { timeout: 0 });
+        await page.waitForSelector('tr:nth-child(1) td.severity', { timeout: 0 });
         await page.click('tr:nth-child(1) td.severity');
         await page.mouse.move(-10, -10);
         await page.waitForNetworkIdle();
