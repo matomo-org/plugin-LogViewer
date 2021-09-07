@@ -1,18 +1,18 @@
 {
     "LogViewer": {
-        "LogViewer": "Günlük görüntüleyici",
-        "Severity": "Önem düzeyi",
         "AnySeverity": "Tüm önem düzeyleri",
-        "SearchPattern": "Arama modeli",
-        "SearchHelp": "Arama büyük küçük harfe duyarlıdır. Kurallı ifadelerin kullanımı etkinleştirilmiş ise '[' gibi karakterler escape biçiminde yazılmalıdır . ('\\[' gibi).",
-        "Tag": "Etiket",
-        "RequestId": "İstek kodu",
-        "Message": "İleti",
-        "NoSupportedLogWriterConfiguredTitle": "Desteklenen bir günlük kaydedici yapılandırılmamış",
-        "NoSupportedLogWriterConfiguredMessage": "Daha önce bir günlük kaydedici yapılandırılmamış ise eski günlüklere bakılabilir ancak yeni günlükler görüntülenmez. %1$sDesteklenen bir günlük kaydediciyi yapılandırmak%2$s hakkında bilgi alın. Desteklenen günlük kaydediciler: %3$s",
-        "UseRegExp": "Kurallı ifadeler kullanılsın",
         "ClickToSearchForThis": "Bu ifadeyi aramak için tıklayın",
         "CurrentLogConfigIs": "Günlük kaydı şu şekilde yapılandırılmış: %s, günlük kaydedici yapılandırması hakkında ayrıntılı bilgi alın.",
-        "ExportThisSearch": "Bu aramayı %1$s olarak son %2$s kaydı kapsayacak şekilde verin. İndirme işlemi bir kaç dakika sürebilir..."
+        "ExportThisSearch": "Bu aramayı %1$s olarak son %2$s kaydı kapsayacak şekilde verin. İndirme işlemi bir kaç dakika sürebilir...",
+        "LogViewer": "Günlük görüntüleyici",
+        "Message": "İleti",
+        "NoSupportedLogWriterConfiguredMessage": "Daha önce bir günlük kaydedici yapılandırılmamış ise eski günlüklere bakılabilir ancak yeni günlükler görüntülenmez. %1$sDesteklenen bir günlük kaydediciyi yapılandırmak%2$s hakkında bilgi alın. Desteklenen günlük kaydediciler: %3$s",
+        "NoSupportedLogWriterConfiguredTitle": "Desteklenen bir günlük kaydedici yapılandırılmamış",
+        "RequestId": "İstek kodu",
+        "SearchHelp": "Arama büyük küçük harfe duyarlıdır. Kurallı ifadelerin kullanımı etkinleştirilmiş ise '[' gibi karakterler escape biçiminde yazılmalıdır . ('\\[' gibi).",
+        "SearchPattern": "Arama modeli",
+        "Severity": "Önem düzeyi",
+        "Tag": "Etiket",
+        "UseRegExp": "Kurallı ifadeler kullanılsın"
     }
 }
