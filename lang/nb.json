@@ -1,9 +1,13 @@
 {
     "LogViewer": {
+        "AnySeverity": "Enhver alvorlighetsgrad",
         "LogViewer": "Loggviser",
         "Message": "Melding",
         "NoSupportedLogWriterConfiguredMessage": "Hvis en var konfigurert før, kan du fortsatt vise gamle logger, men nye vil ikke vises. Les mer om %1$shvordan konfigurere en støttet loggskriver%2$s. Følgende er støttede: %3$s",
+        "RequestId": "Forespør ID",
+        "SearchPattern": "Søkemønster",
         "Severity": "Alvorlighetsgrad",
-        "Tag": "Stikkord"
+        "Tag": "Stikkord",
+        "UseRegExp": "Bruk regulære uttrykk"
     }
 }
