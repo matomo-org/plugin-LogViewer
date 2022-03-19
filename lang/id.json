@@ -1,8 +1,18 @@
 {
     "LogViewer": {
-        "SearchPattern": "Pola pencarian",
-        "Tag": "Tag",
+        "AnySeverity": "Tingkat Keparahan Apa Pun",
+        "ClickToSearchForThis": "Klik untuk mencari istilah ini",
+        "CurrentLogConfigIs": "Penulisan log dikonfigurasi sebagai berikut: %s, klik untuk membaca lebih lanjut tentang cara mengonfigurasi penulisan log.",
+        "ExportThisSearch": "Ekspor pencarian ini sebagai %1$s yang berisi entri %2$s terbaru. Pengunduhan mungkin memerlukan waktu beberapa menit...",
+        "LogViewer": "Penampil Log",
+        "Message": "Pesan",
+        "NoSupportedLogWriterConfiguredMessage": "Jika salah satu telah diatur di masa lalu, Anda masih dapat melihat log lama tetapi log yang baru tidak akan ditampilkan. Baca selengkapnya tentang %1$scara mengonfigurasi penulis log yang didukung%2$s. Yang didukung adalah: %3$s",
+        "NoSupportedLogWriterConfiguredTitle": "Tidak ada penulis log yang didukung yang telah dikonfigurasi",
         "RequestId": "Id Permintaan",
-        "Message": "Pesan"
+        "SearchHelp": "Pencarian tidak peka kapital. Jika ekspresi reguler diaktifkan, karakter seperti '[' mungkin perlu diloloskan (mis. '\\[').",
+        "SearchPattern": "Pola pencarian",
+        "Severity": "Keparahan",
+        "Tag": "Etiket",
+        "UseRegExp": "Gunakan ekspresi reguler"
     }
 }
