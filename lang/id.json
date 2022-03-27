@@ -12,7 +12,7 @@
         "SearchHelp": "Pencarian tidak peka kapital. Jika ekspresi reguler diaktifkan, karakter seperti '[' mungkin perlu diloloskan (mis. '\\[').",
         "SearchPattern": "Pola pencarian",
         "Severity": "Keparahan",
-        "Tag": "Etiket",
+        "Tag": "Tag",
         "UseRegExp": "Gunakan ekspresi reguler"
     }
 }
