@@ -4,12 +4,6 @@
   @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
 -->
 
-<todo>
-- get to build
-- test in UI
-- create PR
-</todo>
-
 <template>
   <div class="logViewer">
     <ContentBlock :content-title="translate('LogViewer_LogViewer')">
@@ -44,13 +38,14 @@
             :title="translate('LogViewer_SearchHelp')"
             v-model="query"
             :placeholder="translate('LogViewer_SearchPattern')"
-          >
+            style="margin-right:3.5px"
+          />
           <span
             class="icon-search searchIcon"
             :title="translate('General_ClickToSearch')"
             @click="update()"
           />
-          <div class="useRegExp">
+          <div class="useRegExp" style="margin-right:3.5px;">
             <Field
               uicontrol="checkbox"
               :title="translate('LogViewer_UseRegExp')"
@@ -60,6 +55,7 @@
           <a
             class="icon-reload"
             @click="update()"
+            style="margin-right:3.5px"
           />
           <form
             method="POST"
@@ -77,11 +73,13 @@
               type="hidden"
               name="force_api_session"
               value="1"
+              style="margin-right:3.5px"
             />
             <a
               class="icon-export"
               onclick="this.$refs.submit()"
               :title="translate('LogViewer_ExportThisSearch', 'TSV', 5000)"
+              style="margin-right:3.5px"
             />
           </form>
           <a
@@ -134,7 +132,7 @@
               >{{ log.requestId || '-' }}</td>
               <td class="message">{{ log.message }}</td>
             </tr>
-            <tr v-if="!isLoading && logs.length === 0">
+            <tr v-if="!isLoading && logs?.length === 0">
               <td colspan="5">
                 {{ translate('General_SearchNoResults') }}
               </td>
@@ -167,7 +165,7 @@
                   id="next"
                   class="next pointer"
                   @click="nextPage()"
-                  v-show="!(logs.length < 1)"
+                  v-show="!(logs?.length < 1)"
                 >
                   <a
                     class="btn"
@@ -290,6 +288,8 @@ export default defineComponent({
       ],
       selectedSeverity: '',
       fetchLogEntriesAbort: null,
+      logs: undefined,
+      logConfig: undefined,
     };
   },
   created() {
