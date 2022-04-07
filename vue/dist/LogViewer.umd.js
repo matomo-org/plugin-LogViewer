@@ -149,7 +149,7 @@ var external_CoreHome_ = __webpack_require__("19dc");
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 
-// CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--0-1!./plugins/LogViewer/vue/src/LogViewer/LogViewer.vue?vue&type=template&id=20b17756
+// CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--0-1!./plugins/LogViewer/vue/src/LogViewer/LogViewer.vue?vue&type=template&id=28be7bbe
 
 var _hoisted_1 = {
   class: "logViewer"
@@ -389,7 +389,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
   }, 8, ["content-title"])]);
 }
-// CONCATENATED MODULE: ./plugins/LogViewer/vue/src/LogViewer/LogViewer.vue?vue&type=template&id=20b17756
+// CONCATENATED MODULE: ./plugins/LogViewer/vue/src/LogViewer/LogViewer.vue?vue&type=template&id=28be7bbe
 
 // EXTERNAL MODULE: external "CorePluginsAdmin"
 var external_CorePluginsAdmin_ = __webpack_require__("a5a2");
@@ -461,9 +461,31 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
         value: 'EMERGENCY'
       }],
       selectedSeverity: '',
-      fetchLogEntriesAbort: null,
       logs: undefined,
       logConfig: undefined
+    };
+  },
+  setup: function setup() {
+    var fetchLogEntriesAbort = null;
+
+    var getLogEntries = function getLogEntries(params) {
+      if (fetchLogEntriesAbort) {
+        fetchLogEntriesAbort.abort();
+        fetchLogEntriesAbort = null;
+      }
+
+      fetchLogEntriesAbort = new AbortController();
+      return external_CoreHome_["AjaxHelper"].fetch(Object.assign(Object.assign({}, params), {}, {
+        method: 'LogViewer.getLogEntries'
+      }), {
+        abortController: fetchLogEntriesAbort
+      }).finally(function () {
+        fetchLogEntriesAbort = null;
+      });
+    };
+
+    return {
+      getLogEntries: getLogEntries
     };
   },
   created: function created() {
@@ -527,31 +549,16 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       var _this2 = this;
 
       this.isLoading = true;
-
-      if (this.fetchLogEntriesAbort) {
-        this.fetchLogEntriesAbort.abort();
-        this.fetchLogEntriesAbort = null;
-      }
-
-      this.fetchLogEntriesAbort = new AbortController();
       this.logs = [];
-      external_CoreHome_["AjaxHelper"].fetch({
-        method: 'LogViewer.getLogEntries',
+      this.getLogEntries({
         query: this.buildQuery,
         limitPerPage: this.limit,
         source: this.selectedLogWriter,
         page: this.page
       }).then(function (logs) {
         _this2.logs = logs;
-      }).catch(function (error) {
-        external_CoreHome_["NotificationsStore"].show({
-          message: error,
-          context: 'error',
-          type: 'transient'
-        });
       }).finally(function () {
         _this2.isLoading = false;
-        _this2.fetchLogEntriesAbort = null;
       });
     },
     searchSeverity: function searchSeverity(severity) {

@@ -215,7 +215,6 @@ interface LogViewerState {
   useRegExp: boolean;
   severities: Option[];
   selectedSeverity: string;
-  fetchLogEntriesAbort: null|AbortController; // TODO: test
   logs?: LogEntry[];
   logConfig?: unknown;
 }
@@ -287,9 +286,36 @@ export default defineComponent({
         },
       ],
       selectedSeverity: '',
-      fetchLogEntriesAbort: null,
       logs: undefined,
       logConfig: undefined,
+    };
+  },
+  setup() {
+    let fetchLogEntriesAbort: AbortController|null = null;
+
+    const getLogEntries = (params: QueryParameters) => {
+      if (fetchLogEntriesAbort) {
+        fetchLogEntriesAbort.abort();
+        fetchLogEntriesAbort = null;
+      }
+
+      fetchLogEntriesAbort = new AbortController();
+
+      return AjaxHelper.fetch(
+        {
+          ...params,
+          method: 'LogViewer.getLogEntries',
+        },
+        {
+          abortController: fetchLogEntriesAbort,
+        },
+      ).finally(() => {
+        fetchLogEntriesAbort = null;
+      });
+    };
+
+    return {
+      getLogEntries,
     };
   },
   created() {
@@ -346,31 +372,16 @@ export default defineComponent({
     update() {
       this.isLoading = true;
 
-      if (this.fetchLogEntriesAbort) {
-        this.fetchLogEntriesAbort.abort();
-        this.fetchLogEntriesAbort = null;
-      }
-
-      this.fetchLogEntriesAbort = new AbortController();
-
       this.logs = [];
-      AjaxHelper.fetch({
-        method: 'LogViewer.getLogEntries',
+      this.getLogEntries({
         query: this.buildQuery,
         limitPerPage: this.limit,
         source: this.selectedLogWriter,
         page: this.page,
       }).then((logs) => {
         this.logs = logs;
-      }).catch((error) => {
-        NotificationsStore.show({
-          message: error,
-          context: 'error',
-          type: 'transient',
-        });
       }).finally(() => {
         this.isLoading = false;
-        this.fetchLogEntriesAbort = null;
       });
     },
     searchSeverity(severity: string) {
