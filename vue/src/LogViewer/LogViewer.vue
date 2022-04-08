@@ -77,7 +77,7 @@
             />
             <a
               class="icon-export"
-              onclick="this.$refs.submit()"
+              @click="$refs.export.submit()"
               :title="translate('LogViewer_ExportThisSearch', 'TSV', 5000)"
               style="margin-right:3.5px"
             />
@@ -137,7 +137,7 @@
                 {{ translate('General_SearchNoResults') }}
               </td>
             </tr>
-            <tr v-if="isLoading">
+            <tr v-show="isLoading">
               <td colspan="5">
                 <span class="loadingPiwik">
                   <img src="plugins/Morpheus/images/loading-blue.gif" />
@@ -301,13 +301,14 @@ export default defineComponent({
 
       fetchLogEntriesAbort = new AbortController();
 
-      return AjaxHelper.fetch(
+      return AjaxHelper.fetch<LogEntry[]>(
         {
           ...params,
           method: 'LogViewer.getLogEntries',
         },
         {
           abortController: fetchLogEntriesAbort,
+          createErrorNotification: false,
         },
       ).finally(() => {
         fetchLogEntriesAbort = null;
@@ -319,7 +320,7 @@ export default defineComponent({
     };
   },
   created() {
-    AjaxHelper.fetch({
+    AjaxHelper.fetch<string[]>({
       method: 'LogViewer.getAvailableLogReaders',
     }).then((logWriters) => {
       if (Array.isArray(logWriters)) {
@@ -361,7 +362,7 @@ export default defineComponent({
       }
     });
 
-    AjaxHelper.fetch({
+    AjaxHelper.fetch<unknown>({
       method: 'LogViewer.getLogConfig',
       filter_limit: '-1',
     }).then((config) => {
@@ -378,6 +379,14 @@ export default defineComponent({
         limitPerPage: this.limit,
         source: this.selectedLogWriter,
         page: this.page,
+      }).catch((error: Error|string) => {
+        NotificationsStore.show({
+          message: (error as Error).message || error as string,
+          context: 'error',
+          type: 'transient',
+        });
+
+        return [];
       }).then((logs) => {
         this.logs = logs;
       }).finally(() => {
