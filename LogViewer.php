@@ -24,14 +24,12 @@ class LogViewer extends \Piwik\Plugin
 
     public function getStylesheetFiles(&$stylesheets)
     {
-        $stylesheets[] = "plugins/LogViewer/angularjs/log-viewer/log-viewer.directive.less";
+        $stylesheets[] = "plugins/LogViewer/vue/src/LogViewer/LogViewer.less";
     }
 
     public function getJsFiles(&$jsFiles)
     {
         $jsFiles[] = "plugins/LogViewer/libs/phpjs/preg_quote.js";
-        $jsFiles[] = "plugins/LogViewer/angularjs/log-viewer/log-viewer.controller.js";
-        $jsFiles[] = "plugins/LogViewer/angularjs/log-viewer/log-viewer.directive.js";
     }
 
     public function getClientSideTranslationKeys(&$translationKeys)
