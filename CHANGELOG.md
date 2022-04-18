@@ -1,6 +1,6 @@
 ## Changelog
 
-* 5.0.0 Migrate angularjs to Vue.
+* 4.1.0 Migrate angularjs to Vue.
 * 4.0.1 Compatibility with Matomo 4.0
 * 4.0.0 Compatibility with Matomo 4.0
 * 3.0.0 Compatibility with Piwik 3.0
