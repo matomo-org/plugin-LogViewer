@@ -37,7 +37,6 @@ class LogViewer extends \Piwik\Plugin
         $translationKeys[] = 'General_Search';
         $translationKeys[] = 'LogViewer_LogViewer';
         $translationKeys[] = 'LogViewer_SearchPattern';
-        $translationKeys[] = 'LogViewer_LogViewer';
         $translationKeys[] = 'General_Plugin';
         $translationKeys[] = 'General_Date';
         $translationKeys[] = 'LogViewer_RequestId';
