@@ -1,1 +1,10 @@
-{}
+{
+    "LogViewer": {
+        "AnySeverity": "Sebarang Keterukan",
+        "LogViewer": "Pemapar Log",
+        "SearchHelp": "Carian tidak peka huruf besar. Jika ungkapan biasa didayakan, aksara seperti '[' mungkin diperlukan untuk dilepaskan (cth. '\\[').",
+        "SearchPattern": "Corak carian",
+        "Severity": "Keterukan",
+        "Tag": "Tag"
+    }
+}
