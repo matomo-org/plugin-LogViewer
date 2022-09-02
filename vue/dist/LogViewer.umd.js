@@ -143,9 +143,6 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// EXTERNAL MODULE: external "CoreHome"
-var external_CoreHome_ = __webpack_require__("19dc");
-
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 
@@ -389,6 +386,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8, ["content-title"])]);
 }
 // CONCATENATED MODULE: ./plugins/LogViewer/vue/src/LogViewer/LogViewer.vue?vue&type=template&id=f03f9e24
+
+// EXTERNAL MODULE: external "CoreHome"
+var external_CoreHome_ = __webpack_require__("19dc");
 
 // EXTERNAL MODULE: external "CorePluginsAdmin"
 var external_CorePluginsAdmin_ = __webpack_require__("a5a2");
@@ -675,24 +675,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 LogViewervue_type_script_lang_ts.render = render
 
 /* harmony default export */ var LogViewer = (LogViewervue_type_script_lang_ts);
-// CONCATENATED MODULE: ./plugins/LogViewer/vue/src/LogViewer/LogViewer.adapter.ts
-/*!
- * Matomo - free/libre analytics platform
- *
- * @link https://matomo.org
- * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
- */
-
-
-/* harmony default export */ var LogViewer_adapter = (Object(external_CoreHome_["createAngularJsAdapter"])({
-  component: LogViewer,
-  scope: {
-    limit: {
-      angularJsBind: '='
-    }
-  },
-  directiveName: 'piwikLogViewer'
-}));
 // CONCATENATED MODULE: ./plugins/LogViewer/vue/src/index.ts
 /*!
  * Matomo - free/libre analytics platform
@@ -700,7 +682,6 @@ LogViewervue_type_script_lang_ts.render = render
  * @link https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
-
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib-no-default.js
 
