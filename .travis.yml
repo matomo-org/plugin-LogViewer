@@ -4,7 +4,6 @@ language: php
 
 php:
   - 7.2
-  - 7.4
 #  - hhvm
 
 services:
@@ -80,7 +79,7 @@ install:
   - '[ -d ./tests/travis/.git ] || sh -c "rm -rf ./tests/travis && git clone https://github.com/matomo-org/travis-scripts.git ./tests/travis"'
   - cd ./tests/travis ; git checkout master ; cd ../..
 
-  - export GENERATE_TRAVIS_YML_COMMAND="php ./tests/travis/generator/main.php generate:travis-yml --plugin=\"LogViewer\" --php-versions=\"7.2,7.4\" --distribution=\"bionic\" --sudo-false --verbose"
+  - export GENERATE_TRAVIS_YML_COMMAND="php ./tests/travis/generator/main.php generate:travis-yml --plugin=\"LogViewer\" --php-versions=\"7.2\" --distribution=\"bionic\" --sudo-false --verbose"
   - '[[ "$TRAVIS_JOB_NUMBER" != *.1 || "$TRAVIS_PULL_REQUEST" != "false" ]] || ./tests/travis/autoupdate_travis_yml.sh'
 
   - ./tests/travis/checkout_test_against_branch.sh
