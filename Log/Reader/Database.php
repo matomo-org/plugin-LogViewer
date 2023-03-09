@@ -18,6 +18,7 @@ class Database implements Reader
     private $lines = array();
     private $table;
     private $lowestIdLogMessageFromPreviousRun;
+    private $db;
 
     public function __construct()
     {

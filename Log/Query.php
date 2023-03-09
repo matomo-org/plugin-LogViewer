@@ -10,6 +10,8 @@ namespace Piwik\Plugins\LogViewer\Log;
 
 class Query
 {
+    protected $query;
+
     public function __construct($query)
     {
         $this->query = $query;
