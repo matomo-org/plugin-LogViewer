@@ -1,6 +1,6 @@
 # Matomo LogViewer Plugin
 
-[![Build Status](https://travis-ci.com/matomo-org/plugin-LogViewer.svg?branch=4.x-dev)](https://travis-ci.com/matomo-org/plugin-LogViewer)
+[![Build Status](https://github.com/matomo-org/plugin-LogViewer/actions/workflows/matomo-tests.yml/badge.svg?branch=4.x-dev)](https://github.com/matomo-org/plugin-LogViewer/actions/workflows/matomo-tests.yml)
 
 ## Description
 
