@@ -8,7 +8,7 @@
         "Message": "İleti",
         "NoSupportedLogWriterConfiguredMessage": "Daha önce bir günlük kaydedici yapılandırılmamış ise eski günlüklere bakılabilir ancak yeni günlükler görüntülenmez. %1$sDesteklenen bir günlük kaydediciyi yapılandırmak%2$s hakkında bilgi alın. Desteklenen günlük kaydediciler: %3$s",
         "NoSupportedLogWriterConfiguredTitle": "Desteklenen bir günlük kaydedici yapılandırılmamış",
-        "RequestId": "İstek kodu",
+        "RequestId": "İstek kimliği",
         "SearchHelp": "Arama büyük küçük harfe duyarlıdır. Kurallı ifadelerin kullanımı etkinleştirilmiş ise '[' gibi karakterler escape biçiminde yazılmalıdır . ('\\[' gibi).",
         "SearchPattern": "Arama modeli",
         "Severity": "Önem düzeyi",
