@@ -1,6 +1,7 @@
 ## Changelog
 
 * 5.0.0 Compatibility with Matomo 5.0
+* 4.1.2 PHP 8.2 Deprecation warnings handled
 * 4.1.1 Translation changes
 * 4.1.0 Migrate angularjs to Vue.
 * 4.0.1 Compatibility with Matomo 4.0
