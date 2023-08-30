@@ -1,18 +1,18 @@
 {
     "LogViewer": {
-        "LogViewer": "Loggvisare",
-        "Severity": "Stränghet",
         "AnySeverity": "Lägg till stränghet",
-        "SearchPattern": "Sökmönster",
-        "SearchHelp": "Sökningen ignorerar om det är stora eller små bokstäver. Om regular expressons är aktiverat så tecken såsom '[' kan behövas för att skifta mellan kod och text (t.ex. '\\[').",
-        "Tag": "Tagg",
-        "RequestId": "Begärans ID",
-        "Message": "Meddelande",
-        "NoSupportedLogWriterConfiguredTitle": "Det finns inget stöd för loggfunktion konfigurerad",
-        "NoSupportedLogWriterConfiguredMessage": "Om en har konfigurerats tidigare kan du fortfarande se de gamla loggfilerna men de nya kommer inte att synas. Läs mer om %1$shur du konfigurerar en loggfunktion%2$s. Följande stöds: %3$s",
-        "UseRegExp": "Använd regular expressions",
         "ClickToSearchForThis": "Klicka för att söka på denna term",
         "CurrentLogConfigIs": "Loggningen är konfigurerad enligt följande: %s, klicka för att läsa mer om konfigureringen av loggfunktionen.",
-        "ExportThisSearch": "Exportera denna sökning som %1$s innehållandes de senaste %2$s posterna. Nerladdningen kan ta några minuter..."
+        "ExportThisSearch": "Exportera denna sökning som %1$s innehållandes de senaste %2$s posterna. Nerladdningen kan ta några minuter…",
+        "LogViewer": "Loggvisare",
+        "Message": "Meddelande",
+        "NoSupportedLogWriterConfiguredMessage": "Om en har konfigurerats tidigare kan du fortfarande se de gamla loggfilerna men de nya kommer inte att synas. Läs mer om %1$shur du konfigurerar en loggfunktion%2$s. Följande stöds: %3$s",
+        "NoSupportedLogWriterConfiguredTitle": "Det finns inget stöd för loggfunktion konfigurerad",
+        "RequestId": "Begärans ID",
+        "SearchHelp": "Sökningen ignorerar om det är stora eller små bokstäver. Om regular expressons är aktiverat så tecken såsom '[' kan behövas för att skifta mellan kod och text (t.ex. '\\[').",
+        "SearchPattern": "Sökmönster",
+        "Severity": "Stränghet",
+        "Tag": "Tagg",
+        "UseRegExp": "Använd regular expressions"
     }
 }
