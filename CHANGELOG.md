@@ -1,5 +1,6 @@
 ## Changelog
 
+* 5.0.1 Prefer using ellipsis over three dots
 * 5.0.0 Compatibility with Matomo 5.0
 * 4.1.2 PHP 8.2 Deprecation warnings handled
 * 4.1.1 Translation changes
