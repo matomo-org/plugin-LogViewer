@@ -3,7 +3,7 @@
         "AnySeverity": "Qualsevol gravetat",
         "ClickToSearchForThis": "Feu clic per cercar aquest terme",
         "CurrentLogConfigIs": "El registre es configura de la següent manera: %s, feu clic per obtenir més informació sobre la configuració del registre.",
-        "ExportThisSearch": "Exporta aquesta cerca com a %1$s que conté les últimes entrades de %2$s. La baixada pot trigar uns minuts...",
+        "ExportThisSearch": "Exporta aquesta cerca com a %1$s que conté les últimes entrades de %2$s. La descàrrega pot trigar uns minuts…",
         "LogViewer": "Visor de registre",
         "Message": "Missatge",
         "NoSupportedLogWriterConfiguredMessage": "Si se n'ha configurat un en el passat encara podreu veure els registres antics, però no es mostraran els nous. Llegiu més sobre %1$smostra com configurar un escriptor de registre admès%2$s. Els admesos són: %3$s",
