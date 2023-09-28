@@ -3,7 +3,7 @@
         "AnySeverity": "Jeder Schweregrad",
         "ClickToSearchForThis": "Klicken um nach diesem Begriff zu suchen",
         "CurrentLogConfigIs": "Logging ist wie folgt konfiguriert: %s, anklicken um mehr übers Konfigurieren des Loggings zu lesen.",
-        "ExportThisSearch": "Exportiere diese Suche als %1$s. Dies beinhaltet die letzten %2$s Einträge. Der Download kann einige Minuten in Anspruch nehmen...",
+        "ExportThisSearch": "Exportiere diese Suche als %1$s. Dies beinhaltet die letzten %2$s Einträge. Der Download kann einige Minuten in Anspruch nehmen…",
         "LogViewer": "Log-Anzeige",
         "Message": "Meldung",
         "NoSupportedLogWriterConfiguredMessage": "Bei alten Konfigurationen kann man die alten Logs noch anschauen, aber neue werden nicht angezeigt. Lesen Sie mehr über die %1$sKonfiguration eines unterstützten Log Schreibers%2$s. Unterstützt werden: %3$s",

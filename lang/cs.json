@@ -1,18 +1,18 @@
 {
     "LogViewer": {
-        "LogViewer": "Prohlížeč záznamu",
-        "Severity": "Závažnost",
         "AnySeverity": "Jakákoliv závažnost",
-        "SearchPattern": "Vzor pro vyhledávání",
-        "SearchHelp": "Vyhledávání nerozlišuje velikost písmen. Pokud jsou povoleny regulérní výrazy, znaky jako '[' možná bude nutné vynechat (t. j. '\\[').",
-        "Tag": "Značka",
-        "RequestId": "ID požadavku",
-        "Message": "Zpráva",
-        "NoSupportedLogWriterConfiguredTitle": "Není nakonfigurován žádný podporovaný zapisovač záznamu",
-        "NoSupportedLogWriterConfiguredMessage": "Pokud byl nějaký nakonfigurován v minulosti, můžete prohlížet staré záznamy, ale nové nebudou zobrazeny. Zjistěte víc o %1$s, jak nakonfigurovat podporovaný zapisovač záznamů%2$s. Podporované jsou %3$s",
-        "UseRegExp": "Použít regulérní výrazy",
         "ClickToSearchForThis": "Klikněte zde pro vyhledání tohoto termínu",
         "CurrentLogConfigIs": "Logování je nastaveno jako %s, zde klikněte pro více informací o konfiguraci logování.",
-        "ExportThisSearch": "Exportovat toto vyhledávání jako %1$s obsahující posledních %2$s záznamů. Stažení může pár minut trvat..."
+        "ExportThisSearch": "Exportovat toto vyhledávání jako %1$s obsahující posledních %2$s záznamů. Stažení může pár minut trvat…",
+        "LogViewer": "Prohlížeč záznamu",
+        "Message": "Zpráva",
+        "NoSupportedLogWriterConfiguredMessage": "Pokud byl nějaký nakonfigurován v minulosti, můžete prohlížet staré záznamy, ale nové nebudou zobrazeny. Zjistěte víc o %1$s, jak nakonfigurovat podporovaný zapisovač záznamů%2$s. Podporované jsou %3$s",
+        "NoSupportedLogWriterConfiguredTitle": "Není nakonfigurován žádný podporovaný zapisovač záznamu",
+        "RequestId": "ID požadavku",
+        "SearchHelp": "Vyhledávání nerozlišuje velikost písmen. Pokud jsou povoleny regulérní výrazy, znaky jako '[' možná bude nutné vynechat (t. j. '\\[').",
+        "SearchPattern": "Vzor pro vyhledávání",
+        "Severity": "Závažnost",
+        "Tag": "Značka",
+        "UseRegExp": "Použít regulérní výrazy"
     }
 }
