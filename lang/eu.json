@@ -1,1 +1,14 @@
-{}
+{
+    "LogViewer": {
+        "AnySeverity": "Edozein larritasun",
+        "ClickToSearchForThis": "Egin klik termino hau bilatzeko",
+        "LogViewer": "Egunkari-ikustailea",
+        "Message": "Mezua",
+        "NoSupportedLogWriterConfiguredTitle": "Ez dago onartutako egunkari-idazlerik konfiguratuta",
+        "RequestId": "Eskaera Id-a",
+        "SearchPattern": "Bilaketa-eredua",
+        "Severity": "Larritasuna",
+        "Tag": "Etiketa",
+        "UseRegExp": "Erabili adierazpen erregularrak"
+    }
+}
