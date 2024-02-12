@@ -3,7 +3,7 @@
         "AnySeverity": "Cualquier severidad",
         "ClickToSearchForThis": "Click para buscar por el término",
         "CurrentLogConfigIs": "El registro de sucesos está configurado del siguiente modo: %s, haga clic para saber más acerca de configurar el registro de sucesos.",
-        "ExportThisSearch": "Exporte esta búsqueda como %1$s conteniendo las últimas %2$s entradas. La descarga puede tomar unos minutos...",
+        "ExportThisSearch": "Exporte esta búsqueda como %1$s conteniendo las últimas %2$s entradas. La descarga puede tomar unos minutos…",
         "LogViewer": "Visualizador del histórico de registros",
         "Message": "Mensaje",
         "NoSupportedLogWriterConfiguredMessage": "Si se configuró uno en el pasado, todavía puedes ver los registros antiguos pero los nuevos no los verás. Lee más acerca de %1$scómo configurar un \"log writer\" de los soportados%2$s. Estos son: %3$s",
