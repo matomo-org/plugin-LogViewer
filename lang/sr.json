@@ -1,18 +1,18 @@
 {
     "LogViewer": {
-        "LogViewer": "Prikaz zapisa",
-        "Severity": "Severity",
         "AnySeverity": "Any Severity",
-        "SearchPattern": "Izraz za pretragu",
-        "SearchHelp": "Pretraga razlikuje velika i mala slova. Ukoliko su uključeni regularni izrazi, znake poput '[' bi trebalo pisati '\\[' (escape).",
-        "Tag": "Oznaka",
-        "RequestId": "Identifikator zahteva",
-        "Message": "Poruka",
-        "NoSupportedLogWriterConfiguredTitle": "Program za pravljenje zapisa nije podešen",
-        "NoSupportedLogWriterConfiguredMessage": "Ukoliko imate ranija podešavanja, još uvek možete videti stare zapise ali se zato novi neće videti. Pročitajte više o ovome na %1$sKako podesiti podržane programe za zapise%2$s. Podržani su: %3$s",
-        "UseRegExp": "Koristi regularne izraze",
         "ClickToSearchForThis": "Kliknite kako biste pretražili ovaj termin",
         "CurrentLogConfigIs": "Zapisi su podešeni na sledeći način: %s, kliknite kako biste saznali više kako da podesite zapise.",
-        "ExportThisSearch": "Sačuvajte ovu pretragu kao %1$s koja sadrži barem %2$s zapisa. Preuzimanje može potrajati nekoliko minuta..."
+        "ExportThisSearch": "Sačuvajte ovu pretragu kao %1$s koja sadrži barem %2$s zapisa. Preuzimanje može potrajati nekoliko minuta…",
+        "LogViewer": "Prikaz zapisa",
+        "Message": "Poruka",
+        "NoSupportedLogWriterConfiguredMessage": "Ukoliko imate ranija podešavanja, još uvek možete videti stare zapise ali se zato novi neće videti. Pročitajte više o ovome na %1$sKako podesiti podržane programe za zapise%2$s. Podržani su: %3$s",
+        "NoSupportedLogWriterConfiguredTitle": "Program za pravljenje zapisa nije podešen",
+        "RequestId": "Identifikator zahteva",
+        "SearchHelp": "Pretraga razlikuje velika i mala slova. Ukoliko su uključeni regularni izrazi, znake poput '[' bi trebalo pisati '\\[' (escape).",
+        "SearchPattern": "Izraz za pretragu",
+        "Severity": "Severity",
+        "Tag": "Oznaka",
+        "UseRegExp": "Koristi regularne izraze"
     }
 }
