@@ -1,18 +1,18 @@
 {
     "LogViewer": {
-        "LogViewer": "Pregledovalnik dnevniških datotek",
-        "Severity": "Pomembnost",
         "AnySeverity": "Vse pomembnosti",
-        "SearchPattern": "Iskalni vzorec",
-        "SearchHelp": "Iskanje ne razlikuje velikih\/malih črk. Če so vključeni regularni izrazi, je možno, da bodo znaki kot '[' potrebovali escape sekvenco (npr. '\\[').",
-        "Tag": "Oznaka",
-        "RequestId": "Id zahtevka",
-        "Message": "Sporočilo",
-        "NoSupportedLogWriterConfiguredTitle": "Ni nastavljena porpora za zapisovanje dnevnika",
-        "NoSupportedLogWriterConfiguredMessage": "Če je bil v preteklosti že konfiguriran, lahko še vedno pregledate stare dnevnike, vendar novejši dnevniki ne bodo prikazani. Prebri več o tem %1$s rikazi kako nastaviti podprte dnevniške zapisovalce%2$s. Podprti so: %3$s",
-        "UseRegExp": "Uporabi regularne izraze",
         "ClickToSearchForThis": "Klikni za iskanje po tem terminu",
         "CurrentLogConfigIs": "Nastavitve za dnevniške datoteke so nastavljene tako: %s, klikni, da prepereš več o konfiguriranju nastavitev dnevniških datotek.",
-        "ExportThisSearch": "Izvozi to iskanje kot %1$s vsebuje zadnjih %2$s vnosov. Prenos lahko traja nekaj minut..."
+        "ExportThisSearch": "Izvozi to iskanje kot %1$s vsebuje zadnjih %2$s vnosov. Prenos lahko traja nekaj minut…",
+        "LogViewer": "Pregledovalnik dnevniških datotek",
+        "Message": "Sporočilo",
+        "NoSupportedLogWriterConfiguredMessage": "Če je bil v preteklosti že konfiguriran, lahko še vedno pregledate stare dnevnike, vendar novejši dnevniki ne bodo prikazani. Prebri več o tem %1$s rikazi kako nastaviti podprte dnevniške zapisovalce%2$s. Podprti so: %3$s",
+        "NoSupportedLogWriterConfiguredTitle": "Ni nastavljena porpora za zapisovanje dnevnika",
+        "RequestId": "Id zahtevka",
+        "SearchHelp": "Iskanje ne razlikuje velikih/malih črk. Če so vključeni regularni izrazi, je možno, da bodo znaki kot '[' potrebovali escape sekvenco (npr. '\\[').",
+        "SearchPattern": "Iskalni vzorec",
+        "Severity": "Pomembnost",
+        "Tag": "Oznaka",
+        "UseRegExp": "Uporabi regularne izraze"
     }
 }
