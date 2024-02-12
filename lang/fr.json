@@ -3,7 +3,7 @@
         "AnySeverity": "N'importe quelle gravité",
         "ClickToSearchForThis": "Cliquez pour rechercher ce terme",
         "CurrentLogConfigIs": "La journalisation est configurée ainsi : %s, cliquer pour en savoir plus sur la configuration de la journalisation.",
-        "ExportThisSearch": "Exporter cette recherche en tant que %1$s contenant les %2$s dernières entrées. Le téléchargement peut prendre quelques minutes...",
+        "ExportThisSearch": "Exporter cette recherche en tant que %1$s contenant les %2$s dernières entrées. Le téléchargement peut prendre quelques minutes…",
         "LogViewer": "Console de Log",
         "Message": "Message",
         "NoSupportedLogWriterConfiguredMessage": "S'il y en avait déjà un de configuré par le passé, vous pouvez toujours visualiser les anciens logs mais les nouveaux ne seront pas affichés. En savoir plus sur %1$scomment configurer un module de logs supporté%2$s. Les modules supportés sont : %3$s",
