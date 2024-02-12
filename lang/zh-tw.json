@@ -1,18 +1,18 @@
 {
     "LogViewer": {
-        "LogViewer": "紀錄檢視器",
-        "Severity": "嚴重性",
         "AnySeverity": "不論嚴重性",
-        "SearchPattern": "搜尋值或格式",
-        "SearchHelp": "搜尋將不區分大小寫。如果啟用了正規表示式，像是「[」的字元必須在前方加入跳脫字符（例如「\\[」）。",
-        "Tag": "標籤",
-        "RequestId": "請求 ID",
-        "Message": "訊息",
-        "NoSupportedLogWriterConfiguredTitle": "沒有支持紀錄檢視器的配置",
-        "NoSupportedLogWriterConfiguredMessage": "如果過去有配置過，你依然可以查看舊的紀錄檔，但新的不會顯示。查看更多關於%1$s如何支持紀錄檢視器%2$s。支援的有：%3$s",
-        "UseRegExp": "使用正規表示式",
         "ClickToSearchForThis": "點擊以搜尋",
         "CurrentLogConfigIs": "紀錄目前為以下配置：%s，點擊查看更多關於紀錄配置。",
-        "ExportThisSearch": "將此搜尋匯出為 %1$s，包含最新 %2$s 項紀錄。下載過程可能需要花費幾分鐘..."
+        "ExportThisSearch": "將此搜尋匯出為 %1$s，包含最新 %2$s 項紀錄。下載過程可能需要花費幾分鐘…",
+        "LogViewer": "紀錄檢視器",
+        "Message": "訊息",
+        "NoSupportedLogWriterConfiguredMessage": "如果過去有配置過，你依然可以查看舊的紀錄檔，但新的不會顯示。查看更多關於%1$s如何支持紀錄檢視器%2$s。支援的有：%3$s",
+        "NoSupportedLogWriterConfiguredTitle": "沒有支持紀錄檢視器的配置",
+        "RequestId": "請求 ID",
+        "SearchHelp": "搜尋將不區分大小寫。如果啟用了正規表示式，像是「[」的字元必須在前方加入跳脫字符（例如「\\[」）。",
+        "SearchPattern": "搜尋值或格式",
+        "Severity": "嚴重性",
+        "Tag": "標籤",
+        "UseRegExp": "使用正規表示式"
     }
 }

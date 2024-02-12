@@ -1,18 +1,18 @@
 {
     "LogViewer": {
-        "LogViewer": "Visualizador de registos",
-        "Severity": "Gravidade",
         "AnySeverity": "Qualquer gravidade",
-        "SearchPattern": "Padrão de pesquisa",
-        "SearchHelp": "A pesquisa não é sensível a maiúsculas ou minúsculas. Se as expressões regulares estiverem ativas, pode ser necessário codificar carateres como '[' (por exemplo, '\\[').",
-        "Tag": "Etiqueta",
-        "RequestId": "ID do pedido",
-        "Message": "Mensagem",
-        "NoSupportedLogWriterConfiguredTitle": "Nenhum gestor de registos suportado configurado",
-        "NoSupportedLogWriterConfiguredMessage": "Se foi configurado um no passado, ainda pode ver registos antigos, mas não serão apresentados novos registos. Saiba mais sobre %1$scomo configurar um gestor de registos suportado%2$s. Os suportados são: %3$s",
-        "UseRegExp": "Utilizar expressões regulares",
         "ClickToSearchForThis": "Clique para pesquisar por este termo",
         "CurrentLogConfigIs": "O registo está configurado da seguinte forma: %s, clique para saber mais sobre a configuração de registos.",
-        "ExportThisSearch": "Exportar esta pesquisa como %1$s contendo as últimas %2$s entradas. A transferência pode demorar uns minutos..."
+        "ExportThisSearch": "Exportar esta pesquisa como %1$s contendo as últimas %2$s entradas. A transferência pode demorar uns minutos…",
+        "LogViewer": "Visualizador de registos",
+        "Message": "Mensagem",
+        "NoSupportedLogWriterConfiguredMessage": "Se foi configurado um no passado, ainda pode ver registos antigos, mas não serão apresentados novos registos. Saiba mais sobre %1$scomo configurar um gestor de registos suportado%2$s. Os suportados são: %3$s",
+        "NoSupportedLogWriterConfiguredTitle": "Nenhum gestor de registos suportado configurado",
+        "RequestId": "ID do pedido",
+        "SearchHelp": "A pesquisa não é sensível a maiúsculas ou minúsculas. Se as expressões regulares estiverem ativas, pode ser necessário codificar carateres como '[' (por exemplo, '\\[').",
+        "SearchPattern": "Padrão de pesquisa",
+        "Severity": "Gravidade",
+        "Tag": "Etiqueta",
+        "UseRegExp": "Utilizar expressões regulares"
     }
 }

@@ -1,18 +1,18 @@
 {
     "LogViewer": {
-        "LogViewer": "Log Viewer",
-        "Severity": "Precisione",
         "AnySeverity": "Qualunque precisione",
-        "SearchPattern": "Modello di ricerca",
-        "SearchHelp": "La ricerca tiene conto delle maiuscole. Se sono abilitate le espressioni regolari, i caratteri come '[' potrebbero aver bisogno di essere saltati (es. '\\[').",
-        "Tag": "Tag",
-        "RequestId": "ID richiesta",
-        "Message": "Messaggio",
-        "NoSupportedLogWriterConfiguredTitle": "Non è configurato alcun log writer supportato",
-        "NoSupportedLogWriterConfiguredMessage": "Se ne è stato configurato uno in passato, puoi ancora vedere i vecchi log ma i nuovi non verranno mostrati. Leggi di più su %1$scome configurare un log writer supportato%2$s. Quelli supportati sono: %3$s",
-        "UseRegExp": "Usa espressioni regolari",
         "ClickToSearchForThis": "Clicca per ricercare questo termine",
         "CurrentLogConfigIs": "La registrazione è configurata come segue: %s, clicca per saperne di più sulla configurazione delle registrazioni.",
-        "ExportThisSearch": "Esporta questa ricerca come %1$s che contiene le ultime %2$s voci. Il download può richiedere qualche minuto."
+        "ExportThisSearch": "Esporta questa ricerca come %1$s che contiene le ultime %2$s voci. Il download può richiedere qualche minuto…",
+        "LogViewer": "Log Viewer",
+        "Message": "Messaggio",
+        "NoSupportedLogWriterConfiguredMessage": "Se ne è stato configurato uno in passato, puoi ancora vedere i vecchi log ma i nuovi non verranno mostrati. Leggi di più su %1$scome configurare un log writer supportato%2$s. Quelli supportati sono: %3$s",
+        "NoSupportedLogWriterConfiguredTitle": "Non è configurato alcun log writer supportato",
+        "RequestId": "ID richiesta",
+        "SearchHelp": "La ricerca tiene conto delle maiuscole. Se sono abilitate le espressioni regolari, i caratteri come '[' potrebbero aver bisogno di essere saltati (es. '\\[').",
+        "SearchPattern": "Modello di ricerca",
+        "Severity": "Precisione",
+        "Tag": "Tag",
+        "UseRegExp": "Usa espressioni regolari"
     }
 }

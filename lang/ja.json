@@ -1,18 +1,18 @@
 {
     "LogViewer": {
-        "LogViewer": "ログビューアー",
-        "Severity": "重大度",
         "AnySeverity": "任意の重大度",
-        "SearchPattern": "検索パターン",
-        "SearchHelp": "検索では大文字と小文字を区別しません。正規表現が有効な場合は、' [ ' はエスケープする必要があります。( 例. ' \\[ ' )",
-        "Tag": "タグ",
-        "RequestId": "リクエスト ID",
-        "Message": "メッセージ",
-        "NoSupportedLogWriterConfiguredTitle": "設定されたログライターがサポートされていません",
-        "NoSupportedLogWriterConfiguredMessage": "過去に設定されている場合、古いログを表示できますが、新しいものは表示されません。%1$s サポートされているログ ライター を設定する方法 %2$s について続きを読む。サポートされています: %3$s",
-        "UseRegExp": "正規表現を使用",
         "ClickToSearchForThis": "クリックしてこの用語を検索",
         "CurrentLogConfigIs": "ログ記録は次のように設定されています: %s、クリックしてログ記録の設定方法の続きを読む。",
-        "ExportThisSearch": "エントリの %1$s 最新のものを含む %2$s ものとしてこの検索をエクスポートします。ダウンロードは数分かかることがあります。"
+        "ExportThisSearch": "エントリの %1$s 最新のものを含む %2$s ものとしてこの検索をエクスポートします。ダウンロードは数分かかることがあります…",
+        "LogViewer": "ログビューアー",
+        "Message": "メッセージ",
+        "NoSupportedLogWriterConfiguredMessage": "過去に設定されている場合、古いログを表示できますが、新しいものは表示されません。%1$s サポートされているログ ライター を設定する方法 %2$s について続きを読む。サポートされています: %3$s",
+        "NoSupportedLogWriterConfiguredTitle": "設定されたログライターがサポートされていません",
+        "RequestId": "リクエスト ID",
+        "SearchHelp": "検索では大文字と小文字を区別しません。正規表現が有効な場合は、' [ ' はエスケープする必要があります。( 例. ' \\[ ' )",
+        "SearchPattern": "検索パターン",
+        "Severity": "重大度",
+        "Tag": "タグ",
+        "UseRegExp": "正規表現を使用"
     }
 }

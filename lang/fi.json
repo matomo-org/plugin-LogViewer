@@ -3,7 +3,7 @@
         "AnySeverity": "Kaikki vakavuudet",
         "ClickToSearchForThis": "Klikkaa hakeaksesi tällä hakuehdolla",
         "CurrentLogConfigIs": "Lokien kirjoitus on käytössä: %s, klikkaa lisätietoja lokien asetuksista.",
-        "ExportThisSearch": "Vie tämä haku %1$s sisältäen viimeisimmät %2$s tietueet. Lataaminen saattaa kestää hetken...",
+        "ExportThisSearch": "Vie tämä haku %1$s sisältäen viimeisimmät %2$s tietueet. Lataaminen saattaa kestää hetken…",
         "LogViewer": "Lokien katselu",
         "Message": "Viesti",
         "NoSupportedLogWriterConfiguredMessage": "Jos sellainen on määritetty aiemmin, voit edelleen tarkastella vanhoja lokeja, mutta uusia ei näytetä. Lue lisää %1$s-tuetun lokikirjoittimen määrittämisestä%2$s. Tuetut ovat: %3$s",
