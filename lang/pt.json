@@ -3,7 +3,7 @@
         "AnySeverity": "Qualquer gravidade",
         "ClickToSearchForThis": "Clique para pesquisar por este termo",
         "CurrentLogConfigIs": "O registo está configurado da seguinte forma: %s, clique para saber mais sobre a configuração de registos.",
-        "ExportThisSearch": "Exportar esta pesquisa como %1$s contendo as últimas %2$s entradas. A transferência pode demorar uns minutos…",
+        "ExportThisSearch": "Exportar esta pesquisa como %1$s contendo as últimas %2$s entradas. A descarga pode demorar alguns minutos…",
         "LogViewer": "Visualizador de registos",
         "Message": "Mensagem",
         "NoSupportedLogWriterConfiguredMessage": "Se foi configurado um no passado, ainda pode ver registos antigos, mas não serão apresentados novos registos. Saiba mais sobre %1$scomo configurar um gestor de registos suportado%2$s. Os suportados são: %3$s",
