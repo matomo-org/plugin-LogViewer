@@ -16,6 +16,14 @@ class Piwik implements Parser
 {
     public function parse(Line $line)
     {
+        
+        $message = json_decode($line->content);
+
+        if (gettype($message) === "object"){
+            $message->severity = $message->level;
+            return $message;
+        }
+
         $severity  = '';
         $tag       = '';
         $datetime  = '';
