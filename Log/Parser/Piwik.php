@@ -17,13 +17,20 @@ class Piwik implements Parser
     public function parse(Line $line)
     {
 
+        /*
+        * First try to json decode the message in case json logging is enabled
+        */
         $message = json_decode($line->content);
 
-        if (gettype($message) === "object") {
+        if (is_object($message)) {
             $message->severity = $message->level;
             return $message;
         }
 
+        /*
+            Here json logging is disabled -OR- we are parsing 
+            historical logs prior to json being enabled
+        */
         $severity  = '';
         $tag       = '';
         $datetime  = '';
