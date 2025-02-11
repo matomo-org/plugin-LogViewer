@@ -28,7 +28,7 @@ class Piwik implements Parser
         }
 
         /*
-            Here json logging is disabled -OR- we are parsing 
+            Here json logging is disabled -OR- we are parsing
             historical logs prior to json being enabled
         */
         $severity  = '';
