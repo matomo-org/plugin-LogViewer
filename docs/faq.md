@@ -12,7 +12,7 @@ __Is the search field case insensitive?__
 
 Yes.
 
-__How is a Piwik log line formatted by default?__
+__How is a Matomo log line formatted by default?__
 
 `'$severity $tag[$datetime] [$requestId] $message` eg `WARNING Piwik\Common[2015-01-01 01:02:03] [cf27] The log message`
 

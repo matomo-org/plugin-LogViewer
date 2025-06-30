@@ -1,5 +1,6 @@
 ## Changelog
 
+* 5.0.4 - 2025-07-07 Textual changes
 * 5.0.3 Added support for JSON
 * 5.0.2 Added plugin category for Marketplace
 * 5.0.1 Prefer using ellipsis over three dots

@@ -1,6 +1,6 @@
 {
   "name": "LogViewer",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "description": "View log messages logged by Matomo",
   "theme": false,
   "keywords": ["log",  "viewer", "diagnostic", "debug", "debugging"],
