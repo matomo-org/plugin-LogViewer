@@ -1,5 +1,11 @@
 {
     "LogViewer": {
-        "Tag": "Oznaka"
+        "AnySeverity": "Bilo koja težina",
+        "ClickToSearchForThis": "Klikni za pretraživanje ovog pojma",
+        "LogViewer": "Prikaz dnevnika",
+        "Message": "Poruka",
+        "Severity": "Težina",
+        "Tag": "Oznaka",
+        "UseRegExp": "Koristi regularne izraze"
     }
 }
