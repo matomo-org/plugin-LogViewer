@@ -17,7 +17,7 @@ use Piwik\Plugins\LogViewer\Log\Query;
 use Piwik\Plugins\LogViewer\Log\Result;
 
 /**
- * API for plugin LogViewer
+ * Reporting API endpoints for reading Matomo log entries and reader configuration.
  *
  * @method static \Piwik\Plugins\LogViewer\API getInstance()
  */
@@ -28,14 +28,15 @@ class API extends \Piwik\Plugin\API
      *
      * Latest log entries are returned first.
      *
-     * @param string       $query        A search query. If given, the search is performed case insensitive and query
-     *                                   is interpreted as a regular expression. Characters like `[` might need to be
-     *                                   escaped as `\[`.
-     * @param string|false $source       The log reader to use. Either 'file' or 'database'.
-     *                                   By default we try to detect the best reader automatically.
-     * @param int          $page         The page that should be returned.
-     * @param int          $limitPerPage Defines how many log entries should be returned per page.
-     * @return array
+     * @param string                   $query        A search query. If given, the search is performed case insensitive and query
+     *                                               is interpreted as a regular expression. Characters like `[` might need to be
+     *                                               escaped as `\[`.
+     * @param 'file'|'database'|false $source       The log reader to use. Either 'file' or 'database'.
+     *                                               By default we try to detect the best reader automatically.
+     * @param int                      $page         The page that should be returned.
+     * @param int                      $limitPerPage Defines how many log entries should be returned per page.
+     * @return list<array{severity: string, tag: string, datetime: string, requestId: string, message: string}|object>
+     *         Parsed log entries ordered from newest to oldest.
      * @throws \Exception Eg if the source cannot be chosen automatically.
      */
     public function getLogEntries($query = '', $source = false, $page = 0, $limitPerPage = 10)
@@ -61,7 +62,7 @@ class API extends \Piwik\Plugin\API
     /**
      * Returns a list of all available log readers.
      *
-     * @return string[]
+     * @return list<string>
      */
     public function getAvailableLogReaders()
     {
@@ -74,7 +75,7 @@ class API extends \Piwik\Plugin\API
     /**
      * Returns a list of all configured log readers that are supported (available).
      *
-     * @return string[]
+     * @return list<string>
      */
     public function getConfiguredLogReaders()
     {
@@ -85,9 +86,9 @@ class API extends \Piwik\Plugin\API
     }
 
     /**
-     * Returns a list of all configured log readers that are supported (available).
+     * Returns the configured log section from Matomo config.
      *
-     * @return string[]
+     * @return array<string, mixed>
      */
     public function getLogConfig()
     {
