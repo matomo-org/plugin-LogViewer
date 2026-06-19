@@ -284,31 +284,23 @@ var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
   };
   const _hoisted_9 = ["action"];
   const _hoisted_10 = ["value"];
-  const _hoisted_11 = /* @__PURE__ */ vue.createElementVNode("input", {
-    type: "hidden",
-    name: "force_api_session",
-    value: "1",
-    style: { "margin-right": "3.5px" }
-  }, null, -1);
+  const _hoisted_11 = ["title"];
   const _hoisted_12 = ["title"];
-  const _hoisted_13 = ["title"];
-  const _hoisted_14 = /* @__PURE__ */ vue.createElementVNode("br", null, null, -1);
-  const _hoisted_15 = { class: "severity" };
-  const _hoisted_16 = { class: "tag" };
-  const _hoisted_17 = { class: "date" };
-  const _hoisted_18 = { class: "date" };
-  const _hoisted_19 = { class: "message" };
+  const _hoisted_13 = { class: "severity" };
+  const _hoisted_14 = { class: "tag" };
+  const _hoisted_15 = { class: "date" };
+  const _hoisted_16 = { class: "date" };
+  const _hoisted_17 = { class: "message" };
+  const _hoisted_18 = ["title", "onClick"];
+  const _hoisted_19 = ["title", "onClick"];
   const _hoisted_20 = ["title", "onClick"];
   const _hoisted_21 = ["title", "onClick"];
-  const _hoisted_22 = ["title", "onClick"];
-  const _hoisted_23 = ["title", "onClick"];
-  const _hoisted_24 = { class: "message" };
-  const _hoisted_25 = { key: 0 };
-  const _hoisted_26 = { colspan: "5" };
-  const _hoisted_27 = { colspan: "5" };
-  const _hoisted_28 = { class: "loadingPiwik" };
-  const _hoisted_29 = /* @__PURE__ */ vue.createElementVNode("img", { src: "plugins/Morpheus/images/loading-blue.gif" }, null, -1);
-  const _hoisted_30 = {
+  const _hoisted_22 = { class: "message" };
+  const _hoisted_23 = { key: 0 };
+  const _hoisted_24 = { colspan: "5" };
+  const _hoisted_25 = { colspan: "5" };
+  const _hoisted_26 = { class: "loadingPiwik" };
+  const _hoisted_27 = {
     colspan: "5",
     class: "paging"
   };
@@ -392,13 +384,18 @@ var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
                     name: "token_auth",
                     value: _ctx.tokenAuth
                   }, null, 8, _hoisted_10),
-                  _hoisted_11,
+                  _cache[12] || (_cache[12] = vue.createElementVNode("input", {
+                    type: "hidden",
+                    name: "force_api_session",
+                    value: "1",
+                    style: { "margin-right": "3.5px" }
+                  }, null, -1)),
                   vue.createElementVNode("a", {
                     class: "icon-export",
                     onClick: _cache[7] || (_cache[7] = ($event) => _ctx.$refs.export.submit()),
                     title: _ctx.translate("LogViewer_ExportThisSearch", "TSV", 5e3),
                     style: { "margin-right": "3.5px" }
-                  }, null, 8, _hoisted_12)
+                  }, null, 8, _hoisted_11)
                 ], 8, _hoisted_9),
                 vue.createElementVNode("a", {
                   class: "icon-info",
@@ -406,17 +403,17 @@ var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
                   href: "https://piwik.org/faq/troubleshooting/faq_115/",
                   rel: "noreferrer noopener",
                   title: _ctx.translate("LogViewer_CurrentLogConfigIs", _ctx.logConfigJson)
-                }, null, 8, _hoisted_13),
-                _hoisted_14
+                }, null, 8, _hoisted_12),
+                _cache[13] || (_cache[13] = vue.createElementVNode("br", null, null, -1))
               ]),
               vue.withDirectives((vue.openBlock(), vue.createElementBlock("table", null, [
                 vue.createElementVNode("thead", null, [
                   vue.createElementVNode("tr", null, [
-                    vue.createElementVNode("th", _hoisted_15, vue.toDisplayString(_ctx.translate("LogViewer_Severity")), 1),
-                    vue.createElementVNode("th", _hoisted_16, vue.toDisplayString(_ctx.translate("LogViewer_Tag")), 1),
-                    vue.createElementVNode("th", _hoisted_17, vue.toDisplayString(_ctx.translate("General_Date")), 1),
-                    vue.createElementVNode("th", _hoisted_18, vue.toDisplayString(_ctx.translate("LogViewer_RequestId")), 1),
-                    vue.createElementVNode("th", _hoisted_19, vue.toDisplayString(_ctx.translate("LogViewer_Message")), 1)
+                    vue.createElementVNode("th", _hoisted_13, vue.toDisplayString(_ctx.translate("LogViewer_Severity")), 1),
+                    vue.createElementVNode("th", _hoisted_14, vue.toDisplayString(_ctx.translate("LogViewer_Tag")), 1),
+                    vue.createElementVNode("th", _hoisted_15, vue.toDisplayString(_ctx.translate("General_Date")), 1),
+                    vue.createElementVNode("th", _hoisted_16, vue.toDisplayString(_ctx.translate("LogViewer_RequestId")), 1),
+                    vue.createElementVNode("th", _hoisted_17, vue.toDisplayString(_ctx.translate("LogViewer_Message")), 1)
                   ])
                 ]),
                 vue.createElementVNode("tbody", null, [
@@ -426,32 +423,32 @@ var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
                         class: vue.normalizeClass(["severity", { selectable: log.severity }]),
                         title: log.severity ? _ctx.translate("LogViewer_ClickToSearchForThis") : "",
                         onClick: ($event) => _ctx.searchSeverity(log.severity)
-                      }, vue.toDisplayString(log.severity || "-"), 11, _hoisted_20),
+                      }, vue.toDisplayString(log.severity || "-"), 11, _hoisted_18),
                       vue.createElementVNode("td", {
                         class: vue.normalizeClass(["tag", { selectable: log.tag }]),
                         title: log.tag ? _ctx.translate("LogViewer_ClickToSearchForThis") : "",
                         onClick: ($event) => _ctx.searchText(log.tag)
-                      }, vue.toDisplayString(log.tag || "-"), 11, _hoisted_21),
+                      }, vue.toDisplayString(log.tag || "-"), 11, _hoisted_19),
                       vue.createElementVNode("td", {
                         class: vue.normalizeClass(["date", { selectable: log.datetime }]),
                         title: log.datetime ? _ctx.translate("LogViewer_ClickToSearchForThis") : "",
                         onClick: ($event) => _ctx.searchDate(log.datetime)
-                      }, vue.toDisplayString(log.datetime || "-"), 11, _hoisted_22),
+                      }, vue.toDisplayString(log.datetime || "-"), 11, _hoisted_20),
                       vue.createElementVNode("td", {
                         class: vue.normalizeClass(["requestId", { selectable: log.requestId }]),
                         title: log.requestId ? _ctx.translate("LogViewer_ClickToSearchForThis") : "",
                         onClick: ($event) => _ctx.searchRequestId(log.requestId)
-                      }, vue.toDisplayString(log.requestId || "-"), 11, _hoisted_23),
-                      vue.createElementVNode("td", _hoisted_24, vue.toDisplayString(log.message), 1)
+                      }, vue.toDisplayString(log.requestId || "-"), 11, _hoisted_21),
+                      vue.createElementVNode("td", _hoisted_22, vue.toDisplayString(log.message), 1)
                     ]);
                   }), 128)),
-                  !_ctx.isLoading && ((_a = _ctx.logs) == null ? void 0 : _a.length) === 0 ? (vue.openBlock(), vue.createElementBlock("tr", _hoisted_25, [
-                    vue.createElementVNode("td", _hoisted_26, vue.toDisplayString(_ctx.translate("General_SearchNoResults")), 1)
+                  !_ctx.isLoading && ((_a = _ctx.logs) == null ? void 0 : _a.length) === 0 ? (vue.openBlock(), vue.createElementBlock("tr", _hoisted_23, [
+                    vue.createElementVNode("td", _hoisted_24, vue.toDisplayString(_ctx.translate("General_SearchNoResults")), 1)
                   ])) : vue.createCommentVNode("", true),
                   vue.withDirectives(vue.createElementVNode("tr", null, [
-                    vue.createElementVNode("td", _hoisted_27, [
-                      vue.createElementVNode("span", _hoisted_28, [
-                        _hoisted_29,
+                    vue.createElementVNode("td", _hoisted_25, [
+                      vue.createElementVNode("span", _hoisted_26, [
+                        _cache[14] || (_cache[14] = vue.createElementVNode("img", { src: "plugins/Morpheus/images/loading-blue.gif" }, null, -1)),
                         vue.createTextVNode(" " + vue.toDisplayString(_ctx.translate("General_Loading")), 1)
                       ])
                     ])
@@ -459,7 +456,7 @@ var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
                     [vue.vShow, _ctx.isLoading]
                   ]),
                   vue.createElementVNode("tr", null, [
-                    vue.createElementVNode("td", _hoisted_30, [
+                    vue.createElementVNode("td", _hoisted_27, [
                       vue.withDirectives(vue.createElementVNode("span", {
                         id: "prev",
                         class: "previous",
