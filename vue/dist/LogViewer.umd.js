@@ -393,7 +393,7 @@ var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
                   vue.createElementVNode("a", {
                     class: "icon-export",
                     onClick: _cache[7] || (_cache[7] = ($event) => _ctx.$refs.export.submit()),
-                    title: _ctx.translate("LogViewer_ExportThisSearch", "TSV", 5e3),
+                    title: _ctx.translate("LogViewer_ExportThisSearch", "TSV", "5000"),
                     style: { "margin-right": "3.5px" }
                   }, null, 8, _hoisted_11)
                 ], 8, _hoisted_9),
@@ -485,7 +485,7 @@ var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
                           vue.createElementVNode("span", null, vue.toDisplayString(_ctx.translate("General_Next")) + " »", 1)
                         ])
                       ], 512), [
-                        [vue.vShow, !(((_b = _ctx.logs) == null ? void 0 : _b.length) < 1)]
+                        [vue.vShow, !((((_b = _ctx.logs) == null ? void 0 : _b.length) || 0) < 1)]
                       ])
                     ])
                   ])
