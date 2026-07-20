@@ -1,1 +1,18 @@
-{}
+{
+    "LogViewer": {
+        "AnySeverity": "Bilo koja težina",
+        "ClickToSearchForThis": "Klikni za pretraživanje ovog pojma",
+        "CurrentLogConfigIs": "Zapisivanje je konfigurirano na sljedeći način: %s, klikni za više informacija o konfiguriranju zapisivanja.",
+        "ExportThisSearch": "Izvezi ovu pretragu kao %1$s koji sadrži najnovije unose (%2$s). Preuzimanje može potrajati nekoliko minuta …",
+        "LogViewer": "Prikaz dnevnika",
+        "Message": "Poruka",
+        "NoSupportedLogWriterConfiguredMessage": "Ako je jedan u prošlosti bio konfiguriran, i dalje možeš pregledavati stare zapisnike, ali novi se neće prikazivati. Pročitaj više o %1$skako konfigurirati podržani program za pisanje dnevnika%2$s. Podržani su: %3$s",
+        "NoSupportedLogWriterConfiguredTitle": "Nije konfiguriran nijedan podržani program za pisanje dnevnika",
+        "RequestId": "ID zahtjeva",
+        "SearchHelp": "Pretraga razlikuje velika i mala slova. Ako su uključeni regularni izrazi, znakove poput '[' će se. možda morati pisati s obrnutom kosom crtom kao predznakom '\\['.",
+        "SearchPattern": "Uzorak pretrage",
+        "Severity": "Težina",
+        "Tag": "Oznaka",
+        "UseRegExp": "Koristi regularne izraze"
+    }
+}
