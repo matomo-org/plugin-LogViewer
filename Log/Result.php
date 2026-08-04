@@ -11,9 +11,6 @@ namespace Piwik\Plugins\LogViewer\Log;
 
 class Result
 {
-    private $logsPerPage;
-    private $page;
-
     private $limitStart;
     private $limitEnd;
 
@@ -26,9 +23,6 @@ class Result
 
     public function __construct($logsPerPage, $page)
     {
-        $this->logsPerPage = $logsPerPage;
-        $this->page        = $page;
-
         $this->limitStart = $logsPerPage * $page;
         $this->limitEnd   = $this->limitStart + $logsPerPage;
     }
