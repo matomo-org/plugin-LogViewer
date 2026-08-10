@@ -78,7 +78,7 @@
             <a
               class="icon-export"
               @click="$refs.export.submit()"
-              :title="translate('LogViewer_ExportThisSearch', 'TSV', 5000)"
+              :title="translate('LogViewer_ExportThisSearch', 'TSV', '5000')"
               style="margin-right:3.5px"
             />
           </form>
@@ -165,7 +165,7 @@
                   id="next"
                   class="next pointer"
                   @click="nextPage()"
-                  v-show="!(logs?.length < 1)"
+                  v-show="!((logs?.length || 0) < 1)"
                 >
                   <a
                     class="btn"
