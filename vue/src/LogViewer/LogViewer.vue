@@ -139,10 +139,10 @@
             </tr>
             <tr v-show="isLoading">
               <td colspan="5">
-                <span class="loadingPiwik">
-                  <img src="plugins/Morpheus/images/loading-blue.gif" />
-                  {{ translate('General_Loading') }}
-                </span>
+                <ActivityIndicator
+                  :loading="true"
+                  :loading-message="translate('General_Loading')"
+                />
               </td>
             </tr>
             <tr>
@@ -186,6 +186,7 @@ import { defineComponent } from 'vue';
 import {
   translate,
   Matomo,
+  ActivityIndicator,
   AjaxHelper,
   ContentBlock,
   ContentTable,
@@ -233,6 +234,7 @@ export default defineComponent({
     },
   },
   components: {
+    ActivityIndicator,
     ContentBlock,
     Field,
   },
