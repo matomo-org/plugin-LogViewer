@@ -16,9 +16,10 @@ permissions: {}
 
 jobs:
   sweep:
-    # Granted here and not in the called workflow: permissions can only be maintained or reduced
-    # down a call chain, never elevated, so without this the dispatch is unauthorised.
+    # Granted by the caller because permissions can only be maintained or reduced down a call
+    # chain, never elevated: the called workflow declares these too, but that can only cap them,
+    # not supply them, so without this block the dispatch is unauthorised.
     permissions:
-      actions: write # dispatch matomo-tests.yml
-      contents: read # read the default branch name and check a branch exists
+      actions: write
+      contents: read
     uses: matomo-org/plugin-ci-workflows/.github/workflows/plugin-branch-sweep.yml@main
