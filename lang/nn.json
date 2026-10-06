@@ -1,1 +1,18 @@
-{}
+{
+    "LogViewer": {
+        "AnySeverity": "Alle alvorsgrader",
+        "ClickToSearchForThis": "Klikk for å søkje etter dette ordet",
+        "CurrentLogConfigIs": "Loggføringa er sett opp slik: %s. Klikk for å lese meir om oppsett av loggføring.",
+        "ExportThisSearch": "Eksporter dette søket som %1$s med dei siste %2$s oppføringane. Nedlastinga kan ta nokre minutt …",
+        "LogViewer": "Loggvisar",
+        "Message": "Melding",
+        "NoSupportedLogWriterConfiguredMessage": "Viss ein var sett opp tidlegare, kan du framleis sjå gamle loggar, men nye blir ikkje viste. Les meir om %1$skorleis du set opp ein støtta loggskrivar%2$s. Desse er støtta: %3$s",
+        "NoSupportedLogWriterConfiguredTitle": "Ingen støtta loggskrivar er sett opp",
+        "RequestId": "Førespurnads-ID",
+        "SearchHelp": "Søket skil ikkje mellom store og små bokstavar. Viss regulære uttrykk er skrudde på, må teikn som «[» kanskje escapast (t.d. «\\[»).",
+        "SearchPattern": "Søkjemønster",
+        "Severity": "Alvorsgrad",
+        "Tag": "Tagg",
+        "UseRegExp": "Bruk regulære uttrykk"
+    }
+}
