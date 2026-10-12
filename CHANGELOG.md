@@ -1,6 +1,6 @@
 ## Changelog
 
-* 6.0.2 - 2026-10-19 Aligned the Log Viewer search field with the controls beside it
+* 6.0.2 - 2026-10-12 Aligned the Log Viewer search field with the controls beside it
 * 6.0.1 - 2026-09-14 Fixed the loading indicator showing as a white box in dark mode
 * 6.0.0 - 2026-08-09 Compatibility with Matomo 6
 * 5.0.6 - 2026-04-27 Updated API documentation
