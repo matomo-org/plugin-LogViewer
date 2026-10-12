@@ -31,6 +31,13 @@
     width: 200px !important;
   }
 
+  // matches the select boxes' height and top offset; the type selector is needed to outrank
+  // core's input[type="text"]:not(.browser-default) height
+  input[type="text"].search {
+    height: 37px;
+    margin-top: 5px;
+  }
+
   .severity, .requestId, .date {
     white-space: nowrap
   }
@@ -66,7 +73,7 @@
 
   .useRegExp {
     display: inline-block;
-    margin: -25px 0 -25px 20px;
+    margin: -25px 0 -25px 22px;
     white-space: nowrap;
   }
 
@@ -76,6 +83,8 @@
 
   .searchIcon {
     margin-left: -30px;
+    // -30px + 15px icon + 15px = no net width, so the icon overlaps the input without pushing the checkbox along
+    margin-right: 15px;
     cursor: pointer;
     font-size: 15px;
     display: inline-block;
