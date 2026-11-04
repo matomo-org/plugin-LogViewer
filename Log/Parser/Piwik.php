@@ -23,8 +23,27 @@ class Piwik implements Parser
         $message = json_decode($line->content);
 
         if (is_object($message)) {
-            $message->severity = $message->level;
-            return $message;
+            if (property_exists($message, "level_name")) {
+                $message->severity = $message->level_name;
+            }
+            $message->requestId = "";
+            if (property_exists($message, "extra") && property_exists($message->extra, "request_id")) {
+                $message->requestId = $message->extra->request_id;
+            }
+            $message->tag = "";
+            if (property_exists($message, "extra") && property_exists($message->extra, "class")) {
+                $message->tag = $message->extra->class;
+            }
+            if (property_exists($message, "datetime") && property_exists($message->datetime, "date")) {
+                $message->datetime = $message->datetime->date;
+            }
+            return array(
+                'severity'  => $message->severity,
+                'tag'       => $message->tag,
+                'datetime'  => $message->datetime,
+                'requestId'  => $message->requestId,
+                'message'   => $message->message
+            );
         }
 
         /*
