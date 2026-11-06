@@ -78,7 +78,8 @@ class LogReaderFactoryTest extends IntegrationTestCase
 
     public function test_make_shouldThrowException_IfNotSupportedReaderRequested()
     {
-        $this->expectException(\Exception::class);
+        $this->expectException(\Piwik\Http\BadRequestException::class);
+        $this->expectExceptionCode(400);
         $this->expectExceptionMessage('Wrong source specified. Such log reader does not exist: notSupporTed');
 
         $this->factory->make('notSupporTed');
@@ -97,7 +98,8 @@ class LogReaderFactoryTest extends IntegrationTestCase
 
     public function test_make_shouldThrowException_IfNoSourceSpecified_AndNoWriterConfigured()
     {
-        $this->expectException(\Exception::class);
+        $this->expectException(\Piwik\Http\BadRequestException::class);
+        $this->expectExceptionCode(400);
         $this->expectExceptionMessage('No source specified, please specify one of: file, database');
 
         $this->setLogWriters(array());
@@ -106,7 +108,8 @@ class LogReaderFactoryTest extends IntegrationTestCase
 
     public function test_make_shouldThrowException_IfNoSourceSpecified_AndManyWritersConfigured()
     {
-        $this->expectException(\Exception::class);
+        $this->expectException(\Piwik\Http\BadRequestException::class);
+        $this->expectExceptionCode(400);
         $this->expectExceptionMessage('No source specified, please specify one of: file, database');
 
         $this->setLogWriters(array('file', 'database'));

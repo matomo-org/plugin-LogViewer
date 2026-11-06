@@ -9,9 +9,9 @@
 
 namespace Piwik\Plugins\LogViewer;
 
-use Exception;
 use Piwik\Config;
 use Piwik\Container\StaticContainer;
+use Piwik\Http\BadRequestException;
 use Piwik\Plugins\LogViewer\Log\Reader\Database;
 use Piwik\Plugins\LogViewer\Log\Reader\File;
 
@@ -41,7 +41,7 @@ class LogReaderFactory
                 return new Database();
 
             default:
-                throw new Exception('Wrong source specified. Such log reader does not exist: ' . $source);
+                throw new BadRequestException('Wrong source specified. Such log reader does not exist: ' . $source);
         }
     }
 
@@ -75,6 +75,6 @@ class LogReaderFactory
             return array_shift($logWriters);
         }
 
-        throw new Exception('No source specified, please specify one of: ' . implode(', ', $this->supportedLogReader));
+        throw new BadRequestException('No source specified, please specify one of: ' . implode(', ', $this->supportedLogReader));
     }
 }
