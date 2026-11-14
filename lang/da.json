@@ -1,6 +1,18 @@
 {
     "LogViewer": {
+        "AnySeverity": "Alle alvorlighedsgrader",
+        "ClickToSearchForThis": "Klik for at søge efter dette udtryk",
+        "CurrentLogConfigIs": "Logning er konfigureret således: %s. Klik for at læse mere om konfiguration af logning.",
+        "ExportThisSearch": "Eksportér denne søgning som %1$s med de seneste %2$s poster. Hentningen kan tage et par minutter…",
+        "LogViewer": "Logviser",
         "Message": "Besked",
+        "NoSupportedLogWriterConfiguredMessage": "Hvis der tidligere har været konfigureret en, kan du stadig se gamle logfiler, men nye vises ikke. Læs mere om, %1$shvordan du konfigurerer en understøttet logskriver%2$s. Understøttede er: %3$s",
+        "NoSupportedLogWriterConfiguredTitle": "Der er ikke konfigureret nogen understøttet logskriver",
+        "RequestId": "Anmodnings-id",
+        "SearchHelp": "Søgningen skelner ikke mellem store og små bogstaver. Hvis regulære udtryk er aktiveret, kan det være nødvendigt at escape tegn som '[' (f.eks. '\\[').",
+        "SearchPattern": "Søgemønster",
+        "Severity": "Alvorlighedsgrad",
+        "Tag": "Tag",
         "UseRegExp": "Benyt regulære udtryk"
     }
 }
