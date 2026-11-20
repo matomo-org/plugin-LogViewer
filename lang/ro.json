@@ -1,1 +1,18 @@
-{}
+{
+    "LogViewer": {
+        "AnySeverity": "Orice severitate",
+        "ClickToSearchForThis": "Faceți clic pentru a căuta acest termen",
+        "CurrentLogConfigIs": "Jurnalizarea este configurată astfel: %s. Faceți clic pentru a afla mai multe despre configurarea jurnalizării.",
+        "ExportThisSearch": "Exportați această căutare ca %1$s cu ultimele %2$s intrări. Descărcarea poate dura câteva minute…",
+        "LogViewer": "Vizualizator de jurnale",
+        "Message": "Mesaj",
+        "NoSupportedLogWriterConfiguredMessage": "Dacă unul a fost configurat în trecut, puteți vedea în continuare jurnalele vechi, dar cele noi nu vor fi afișate. Aflați mai multe despre %1$scum se configurează un scriitor de jurnal acceptat%2$s. Sunt acceptate: %3$s",
+        "NoSupportedLogWriterConfiguredTitle": "Nu este configurat niciun scriitor de jurnal acceptat",
+        "RequestId": "ID cerere",
+        "SearchHelp": "Căutarea nu ține cont de majuscule. Dacă expresiile regulate sunt activate, este posibil ca unele caractere, precum '[', să trebuiască escapate (de ex. '\\[').",
+        "SearchPattern": "Model de căutare",
+        "Severity": "Severitate",
+        "Tag": "Etichetă",
+        "UseRegExp": "Folosire expresii regulate"
+    }
+}
